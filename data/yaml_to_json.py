@@ -5,14 +5,12 @@ yaml_to_json.py
 Konvertiert contacts.yaml → contacts.json für json-graphql-server.
 
 Erzeugte Collections:
-  contacts       Haupttabelle aller Kontakte
-  groups         Eindeutige Gruppen / Kategorien
-  contactGroups  Kontakt ↔ Gruppe (n:m Junction-Tabelle)
-  relationships  Kontakt ↔ Kontakt (related_to Verweise)
-
-Didaktischer Hinweis:
-  Die vier Collections zeigen live, warum eine flache JSON-Datei
-  nicht ausreicht, sobald Beziehungen ins Spiel kommen.
+  contacts          Haupttabelle
+  groups            Eindeutige Gruppen / Kategorien
+  contactGroups     Kontakt ↔ Gruppe (n:m Junction, contact_id + group_id)
+  contactRelations  Selbstreferentielle Beziehungen:
+                    from_id (Integer, Quelle) + contact_id (FK → Contact, Ziel)
+                    → contact_id wird von json-graphql-server zu Contact aufgelöst
 
 Usage:
   python yaml_to_json.py
@@ -28,10 +26,7 @@ from pathlib import Path
 try:
     import yaml
 except ImportError:
-    sys.exit(
-        "PyYAML fehlt.\n"
-        "Bitte installieren:  pip install pyyaml"
-    )
+    sys.exit("PyYAML fehlt.\nBitte installieren:  pip install pyyaml")
 
 
 # ─── Hilfsfunktionen ────────────────────────────────────────────────────────
@@ -44,8 +39,8 @@ def clean_string(value) -> str | None:
 
 
 FIELD_MAP = {
-    "met_at": "metAt",
-    "met_when": "metWhen",
+    "met_at":       "metAt",
+    "met_when":     "metWhen",
     "relationship": "relationship",
     "organization": "organization",
 }
@@ -54,11 +49,27 @@ FIELD_MAP = {
 SKIP_FIELDS = {"groups", "related_to", "known_preferences"}
 
 
+def extract_related_ids(related_to: list) -> list[int]:
+    """Extrahiert IDs aus related_to – unterstützt {id: X} und direkt X."""
+    ids = []
+    for rel in related_to or []:
+        if isinstance(rel, dict):
+            to_id = rel.get("id")
+        elif isinstance(rel, int):
+            to_id = rel
+        else:
+            to_id = None
+        if to_id is not None:
+            ids.append({"contact_id": to_id})
+    return ids
+
+
 def convert_contact(contact: dict) -> dict:
     """
     Konvertiert einen rohen YAML-Kontakt in ein JSON-freundliches Dict.
     - Felder in SKIP_FIELDS werden ausgelassen (separat behandelt)
-    - known_preferences wird als sauberes Array angehängt
+    - known_preferences → knownPreferences als String-Array
+    - related_to        → relatedTo als [{contact_id: X}]-Array (eingebettet)
     - Mehrzeilige Strings werden normalisiert
     """
     result = {}
@@ -66,9 +77,7 @@ def convert_contact(contact: dict) -> dict:
     for key, value in contact.items():
         if key in SKIP_FIELDS:
             continue
-
         out_key = FIELD_MAP.get(key, key)
-
         if isinstance(value, str):
             result[out_key] = clean_string(value)
         elif value is None:
@@ -80,6 +89,9 @@ def convert_contact(contact: dict) -> dict:
     prefs = contact.get("known_preferences") or []
     result["knownPreferences"] = [clean_string(p) for p in prefs]
 
+    # related_to als eingebettetes [{contact_id: X}]-Array
+    result["relatedTo"] = extract_related_ids(contact.get("related_to") or [])
+
     return result
 
 
@@ -90,14 +102,12 @@ def build_groups(raw_contacts: list) -> tuple[list, dict]:
     name_to_id: dict[str, int] = {}
     groups: list[dict] = []
     gid = 1
-
     for contact in raw_contacts:
         for name in contact.get("groups") or []:
             if name not in name_to_id:
                 name_to_id[name] = gid
                 groups.append({"id": gid, "name": name})
                 gid += 1
-
     return groups, name_to_id
 
 
@@ -105,7 +115,6 @@ def build_contact_groups(raw_contacts: list, name_to_id: dict) -> list:
     """n:m Junction-Tabelle: Kontakt ↔ Gruppe."""
     contact_groups = []
     cg_id = 1
-
     for contact in raw_contacts:
         contact_id = contact["id"]
         for group_name in contact.get("groups") or []:
@@ -115,42 +124,34 @@ def build_contact_groups(raw_contacts: list, name_to_id: dict) -> list:
                     {"id": cg_id, "contact_id": contact_id, "group_id": gid}
                 )
                 cg_id += 1
-
     return contact_groups
 
 
-def build_relationships(raw_contacts: list) -> list:
-    """Selbstreferentielle Beziehungen aus related_to-Feldern."""
-    relationships = []
+def build_contact_relations(raw_contacts: list) -> list:
+    """
+    Selbstreferentielle Beziehungen als flache Junction-Tabelle.
+    - from_id    : Integer (Quell-Kontakt, kein auto-resolve)
+    - contact_id : FK → Contact (Ziel-Kontakt, wird von json-graphql-server aufgelöst)
+    """
+    relations = []
     rel_id = 1
-
     for contact in raw_contacts:
         from_id = contact["id"]
         for rel in contact.get("related_to") or []:
-            # Robuste Extraktion: {id: X} oder direkt X
             if isinstance(rel, dict):
                 to_id = rel.get("id")
             elif isinstance(rel, int):
                 to_id = rel
             else:
                 to_id = None
-
             if to_id is not None:
-                relationships.append(
-                    {
-                        "id": rel_id,
-                        "from_contact_id": from_id,
-                        "to_contact_id": to_id,
-                    }
-                )
+                relations.append({"id": rel_id, "from_id": from_id, "contact_id": to_id})
                 rel_id += 1
-
-    return relationships
+    return relations
 
 
 def main(input_path: Path, output_path: Path, verbose: bool = False):
 
-    # ── YAML laden ──────────────────────────────────────────────────────────
     if not input_path.exists():
         sys.exit(f"❌ Datei nicht gefunden: {input_path}")
 
@@ -161,29 +162,23 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
     if not raw_contacts:
         sys.exit("❌ Keine Kontakte in der YAML-Datei gefunden.")
 
-    # ── Collections aufbauen ─────────────────────────────────────────────────
-    groups, name_to_id       = build_groups(raw_contacts)
-    contacts                 = [convert_contact(c) for c in raw_contacts]
-    contact_groups           = build_contact_groups(raw_contacts, name_to_id)
-    relationships            = build_relationships(raw_contacts)
+    groups, name_to_id  = build_groups(raw_contacts)
+    contacts            = [convert_contact(c) for c in raw_contacts]
+    contact_groups      = build_contact_groups(raw_contacts, name_to_id)
 
-    # ── JSON schreiben ───────────────────────────────────────────────────────
     output = {
         "contacts":      contacts,
         "groups":        groups,
         "contactGroups": contact_groups,
-        "relationships": relationships,
     }
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(output, f, ensure_ascii=False, indent=2)
 
-    # ── Zusammenfassung ──────────────────────────────────────────────────────
     print(f"✓  {len(contacts):>3} contacts")
     print(f"✓  {len(groups):>3} groups")
-    print(f"✓  {len(contact_groups):>3} contactGroups   (n:m Junction)")
-    print(f"✓  {len(relationships):>3} relationships   (contact ↔ contact)")
+    print(f"✓  {len(contact_groups):>3} contactGroups    (n:m Junction)")
     print(f"→  {output_path}")
 
     if verbose:
@@ -196,19 +191,15 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
             ]
             print(f"   [{g['id']:>2}] {g['name']:<30} ({len(members)} Kontakte)")
 
-        print("\n── Beziehungen (Stichprobe, erste 10) ───────────────")
+        print("\n── contactRelations Stichprobe (erste 10) ───────────")
         contact_by_id = {c["id"]: c["name"] for c in contacts}
-        for rel in relationships[:10]:
-            frm = contact_by_id.get(rel["fromContactId"], "?")
-            to  = contact_by_id.get(rel["toContactId"],   "?")
+        for r in contact_relations[:10]:
+            frm = contact_by_id.get(r["from_id"], "?")
+            to  = contact_by_id.get(r["contact_id"], "?")
             print(f"   {frm:<25} → {to}")
-        if len(relationships) > 10:
-            print(f"   ... und {len(relationships) - 10} weitere")
 
-    print("\nStart mit: json-graphql-server", output_path)
+    print(f"\nStart mit: json-graphql-server {output_path}")
 
-
-# ─── Entry Point ──────────────────────────────────────────────────────────────
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
@@ -216,17 +207,8 @@ if __name__ == "__main__":
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument(
-        "--input", default="data/contacts.yaml", type=Path,
-        help="YAML-Quelldatei  (default: data/contacts.yaml)",
-    )
-    parser.add_argument(
-        "--output", default="data/contacts.json", type=Path,
-        help="JSON-Zieldatei   (default: data/contacts.json)",
-    )
-    parser.add_argument(
-        "--verbose", "-v", action="store_true",
-        help="Gibt Gruppen und Beziehungen als Übersicht aus",
-    )
+    parser.add_argument("--input",   default="data/contacts.yaml", type=Path)
+    parser.add_argument("--output",  default="data/contacts.json",  type=Path)
+    parser.add_argument("--verbose", "-v", action="store_true")
     args = parser.parse_args()
     main(args.input, args.output, args.verbose)
