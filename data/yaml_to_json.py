@@ -46,7 +46,8 @@ def clean_string(value) -> str | None:
 FIELD_MAP = {
     "met_at": "metAt",
     "met_when": "metWhen",
-    "relationship_to_luke": "relationshipToLuke",
+    "relationship": "relationship",
+    "organization": "organization",
 }
 
 # Felder, die separat verarbeitet werden

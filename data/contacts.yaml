@@ -17,10 +17,10 @@ contacts:
   - id: 1
     name: Owen Lars
     species: Mensch
-    affiliation: Zivilist / Vaporfarmer
+    organization: Zivilist / Vaporfarmer
     met_at: Lars-Moisture-Farm, Tatooine
     met_when: Geburt (19 BBY) – aufgewachsen
-    relationship_to_luke: Ziehvater (Halbbruder von Anakin Skywalker)
+    relationship: Ziehvater (Halbbruder von Anakin Skywalker)
     groups:
       - Familie
       - Tatooine
@@ -38,10 +38,10 @@ contacts:
   - id: 2
     name: Beru Whitesun Lars
     species: Mensch
-    affiliation: Zivilist / Vaporfarmer
+    organization: Zivilist / Vaporfarmer
     met_at: Lars-Moisture-Farm, Tatooine
     met_when: Geburt (19 BBY) – aufgewachsen
-    relationship_to_luke: Ziehtante
+    relationship: Ziehtante
     groups:
       - Familie
       - Tatooine
@@ -59,10 +59,10 @@ contacts:
     name: Obi-Wan Kenobi
     alias: Ben Kenobi
     species: Mensch
-    affiliation: Jedi Order (im Exil) / später Eins-mit-der-Macht
+    organization: Jedi Order (im Exil) / später Eins-mit-der-Macht
     met_at: Jundland Wastes / Obi-Wans Hütte, Tatooine
     met_when: 0 BBY (kurz vor der Yavin-Schlacht)
-    relationship_to_luke: Erster Jedi-Mentor
+    relationship: Erster Jedi-Mentor
     groups:
       - Jedi
       - Mentor
@@ -83,10 +83,10 @@ contacts:
   - id: 4
     name: R2-D2
     species: Astromech-Droid (R2-Serie)
-    affiliation: Rebel Alliance
+    organization: Rebel Alliance
     met_at: Lars-Moisture-Farm, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: Treuer Copilot und Begleiter
+    relationship: Treuer Copilot und Begleiter
     groups:
       - Crew
       - Droiden
@@ -107,10 +107,10 @@ contacts:
     name: C-3PO
     alias: Threepio
     species: Humanoider Protokoll-Droid
-    affiliation: Rebel Alliance
+    organization: Rebel Alliance
     met_at: Lars-Moisture-Farm, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: Droid-Begleiter – nützlich, manchmal nervig
+    relationship: Droid-Begleiter – nützlich, manchmal nervig
     groups:
       - Crew
       - Droiden
@@ -128,10 +128,10 @@ contacts:
   - id: 6
     name: Han Solo
     species: Mensch
-    affiliation: Schmuggler / Rebel Alliance (widerwillig, dann überzeugt)
+    organization: Schmuggler / Rebel Alliance (widerwillig, dann überzeugt)
     met_at: Mos Eisley Cantina, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: Bester Freund / Bruder im Geiste
+    relationship: Bester Freund / Bruder im Geiste
     groups:
       - Crew
       - Rebel Alliance
@@ -155,10 +155,10 @@ contacts:
     name: Leia Organa
     alias: Prinzessin Leia
     species: Mensch
-    affiliation: Alderaan (zerstört) / Rebel Alliance / Galaktischer Senat
+    organization: Alderaan (zerstört) / Rebel Alliance / Galaktischer Senat
     met_at: Death Star, Orbit Alderaan
     met_when: 0 BBY
-    relationship_to_luke: Zwillingsschwester (enthüllt Endor, 4 ABY) / enge Vertraute
+    relationship: Zwillingsschwester (enthüllt Endor, 4 ABY) / enge Vertraute
     groups:
       - Rebel Alliance
       - Familie
@@ -179,10 +179,10 @@ contacts:
     name: Chewbacca
     alias: Chewie
     species: Wookiee
-    affiliation: Rebel Alliance / Co-Pilot Millennium Falcon
+    organization: Rebel Alliance / Co-Pilot Millennium Falcon
     met_at: Mos Eisley Cantina, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: Verlässlicher Verbündeter
+    relationship: Verlässlicher Verbündeter
     groups:
       - Crew
       - Rebel Alliance
@@ -201,13 +201,13 @@ contacts:
     name: Darth Vader
     alias: Anakin Skywalker
     species: Mensch (teilweise cybernetisch)
-    affiliation: "Galaktisches Imperium / Sith / später: erlöst"
+    organization: "Galaktisches Imperium / Sith / später: erlöst"
     met_at: >
       Death Star (0 BBY, indirekt / Kampf) →
       Cloud City, Bespin (3 ABY, Falle) →
       Death Star II, Endor-Orbit (4 ABY, Finale)
     met_when: 0 BBY – 4 ABY
-    relationship_to_luke: Vater (enthüllt Bespin, 3 ABY)
+    relationship: Vater (enthüllt Bespin, 3 ABY)
     groups:
       - Imperium
       - Sith
@@ -228,10 +228,10 @@ contacts:
   - id: 10
     name: Yoda
     species: Unbekannte Art
-    affiliation: Jedi Order (im Exil auf Dagobah)
+    organization: Jedi Order (im Exil auf Dagobah)
     met_at: Dagobah
     met_when: 3 ABY
-    relationship_to_luke: Zweiter Jedi-Meister / wichtigster Lehrmeister
+    relationship: Zweiter Jedi-Meister / wichtigster Lehrmeister
     groups:
       - Jedi
       - Mentor
@@ -249,10 +249,10 @@ contacts:
   - id: 11
     name: Lando Calrissian
     species: Mensch
-    affiliation: Administrator Cloud City, Bespin / Rebel Alliance (ab Endor)
+    organization: Administrator Cloud City, Bespin / Rebel Alliance (ab Endor)
     met_at: Cloud City, Bespin
     met_when: 3 ABY
-    relationship_to_luke: Verbündeter – zunächst als Verräter wahrgenommen
+    relationship: Verbündeter – zunächst als Verräter wahrgenommen
     groups:
       - Rebel Alliance
       - Cloud City
@@ -272,10 +272,10 @@ contacts:
   - id: 12
     name: Wedge Antilles
     species: Mensch
-    affiliation: Rebel Alliance / Red Squadron / Rogue Squadron
+    organization: Rebel Alliance / Red Squadron / Rogue Squadron
     met_at: Yavin IV, Rebellenbasis
     met_when: 0 BBY
-    relationship_to_luke: Kampfgefährte – verlässlichster Pilot
+    relationship: Kampfgefährte – verlässlichster Pilot
     groups:
       - Rebel Alliance
       - Rogue Squadron
@@ -293,12 +293,12 @@ contacts:
   - id: 13
     name: Biggs Darklighter
     species: Mensch
-    affiliation: Rebel Alliance / Red Squadron
+    organization: Rebel Alliance / Red Squadron
     met_at: >
       Anchorhead / Lars-Farm-Umgebung, Tatooine (Kindheit) →
       Yavin IV (letztes Wiedersehen, 0 BBY)
     met_when: Kindheit (aufgewachsen zusammen) / 0 BBY (Wiedersehen und Tod)
-    relationship_to_luke: Bester Freund aus der Kindheit
+    relationship: Bester Freund aus der Kindheit
     groups:
       - Tatooine
       - Rebel Alliance
@@ -316,10 +316,10 @@ contacts:
   - id: 14
     name: Boba Fett
     species: Mensch (Klon-Abstammung von Jango Fett)
-    affiliation: Kopfgeldjäger (freiberuflich / Imperium / Jabba)
+    organization: Kopfgeldjäger (freiberuflich / Imperium / Jabba)
     met_at: Jabba's Palast, Tatooine / Sail Barge, Carkoon-Wüste
     met_when: 4 ABY (direkte Konfrontation)
-    relationship_to_luke: Feind / gefährlicher Kopfgeldjäger
+    relationship: Feind / gefährlicher Kopfgeldjäger
     groups:
       - Kopfgeldjäger
       - Jabba's Hof
@@ -337,10 +337,10 @@ contacts:
   - id: 15
     name: Jabba the Hutt
     species: Hutt
-    affiliation: Hutt-Kriminelles Syndikat / Tatooine-Unterwelt
+    organization: Hutt-Kriminelles Syndikat / Tatooine-Unterwelt
     met_at: Jabba's Palast, Tatooine
     met_when: 4 ABY (direkte Konfrontation bei Hans Befreiung)
-    relationship_to_luke: Feind / Wächter des eingefrorenen Han Solo
+    relationship: Feind / Wächter des eingefrorenen Han Solo
     groups:
       - Unterwelt
       - Tatooine
@@ -359,10 +359,10 @@ contacts:
     name: Emperor Palpatine
     alias: Darth Sidious
     species: Mensch
-    affiliation: Galaktisches Imperium / Sith
+    organization: Galaktisches Imperium / Sith
     met_at: Death Star II, Endor-Orbit
     met_when: 4 ABY
-    relationship_to_luke: Erzfeind – will Luke auf die dunkle Seite zwingen
+    relationship: Erzfeind – will Luke auf die dunkle Seite zwingen
     groups:
       - Imperium
       - Sith
@@ -379,10 +379,10 @@ contacts:
   - id: 17
     name: Admiral Gial Ackbar
     species: Mon Calamari
-    affiliation: Rebel Alliance / Mon-Calamari-Flotte
+    organization: Rebel Alliance / Mon-Calamari-Flotte
     met_at: Rebellenflotte, Endor-Briefing
     met_when: 4 ABY
-    relationship_to_luke: Respektierter Flottenkommandant
+    relationship: Respektierter Flottenkommandant
     groups:
       - Rebel Alliance
       - Führung
@@ -396,10 +396,10 @@ contacts:
   - id: 18
     name: Mon Mothma
     species: Mensch
-    affiliation: Rebel Alliance (politische Führung)
+    organization: Rebel Alliance (politische Führung)
     met_at: Rebellenbasis (Yavin / später Endor-Briefing)
     met_when: 0 BBY / 4 ABY
-    relationship_to_luke: Politische Anführerin der Rebellion
+    relationship: Politische Anführerin der Rebellion
     groups:
       - Rebel Alliance
       - Führung
@@ -413,10 +413,10 @@ contacts:
   - id: 19
     name: General Jan Dodonna
     species: Mensch
-    affiliation: Rebel Alliance
+    organization: Rebel Alliance
     met_at: Yavin IV, Rebellenbasis
     met_when: 0 BBY
-    relationship_to_luke: Strategischer Befehlshaber der Yavin-Operation
+    relationship: Strategischer Befehlshaber der Yavin-Operation
     groups:
       - Rebel Alliance
       - Führung
@@ -427,10 +427,10 @@ contacts:
   - id: 20
     name: Dak Ralter
     species: Mensch
-    affiliation: Rebel Alliance / Echo Base
+    organization: Rebel Alliance / Echo Base
     met_at: Echo Base, Hoth
     met_when: 3 ABY
-    relationship_to_luke: Gunner / Rücksitzpilot im AT-AT-Gefecht
+    relationship: Gunner / Rücksitzpilot im AT-AT-Gefecht
     groups:
       - Rebel Alliance
     known_preferences:
@@ -443,10 +443,10 @@ contacts:
   - id: 21
     name: Zev Senesca
     species: Mensch
-    affiliation: Rebel Alliance / Rogue Squadron
+    organization: Rebel Alliance / Rogue Squadron
     met_at: Echo Base, Hoth
     met_when: 3 ABY
-    relationship_to_luke: Retterpilot – fand Luke und Han im Schnee
+    relationship: Retterpilot – fand Luke und Han im Schnee
     groups:
       - Rebel Alliance
       - Rogue Squadron
@@ -457,10 +457,10 @@ contacts:
   - id: 22
     name: General Carlist Rieekan
     species: Mensch
-    affiliation: Rebel Alliance
+    organization: Rebel Alliance
     met_at: Echo Base, Hoth
     met_when: 3 ABY
-    relationship_to_luke: Kommandant der Echo Base
+    relationship: Kommandant der Echo Base
     groups:
       - Rebel Alliance
       - Führung
@@ -474,10 +474,10 @@ contacts:
   - id: 23
     name: Lobot
     species: Mensch (mit Cyborg-Kopfinterface)
-    affiliation: Cloud City, Bespin
+    organization: Cloud City, Bespin
     met_at: Cloud City, Bespin
     met_when: 3 ABY
-    relationship_to_luke: Neutral / Landos stiller Assistent
+    relationship: Neutral / Landos stiller Assistent
     groups:
       - Cloud City
     known_preferences:
@@ -492,10 +492,10 @@ contacts:
   - id: 24
     name: Wes Janson
     species: Mensch
-    affiliation: Rebel Alliance / Rogue Squadron
+    organization: Rebel Alliance / Rogue Squadron
     met_at: Echo Base, Hoth
     met_when: 3 ABY
-    relationship_to_luke: Staffelkamerad
+    relationship: Staffelkamerad
     groups:
       - Rebel Alliance
       - Rogue Squadron
@@ -509,10 +509,10 @@ contacts:
     name: Derek Klivian
     alias: Hobbie
     species: Mensch
-    affiliation: Rebel Alliance / Rogue Squadron
+    organization: Rebel Alliance / Rogue Squadron
     met_at: Echo Base, Hoth
     met_when: 3 ABY
-    relationship_to_luke: Staffelkamerad
+    relationship: Staffelkamerad
     groups:
       - Rebel Alliance
       - Rogue Squadron
@@ -525,10 +525,10 @@ contacts:
     name: 2-1B
     alias: Too-Onebee
     species: Medizin-Droid (2-1B-Serie)
-    affiliation: Rebel Alliance
+    organization: Rebel Alliance
     met_at: Echo Base, Hoth
     met_when: 3 ABY
-    relationship_to_luke: Arzt – behandelte Wampa-Verletzungen und Prothesenhand
+    relationship: Arzt – behandelte Wampa-Verletzungen und Prothesenhand
     groups:
       - Droiden
       - Rebel Alliance
@@ -542,10 +542,10 @@ contacts:
   - id: 27
     name: Wicket W. Warrick
     species: Ewok
-    affiliation: Bright Tree Village, Endor-Mond
+    organization: Bright Tree Village, Endor-Mond
     met_at: Wald des Endor-Monds
     met_when: 4 ABY
-    relationship_to_luke: Verbündeter – über Leia zuerst kontaktiert
+    relationship: Verbündeter – über Leia zuerst kontaktiert
     groups:
       - Ewoks
       - Endor-Allianz
@@ -562,10 +562,10 @@ contacts:
   - id: 28
     name: Chief Chirpa
     species: Ewok
-    affiliation: Bright Tree Village, Endor-Mond
+    organization: Bright Tree Village, Endor-Mond
     met_at: Bright Tree Village, Endor-Mond
     met_when: 4 ABY
-    relationship_to_luke: Stammesoberhaupt der verbündeten Ewoks
+    relationship: Stammesoberhaupt der verbündeten Ewoks
     groups:
       - Ewoks
       - Endor-Allianz
@@ -576,10 +576,10 @@ contacts:
   - id: 29
     name: Logray
     species: Ewok
-    affiliation: Bright Tree Village, Endor-Mond
+    organization: Bright Tree Village, Endor-Mond
     met_at: Bright Tree Village, Endor-Mond
     met_when: 4 ABY
-    relationship_to_luke: Ewok-Schamane – zunächst feindlich
+    relationship: Ewok-Schamane – zunächst feindlich
     groups:
       - Ewoks
     known_preferences:
@@ -592,10 +592,10 @@ contacts:
   - id: 30
     name: Bib Fortuna
     species: Twi'lek
-    affiliation: Jabba's Palast / Tatooine-Unterwelt
+    organization: Jabba's Palast / Tatooine-Unterwelt
     met_at: Jabba's Palast, Tatooine
     met_when: 4 ABY
-    relationship_to_luke: Türsteher und Majordomo Jabbas – feindlich
+    relationship: Türsteher und Majordomo Jabbas – feindlich
     groups:
       - Jabba's Hof
       - Unterwelt
@@ -611,10 +611,10 @@ contacts:
   - id: 31
     name: Salacious B. Crumb
     species: Kowakianischer Affenlizard
-    affiliation: Jabba's Palast
+    organization: Jabba's Palast
     met_at: Jabba's Palast, Tatooine
     met_when: 4 ABY
-    relationship_to_luke: irrelevante Nervensäge in Jabbas Hof
+    relationship: irrelevante Nervensäge in Jabbas Hof
     groups:
       - Jabba's Hof
     known_preferences:
@@ -627,10 +627,10 @@ contacts:
     name: Malakili
     alias: Der Rancor-Wächter
     species: Mensch
-    affiliation: Jabba's Palast
+    organization: Jabba's Palast
     met_at: Jabba's Palast / Rancor-Grube, Tatooine
     met_when: 4 ABY
-    relationship_to_luke: Bewacher des Rancors (von Luke besiegt)
+    relationship: Bewacher des Rancors (von Luke besiegt)
     groups:
       - Jabba's Hof
     known_preferences:
@@ -643,10 +643,10 @@ contacts:
   - id: 33
     name: Max Rebo
     species: Ortolan
-    affiliation: Max Rebo Band / Jabba's Palast
+    organization: Max Rebo Band / Jabba's Palast
     met_at: Jabba's Palast, Tatooine
     met_when: 4 ABY
-    relationship_to_luke: Hofmusiker in Jabbas Palast
+    relationship: Hofmusiker in Jabbas Palast
     groups:
       - Jabba's Hof
     known_preferences:
@@ -656,10 +656,10 @@ contacts:
   - id: 34
     name: Sy Snootles
     species: Pa'lowick
-    affiliation: Max Rebo Band / Jabba's Palast
+    organization: Max Rebo Band / Jabba's Palast
     met_at: Jabba's Palast, Tatooine
     met_when: 4 ABY
-    relationship_to_luke: Sängerin in Jabbas Hof
+    relationship: Sängerin in Jabbas Hof
     groups:
       - Jabba's Hof
     known_preferences:
@@ -668,10 +668,10 @@ contacts:
   - id: 35
     name: Nien Nunb
     species: Sullustan
-    affiliation: Rebel Alliance
+    organization: Rebel Alliance
     met_at: Rebellenflotte, Endor-Orbit
     met_when: 4 ABY
-    relationship_to_luke: Verbündeter / Co-Pilot Landos bei Endor
+    relationship: Verbündeter / Co-Pilot Landos bei Endor
     groups:
       - Rebel Alliance
     known_preferences:
@@ -683,10 +683,10 @@ contacts:
   - id: 36
     name: Greedo
     species: Rodian
-    affiliation: Kopfgeldjäger (für Jabba)
+    organization: Kopfgeldjäger (für Jabba)
     met_at: Mos Eisley Cantina, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: kurze Beobachtung (Scharmützel mit Han)
+    relationship: kurze Beobachtung (Scharmützel mit Han)
     groups:
       - Kopfgeldjäger
       - Tatooine
@@ -701,10 +701,10 @@ contacts:
     name: Ponda Baba
     alias: Walrus Man
     species: Aqualish
-    affiliation: Kriminell
+    organization: Kriminell
     met_at: Mos Eisley Cantina, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: kurze Bedrohung in der Cantina
+    relationship: kurze Bedrohung in der Cantina
     groups:
       - Tatooine
       - Unterwelt
@@ -715,10 +715,10 @@ contacts:
   - id: 38
     name: Dr. Cornelius Evazan
     species: Mensch
-    affiliation: Kriminell (Todesstrafe in 12 Systemen)
+    organization: Kriminell (Todesstrafe in 12 Systemen)
     met_at: Mos Eisley Cantina, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: kurze Bedrohung in der Cantina
+    relationship: kurze Bedrohung in der Cantina
     groups:
       - Tatooine
       - Unterwelt
@@ -731,10 +731,10 @@ contacts:
   - id: 39
     name: Wuher
     species: Mensch
-    affiliation: Mos Eisley Cantina (Barkeeper)
+    organization: Mos Eisley Cantina (Barkeeper)
     met_at: Mos Eisley Cantina, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: gleichgültig / kein Interesse an Luke
+    relationship: gleichgültig / kein Interesse an Luke
     groups:
       - Tatooine
     known_preferences:
@@ -748,10 +748,10 @@ contacts:
     name: Momaw Nadon
     alias: Hammerhead
     species: Ithorianisch
-    affiliation: Rebellions-Sympathisant (nicht öffentlich)
+    organization: Rebellions-Sympathisant (nicht öffentlich)
     met_at: Mos Eisley Cantina, Tatooine
     met_when: 0 BBY
-    relationship_to_luke: beiläufige Cantina-Bekanntschaft
+    relationship: beiläufige Cantina-Bekanntschaft
     groups:
       - Tatooine
     known_preferences:
@@ -765,10 +765,10 @@ contacts:
   - id: 41
     name: General Crix Madine
     species: Mensch
-    affiliation: Rebel Alliance (ehemaliger Imperialer Offizier)
+    organization: Rebel Alliance (ehemaliger Imperialer Offizier)
     met_at: Rebellenflotte, Endor-Briefing
     met_when: 4 ABY
-    relationship_to_luke: Taktischer Planer der Endor-Bodenoperation
+    relationship: Taktischer Planer der Endor-Bodenoperation
     groups:
       - Rebel Alliance
       - Führung
@@ -781,10 +781,10 @@ contacts:
     name: Jek Tono Porkins
     alias: Red Six
     species: Mensch
-    affiliation: Rebel Alliance / Red Squadron
+    organization: Rebel Alliance / Red Squadron
     met_at: Yavin IV, Rebellenbasis
     met_when: 0 BBY
-    relationship_to_luke: Staffelkamerad
+    relationship: Staffelkamerad
     groups:
       - Rebel Alliance
       - Red Squadron
@@ -795,10 +795,10 @@ contacts:
   - id: 43
     name: Dengar
     species: Mensch (teilweise cybernetisch)
-    affiliation: Kopfgeldjäger
+    organization: Kopfgeldjäger
     met_at: nie persönlich getroffen (aus Berichten bekannt)
     met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
-    relationship_to_luke: Feind-Netzwerk / indirekte Bedrohung
+    relationship: Feind-Netzwerk / indirekte Bedrohung
     groups:
       - Kopfgeldjäger
     known_preferences:
@@ -813,10 +813,10 @@ contacts:
   - id: 44
     name: Bossk
     species: Trandoshaner
-    affiliation: Kopfgeldjäger
+    organization: Kopfgeldjäger
     met_at: nie persönlich getroffen (aus Berichten bekannt)
     met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
-    relationship_to_luke: Feind-Netzwerk / indirekte Bedrohung
+    relationship: Feind-Netzwerk / indirekte Bedrohung
     groups:
       - Kopfgeldjäger
     known_preferences:
@@ -828,10 +828,10 @@ contacts:
   - id: 45
     name: IG-88
     species: IG-Serie Assassinen-Droid
-    affiliation: Kopfgeldjäger
+    organization: Kopfgeldjäger
     met_at: nie persönlich getroffen (aus Berichten bekannt)
     met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
-    relationship_to_luke: Feind-Netzwerk
+    relationship: Feind-Netzwerk
     groups:
       - Kopfgeldjäger
       - Droiden
@@ -842,10 +842,10 @@ contacts:
   - id: 46
     name: 4-LOM
     species: Protokoll-Droid (zu Kopfgeldjäger umgebaut)
-    affiliation: Kopfgeldjäger
+    organization: Kopfgeldjäger
     met_at: nie persönlich getroffen (aus Berichten bekannt)
     met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
-    relationship_to_luke: Feind-Netzwerk
+    relationship: Feind-Netzwerk
     groups:
       - Kopfgeldjäger
     known_preferences:
@@ -856,10 +856,10 @@ contacts:
   - id: 47
     name: Zuckuss
     species: Gand
-    affiliation: Kopfgeldjäger
+    organization: Kopfgeldjäger
     met_at: nie persönlich getroffen (aus Berichten bekannt)
     met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
-    relationship_to_luke: Feind-Netzwerk
+    relationship: Feind-Netzwerk
     groups:
       - Kopfgeldjäger
     related_to:
@@ -868,10 +868,10 @@ contacts:
   - id: 48
     name: Admiral Firmus Piett
     species: Mensch
-    affiliation: Galaktisches Imperium / Vaders Flotte
+    organization: Galaktisches Imperium / Vaders Flotte
     met_at: kein direkter Kontakt
     met_when: 3–4 ABY (Kommandant der Verfolgungsflotte)
-    relationship_to_luke: Feind-Netzwerk / militärische Bedrohung
+    relationship: Feind-Netzwerk / militärische Bedrohung
     groups:
       - Imperium
     known_preferences:
@@ -885,10 +885,10 @@ contacts:
     name: FX-7
     alias: Effex-Seven
     species: Medizin-Assistent-Droid
-    affiliation: Rebel Alliance
+    organization: Rebel Alliance
     met_at: Echo Base, Hoth
     met_when: 3 ABY
-    relationship_to_luke: Medizinische Erstversorgung nach Wampa-Attacke
+    relationship: Medizinische Erstversorgung nach Wampa-Attacke
     groups:
       - Droiden
       - Rebel Alliance
@@ -900,10 +900,10 @@ contacts:
   - id: 50
     name: Paploo
     species: Ewok
-    affiliation: Bright Tree Village, Endor-Mond
+    organization: Bright Tree Village, Endor-Mond
     met_at: Endor-Mond, imperialer Bunker-Bereich
     met_when: 4 ABY
-    relationship_to_luke: verbündeter Ewok / Ablenkungsmanöver
+    relationship: verbündeter Ewok / Ablenkungsmanöver
     groups:
       - Ewoks
       - Endor-Allianz
