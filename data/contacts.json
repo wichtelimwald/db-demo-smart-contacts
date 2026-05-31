@@ -13,14 +13,6 @@
         "Ruhe und Anonymität, nie auffallen",
         "harte Arbeit auf der Farm",
         "kein Kontakt zu Rebellion oder Jedi"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 2
-        },
-        {
-          "contact_id": 9
-        }
       ]
     },
     {
@@ -36,11 +28,6 @@
         "Wärme und Fürsorge",
         "gutes Essen zubereiten",
         "wollte, dass Luke mehr Freiheit bekommt als Owen zugestand"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 1
-        }
       ]
     },
     {
@@ -57,17 +44,6 @@
         "Geduld und genaues Beobachten",
         "einfaches Leben / kein Überfluss",
         "Wahrheit – wenn auch manchmal aus „einer bestimmten Perspektive\""
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 9
-        },
-        {
-          "contact_id": 10
-        },
-        {
-          "contact_id": 1
-        }
       ]
     },
     {
@@ -83,14 +59,6 @@
         "Abenteuer und aktives Handeln",
         "beschützt Freunde eigenmächtig",
         "scheinbar eigenwillig, aber immer loyal"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 5
-        },
-        {
-          "contact_id": 7
-        }
       ]
     },
     {
@@ -107,11 +75,6 @@
         "Höflichkeit und Protokoll",
         "vermeidet gefährliche Situationen (spricht es aber laut aus)",
         "über 6 Millionen Kommunikationsformen beherrschen"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 4
-        }
       ]
     },
     {
@@ -128,20 +91,6 @@
         "die Millennium Falcon über alles",
         "Sabacc spielen",
         "hasst schlechte Quoten und Wahrscheinlichkeitsrechnungen"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 8
-        },
-        {
-          "contact_id": 7
-        },
-        {
-          "contact_id": 15
-        },
-        {
-          "contact_id": 11
-        }
       ]
     },
     {
@@ -158,17 +107,6 @@
         "Gerechtigkeit und Freiheit der Galaxis",
         "direkte, klare Kommunikation",
         "diplomatisches Geschick – aber auch zu Waffen greifend"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 6
-        },
-        {
-          "contact_id": 9
-        },
-        {
-          "contact_id": 4
-        }
       ]
     },
     {
@@ -185,11 +123,6 @@
         "Loyalität (vor allem gegenüber Han – Life Debt)",
         "Dejarik (holografisches Schachspiel) – verliert nicht gern",
         "Wookiee-Stolz"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 6
-        }
       ]
     },
     {
@@ -206,17 +139,6 @@
         "Kontrolle und militärische Ordnung",
         "sieht Potenzial in Luke – will ihn auf die dunkle Seite",
         "duldet keine Inkompetenz"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 16
-        },
-        {
-          "contact_id": 3
-        },
-        {
-          "contact_id": 7
-        }
       ]
     },
     {
@@ -232,11 +154,6 @@
         "Geduld und Demut als erste Lektionen",
         "Rootleaf-Eintopf (einfaches, selbst gekochtes Essen)",
         "direkte Sprache mit unkonventioneller Satzstellung"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 3
-        }
       ]
     },
     {
@@ -252,17 +169,6 @@
         "Stil und Eleganz in jedem Kontext",
         "Glücksspiel (verlor die Millennium Falcon beim Sabacc)",
         "guter Wein und gute Gesellschaft"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 6
-        },
-        {
-          "contact_id": 23
-        },
-        {
-          "contact_id": 35
-        }
       ]
     },
     {
@@ -278,14 +184,6 @@
         "präzises Fliegen statt Heldenmut",
         "Kameradschaft unter Piloten",
         "überleben (was er tatsächlich schafft – beide Schlachten)"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 13
-        },
-        {
-          "contact_id": 24
-        }
       ]
     },
     {
@@ -301,11 +199,6 @@
         "Freiheit (desertierte von der Imperialen Akademie)",
         "Fliegen und Abenteuer",
         "ehrliche Kameradschaft"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 12
-        }
       ]
     },
     {
@@ -321,14 +214,6 @@
         "Professionalität und Schweigen",
         "minimale Kommunikation – handelt lieber",
         "mandalorianische Rüstung und Jetpack"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 15
-        },
-        {
-          "contact_id": 9
-        }
       ]
     },
     {
@@ -344,17 +229,6 @@
         "Macht, Geld, öffentliche Demütigungen",
         "exotische Speisen (Gorg, Klatooinische Frösche)",
         "Unterhaltung durch sein Hoforchester und Tänzerinnen"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 14
-        },
-        {
-          "contact_id": 30
-        },
-        {
-          "contact_id": 6
-        }
       ]
     },
     {
@@ -371,11 +245,6 @@
         "absolute Macht durch Manipulation",
         "nutzt Wut und Schmerz als Werkzeuge",
         "Kraft-Blitz als bevorzugte Waffe"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 9
-        }
       ]
     },
     {
@@ -390,8 +259,7 @@
       "knownPreferences": [
         "taktische Präzision und Vorsicht",
         "Mon-Calamari-Kultur und Meeresumgebung"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 18,
@@ -405,8 +273,7 @@
       "knownPreferences": [
         "diplomatische Lösungen vor militärischen",
         "minimale Verluste, maximale politische Wirkung"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 19,
@@ -417,8 +284,7 @@
       "metWhen": "0 BBY",
       "relationship": "Strategischer Befehlshaber der Yavin-Operation",
       "notes": "Entwickelte den Angriffsplan auf den ersten Death Star – präziser Torpedoschuss in den Thermal Exhaust Port.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "knownPreferences": []
     },
     {
       "id": 20,
@@ -432,8 +298,7 @@
       "knownPreferences": [
         "enthusiastisch und mutig",
         "bewunderte Luke und wollte mehr lernen"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 21,
@@ -444,8 +309,7 @@
       "metWhen": "3 ABY",
       "relationship": "Retterpilot – fand Luke und Han im Schnee",
       "notes": "Geortet Luke und Han nach ihrer Nacht im Schnee. Gefallen kurz darauf im Hoth-Rückzugsgefecht.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "knownPreferences": []
     },
     {
       "id": 22,
@@ -459,8 +323,7 @@
       "knownPreferences": [
         "Vorsicht und Risikoabwägung",
         "schützt seine Leute"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 23,
@@ -474,11 +337,6 @@
       "knownPreferences": [
         "direkte Kommunikation über sein Computerinterface",
         "Loyalität gegenüber Lando"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 11
-        }
       ]
     },
     {
@@ -492,11 +350,6 @@
       "knownPreferences": [
         "Humor und lockerer Umgang auch in Gefahrensituationen",
         "Tow-Kabel-Manöver (schoss AT-AT erfolgreich ab)"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 25
-        }
       ]
     },
     {
@@ -510,11 +363,6 @@
       "relationship": "Staffelkamerad",
       "knownPreferences": [
         "zuverlässig – wenn auch mit pessimistischem Grundton"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 24
-        }
       ]
     },
     {
@@ -530,8 +378,7 @@
       "knownPreferences": [
         "präzise medizinische Sprache",
         "Patientenwohl als oberste Priorität"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 27,
@@ -545,14 +392,6 @@
       "knownPreferences": [
         "neugierig und mutig für seine Größe",
         "Fremden gegenüber zunächst misstrauisch, dann loyal"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 7
-        },
-        {
-          "contact_id": 28
-        }
       ]
     },
     {
@@ -564,8 +403,7 @@
       "metWhen": "4 ABY",
       "relationship": "Stammesoberhaupt der verbündeten Ewoks",
       "notes": "Beschloss nach C-3POs Erzählungen, der Rebellion zu helfen. Mobilisierte den gesamten Stamm für den Bodenkrieg.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "knownPreferences": []
     },
     {
       "id": 29,
@@ -579,8 +417,7 @@
       "knownPreferences": [
         "Rituale und Stammestradition",
         "anfangs wollte er Luke und die Gruppe als Festessen"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 30,
@@ -594,11 +431,6 @@
       "knownPreferences": [
         "Jabbas Gunst erhalten um jeden Preis",
         "misstrauisch gegenüber allen Besuchern"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 15
-        }
       ]
     },
     {
@@ -613,8 +445,7 @@
       "knownPreferences": [
         "lachen, spotten, quälen (z. B. C-3POs Auge)",
         "Jabbas Unterhaltung sicherstellen"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 32,
@@ -629,8 +460,7 @@
       "knownPreferences": [
         "seinen Rancor wie ein Haustier / echte Zuneigung",
         "weinte offen nach dem Tod des Tiers"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 33,
@@ -643,8 +473,7 @@
       "knownPreferences": [
         "Essen (arbeitete für Jabba nur gegen freie Verpflegung – kein Geld)",
         "Musik / Red Ball Organ (Keyboard-Synthesizer)"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 34,
@@ -656,8 +485,7 @@
       "relationship": "Sängerin in Jabbas Hof",
       "knownPreferences": [
         "Rampenlicht und Aufmerksamkeit"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 35,
@@ -670,11 +498,6 @@
       "knownPreferences": [
         "freundlicher Charakter, lacht häufig",
         "präzises Fliegen"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 11
-        }
       ]
     },
     {
@@ -689,8 +512,7 @@
       "knownPreferences": [
         "Kopfgelder pünktlich eintreiben",
         "überschätzt sich gelegentlich"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 37,
@@ -702,8 +524,7 @@
       "metWhen": "0 BBY",
       "relationship": "kurze Bedrohung in der Cantina",
       "notes": "Bedrohte Luke zusammen mit Dr. Evazan. Arm von Obi-Wan Kenobis Lichtschwert abgetrennt.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "knownPreferences": []
     },
     {
       "id": 38,
@@ -716,8 +537,7 @@
       "notes": "Bedrohte Luke gemeinsam mit Ponda Baba. Beide von Obi-Wan außer Gefecht gesetzt.",
       "knownPreferences": [
         "Einschüchterung als erste Gesprächsstrategie"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 39,
@@ -731,8 +551,7 @@
       "knownPreferences": [
         "hasst Droiden kategorisch",
         "Ruhe und Ordnung in seiner Bar"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 40,
@@ -747,8 +566,7 @@
       "knownPreferences": [
         "Botanik und ökologisches Gleichgewicht",
         "Ithorianische Philosophie der Naturverbundenheit"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 41,
@@ -761,8 +579,7 @@
       "notes": "Plante den Bodeneinsatz zur Zerstörung des Bunker-Schildgenerators.",
       "knownPreferences": [
         "Spezialoperationen und Guerillataktik"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 42,
@@ -774,8 +591,7 @@
       "metWhen": "0 BBY",
       "relationship": "Staffelkamerad",
       "notes": "Gefallen in der Yavin-Angriffsrunde – ignorierte eine Systemwarnung und flog weiter.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "knownPreferences": []
     },
     {
       "id": 43,
@@ -788,8 +604,7 @@
       "notes": "Wurde von Vader zur Han-Suche engagiert. Luke war bei diesem Briefing nicht anwesend – kennt ihn nur aus Berichten. DEMO-HINWEIS: Zeigt, dass ein Kontakt-System nicht nur direkte Bekanntschaften enthält.",
       "knownPreferences": [
         "zäh, verbittert, kein Interesse an Stil"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 44,
@@ -803,8 +618,7 @@
       "knownPreferences": [
         "hasst Wookiees (Spezies-Antagonismus)",
         "brutale Direktheit"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 45,
@@ -815,8 +629,7 @@
       "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
       "relationship": "Feind-Netzwerk",
       "notes": "Gefährlichster der engagierten Droiden-Kopfgeldjäger. Luke kennt ihn nur aus Geheimdienstberichten.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "knownPreferences": []
     },
     {
       "id": 46,
@@ -828,11 +641,6 @@
       "relationship": "Feind-Netzwerk",
       "knownPreferences": [
         "analytische Vorgehensweise"
-      ],
-      "relatedTo": [
-        {
-          "contact_id": 47
-        }
       ]
     },
     {
@@ -843,12 +651,7 @@
       "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
       "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
       "relationship": "Feind-Netzwerk",
-      "knownPreferences": [],
-      "relatedTo": [
-        {
-          "contact_id": 46
-        }
-      ]
+      "knownPreferences": []
     },
     {
       "id": 48,
@@ -861,8 +664,7 @@
       "notes": "Kommandierte Vaders Superintendantur-Flotte bei Hoth und Endor. Kein direkter Kontakt zu Luke – präsente institutionelle Bedrohung. Starb beim Endor-Raumkampf (Kamikaze-A-Wing).",
       "knownPreferences": [
         "Pflichterfüllung – auch unter Todesangst (Vader)"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 49,
@@ -876,8 +678,7 @@
       "notes": "Assistierte 2-1B bei Lukes Behandlung in der Bacta-Tank-Vorbereitung.",
       "knownPreferences": [
         "unterstützende Rolle / arbeitet 2-1B zu"
-      ],
-      "relatedTo": []
+      ]
     },
     {
       "id": 50,
@@ -891,8 +692,7 @@
       "knownPreferences": [
         "draufgängerisch und impulsiv",
         "technisch neugierig (Speeder Bike sofort fasziniert)"
-      ],
-      "relatedTo": []
+      ]
     }
   ],
   "groups": [
@@ -1433,6 +1233,328 @@
       "id": 92,
       "contact_id": 50,
       "group_id": 19
+    }
+  ],
+  "relations": [
+    {
+      "id": 1,
+      "name": "Ehepaar"
+    },
+    {
+      "id": 2,
+      "name": "Familie"
+    },
+    {
+      "id": 3,
+      "name": "Jedi-Meister"
+    },
+    {
+      "id": 4,
+      "name": "Jedi-Kollegen"
+    },
+    {
+      "id": 5,
+      "name": "Vertrauter"
+    },
+    {
+      "id": 6,
+      "name": "Droid-Duo"
+    },
+    {
+      "id": 7,
+      "name": "Partner"
+    },
+    {
+      "id": 8,
+      "name": "Liebesinteresse"
+    },
+    {
+      "id": 9,
+      "name": "Schuldner"
+    },
+    {
+      "id": 10,
+      "name": "Freund"
+    },
+    {
+      "id": 11,
+      "name": "Sith-Meister"
+    },
+    {
+      "id": 12,
+      "name": "Co-Pilot"
+    },
+    {
+      "id": 13,
+      "name": "Kamerad"
+    },
+    {
+      "id": 14,
+      "name": "Auftraggeber"
+    },
+    {
+      "id": 15,
+      "name": "Kopfgeldjäger"
+    },
+    {
+      "id": 16,
+      "name": "Herr-Diener"
+    },
+    {
+      "id": 17,
+      "name": "Bekannt"
+    }
+  ],
+  "contactRelations": [
+    {
+      "id": 1,
+      "contact_id": 1,
+      "relation_id": 1
+    },
+    {
+      "id": 2,
+      "contact_id": 2,
+      "relation_id": 1
+    },
+    {
+      "id": 3,
+      "contact_id": 1,
+      "relation_id": 2
+    },
+    {
+      "id": 4,
+      "contact_id": 9,
+      "relation_id": 2
+    },
+    {
+      "id": 5,
+      "contact_id": 3,
+      "relation_id": 3
+    },
+    {
+      "id": 6,
+      "contact_id": 9,
+      "relation_id": 3
+    },
+    {
+      "id": 7,
+      "contact_id": 3,
+      "relation_id": 4
+    },
+    {
+      "id": 8,
+      "contact_id": 10,
+      "relation_id": 4
+    },
+    {
+      "id": 9,
+      "contact_id": 3,
+      "relation_id": 5
+    },
+    {
+      "id": 10,
+      "contact_id": 1,
+      "relation_id": 5
+    },
+    {
+      "id": 11,
+      "contact_id": 4,
+      "relation_id": 6
+    },
+    {
+      "id": 12,
+      "contact_id": 5,
+      "relation_id": 6
+    },
+    {
+      "id": 13,
+      "contact_id": 4,
+      "relation_id": 5
+    },
+    {
+      "id": 14,
+      "contact_id": 7,
+      "relation_id": 5
+    },
+    {
+      "id": 15,
+      "contact_id": 6,
+      "relation_id": 7
+    },
+    {
+      "id": 16,
+      "contact_id": 8,
+      "relation_id": 7
+    },
+    {
+      "id": 17,
+      "contact_id": 6,
+      "relation_id": 8
+    },
+    {
+      "id": 18,
+      "contact_id": 7,
+      "relation_id": 8
+    },
+    {
+      "id": 19,
+      "contact_id": 6,
+      "relation_id": 9
+    },
+    {
+      "id": 20,
+      "contact_id": 15,
+      "relation_id": 9
+    },
+    {
+      "id": 21,
+      "contact_id": 6,
+      "relation_id": 10
+    },
+    {
+      "id": 22,
+      "contact_id": 11,
+      "relation_id": 10
+    },
+    {
+      "id": 23,
+      "contact_id": 7,
+      "relation_id": 2
+    },
+    {
+      "id": 24,
+      "contact_id": 9,
+      "relation_id": 2
+    },
+    {
+      "id": 25,
+      "contact_id": 9,
+      "relation_id": 11
+    },
+    {
+      "id": 26,
+      "contact_id": 16,
+      "relation_id": 11
+    },
+    {
+      "id": 27,
+      "contact_id": 11,
+      "relation_id": 5
+    },
+    {
+      "id": 28,
+      "contact_id": 23,
+      "relation_id": 5
+    },
+    {
+      "id": 29,
+      "contact_id": 11,
+      "relation_id": 12
+    },
+    {
+      "id": 30,
+      "contact_id": 35,
+      "relation_id": 12
+    },
+    {
+      "id": 31,
+      "contact_id": 12,
+      "relation_id": 13
+    },
+    {
+      "id": 32,
+      "contact_id": 13,
+      "relation_id": 13
+    },
+    {
+      "id": 33,
+      "contact_id": 12,
+      "relation_id": 13
+    },
+    {
+      "id": 34,
+      "contact_id": 24,
+      "relation_id": 13
+    },
+    {
+      "id": 35,
+      "contact_id": 14,
+      "relation_id": 14
+    },
+    {
+      "id": 36,
+      "contact_id": 15,
+      "relation_id": 14
+    },
+    {
+      "id": 37,
+      "contact_id": 14,
+      "relation_id": 14
+    },
+    {
+      "id": 38,
+      "contact_id": 9,
+      "relation_id": 14
+    },
+    {
+      "id": 39,
+      "contact_id": 15,
+      "relation_id": 15
+    },
+    {
+      "id": 40,
+      "contact_id": 14,
+      "relation_id": 15
+    },
+    {
+      "id": 41,
+      "contact_id": 15,
+      "relation_id": 16
+    },
+    {
+      "id": 42,
+      "contact_id": 30,
+      "relation_id": 16
+    },
+    {
+      "id": 43,
+      "contact_id": 24,
+      "relation_id": 13
+    },
+    {
+      "id": 44,
+      "contact_id": 25,
+      "relation_id": 13
+    },
+    {
+      "id": 45,
+      "contact_id": 27,
+      "relation_id": 17
+    },
+    {
+      "id": 46,
+      "contact_id": 7,
+      "relation_id": 17
+    },
+    {
+      "id": 47,
+      "contact_id": 27,
+      "relation_id": 17
+    },
+    {
+      "id": 48,
+      "contact_id": 28,
+      "relation_id": 17
+    },
+    {
+      "id": 49,
+      "contact_id": 46,
+      "relation_id": 7
+    },
+    {
+      "id": 50,
+      "contact_id": 47,
+      "relation_id": 7
     }
   ]
 }
