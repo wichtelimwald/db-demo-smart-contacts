@@ -1,0 +1,1450 @@
+{
+  "contacts": [
+    {
+      "id": 1,
+      "name": "Owen Lars",
+      "species": "Mensch",
+      "affiliation": "Zivilist / Vaporfarmer",
+      "metAt": "Lars-Moisture-Farm, Tatooine",
+      "metWhen": "Geburt (19 BBY) – aufgewachsen",
+      "relationshipToLuke": "Ziehvater (Halbbruder von Anakin Skywalker)",
+      "notes": "Hat Luke bewusst von seiner Herkunft ferngehalten. Starb beim imperialen Angriff auf die Farm (0 BBY).",
+      "knownPreferences": [
+        "Ruhe und Anonymität, nie auffallen",
+        "harte Arbeit auf der Farm",
+        "kein Kontakt zu Rebellion oder Jedi"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Beru Whitesun Lars",
+      "species": "Mensch",
+      "affiliation": "Zivilist / Vaporfarmer",
+      "metAt": "Lars-Moisture-Farm, Tatooine",
+      "metWhen": "Geburt (19 BBY) – aufgewachsen",
+      "relationshipToLuke": "Ziehtante",
+      "notes": "Verständnisvoller als Owen gegenüber Lukes Ambitionen. Starb beim imperialen Angriff auf die Farm (0 BBY).",
+      "knownPreferences": [
+        "Wärme und Fürsorge",
+        "gutes Essen zubereiten",
+        "wollte, dass Luke mehr Freiheit bekommt als Owen zugestand"
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Obi-Wan Kenobi",
+      "alias": "Ben Kenobi",
+      "species": "Mensch",
+      "affiliation": "Jedi Order (im Exil) / später Eins-mit-der-Macht",
+      "metAt": "Jundland Wastes / Obi-Wans Hütte, Tatooine",
+      "metWhen": "0 BBY (kurz vor der Yavin-Schlacht)",
+      "relationshipToLuke": "Erster Jedi-Mentor",
+      "notes": "Starb im Lichtschwert-Duell mit Vader auf dem ersten Death Star. Erscheint Luke seitdem als Kraft-Geist. Verschwieg Luke seine Vaterschaft – was Luke ihm später vorwarf.",
+      "knownPreferences": [
+        "Geduld und genaues Beobachten",
+        "einfaches Leben / kein Überfluss",
+        "Wahrheit – wenn auch manchmal aus „einer bestimmten Perspektive\""
+      ]
+    },
+    {
+      "id": 4,
+      "name": "R2-D2",
+      "species": "Astromech-Droid (R2-Serie)",
+      "affiliation": "Rebel Alliance",
+      "metAt": "Lars-Moisture-Farm, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Treuer Copilot und Begleiter",
+      "notes": "Trägt Leias Hilfsbotschaft und die Death-Star-Pläne. Unverzichtbarer Begleiter in jedem X-Wing. Hat mehr Geheimnisse als er preisgibt.",
+      "knownPreferences": [
+        "Abenteuer und aktives Handeln",
+        "beschützt Freunde eigenmächtig",
+        "scheinbar eigenwillig, aber immer loyal"
+      ]
+    },
+    {
+      "id": 5,
+      "name": "C-3PO",
+      "alias": "Threepio",
+      "species": "Humanoider Protokoll-Droid",
+      "affiliation": "Rebel Alliance",
+      "metAt": "Lars-Moisture-Farm, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Droid-Begleiter – nützlich, manchmal nervig",
+      "notes": "Übersetzt Ewokisch auf Endor – entscheidend für die Allianz. Erbaut ursprünglich von Anakin Skywalker (Hintergrund-Lore).",
+      "knownPreferences": [
+        "Höflichkeit und Protokoll",
+        "vermeidet gefährliche Situationen (spricht es aber laut aus)",
+        "über 6 Millionen Kommunikationsformen beherrschen"
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Han Solo",
+      "species": "Mensch",
+      "affiliation": "Schmuggler / Rebel Alliance (widerwillig, dann überzeugt)",
+      "metAt": "Mos Eisley Cantina, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Bester Freund / Bruder im Geiste",
+      "notes": "Kehrt spontan zur Yavin-Schlacht zurück und rettet Luke. Wird auf Bespin in Karbonit eingefroren (3 ABY). Von Luke und Leia aus Jabbas Palast befreit (4 ABY).",
+      "knownPreferences": [
+        "Freiheit und Unabhängigkeit",
+        "die Millennium Falcon über alles",
+        "Sabacc spielen",
+        "hasst schlechte Quoten und Wahrscheinlichkeitsrechnungen"
+      ]
+    },
+    {
+      "id": 7,
+      "name": "Leia Organa",
+      "alias": "Prinzessin Leia",
+      "species": "Mensch",
+      "affiliation": "Alderaan (zerstört) / Rebel Alliance / Galaktischer Senat",
+      "metAt": "Death Star, Orbit Alderaan",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Zwillingsschwester (enthüllt Endor, 4 ABY) / enge Vertraute",
+      "notes": "Luke erkennt die Geschwister-Verbindung auf Endor durch die Macht. Hat selbst Macht-Sensitivität – nutzt sie intuitiv.",
+      "knownPreferences": [
+        "Gerechtigkeit und Freiheit der Galaxis",
+        "direkte, klare Kommunikation",
+        "diplomatisches Geschick – aber auch zu Waffen greifend"
+      ]
+    },
+    {
+      "id": 8,
+      "name": "Chewbacca",
+      "alias": "Chewie",
+      "species": "Wookiee",
+      "affiliation": "Rebel Alliance / Co-Pilot Millennium Falcon",
+      "metAt": "Mos Eisley Cantina, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Verlässlicher Verbündeter",
+      "notes": "Über 200 Jahre alt. Kommuniziert in Shyriiwook. Außerordentliche Stärke – reißt Arme aus Schultergelenken (laut Han eine bekannte Gewohnheit von Wookiees).",
+      "knownPreferences": [
+        "Loyalität (vor allem gegenüber Han – Life Debt)",
+        "Dejarik (holografisches Schachspiel) – verliert nicht gern",
+        "Wookiee-Stolz"
+      ]
+    },
+    {
+      "id": 9,
+      "name": "Darth Vader",
+      "alias": "Anakin Skywalker",
+      "species": "Mensch (teilweise cybernetisch)",
+      "affiliation": "Galaktisches Imperium / Sith / später: erlöst",
+      "metAt": "Death Star (0 BBY, indirekt / Kampf) → Cloud City, Bespin (3 ABY, Falle) → Death Star II, Endor-Orbit (4 ABY, Finale)",
+      "metWhen": "0 BBY – 4 ABY",
+      "relationshipToLuke": "Vater (enthüllt Bespin, 3 ABY)",
+      "notes": "Enthüllt Vaterschaft auf Bespin: „Ich bin dein Vater.\" Rettet Luke schließlich durch Töten des Imperators. Stirbt als Anakin Skywalker – zurück zur hellen Seite.",
+      "knownPreferences": [
+        "Kontrolle und militärische Ordnung",
+        "sieht Potenzial in Luke – will ihn auf die dunkle Seite",
+        "duldet keine Inkompetenz"
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Yoda",
+      "species": "Unbekannte Art",
+      "affiliation": "Jedi Order (im Exil auf Dagobah)",
+      "metAt": "Dagobah",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Zweiter Jedi-Meister / wichtigster Lehrmeister",
+      "notes": "900 Jahre alt. Bildet Luke zunächst widerwillig aus. Stirbt friedlich auf Dagobah (4 ABY). Erscheint danach als Kraft-Geist.",
+      "knownPreferences": [
+        "Geduld und Demut als erste Lektionen",
+        "Rootleaf-Eintopf (einfaches, selbst gekochtes Essen)",
+        "direkte Sprache mit unkonventioneller Satzstellung"
+      ]
+    },
+    {
+      "id": 11,
+      "name": "Lando Calrissian",
+      "species": "Mensch",
+      "affiliation": "Administrator Cloud City, Bespin / Rebel Alliance (ab Endor)",
+      "metAt": "Cloud City, Bespin",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Verbündeter – zunächst als Verräter wahrgenommen",
+      "notes": "Stand unter imperialem Druck und lieferte Han aus. Bereut es und hilft anschließend bei der Befreiung. Führt den Angriff auf den zweiten Death Star (4 ABY).",
+      "knownPreferences": [
+        "Stil und Eleganz in jedem Kontext",
+        "Glücksspiel (verlor die Millennium Falcon beim Sabacc)",
+        "guter Wein und gute Gesellschaft"
+      ]
+    },
+    {
+      "id": 12,
+      "name": "Wedge Antilles",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance / Red Squadron / Rogue Squadron",
+      "metAt": "Yavin IV, Rebellenbasis",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Kampfgefährte – verlässlichster Pilot",
+      "notes": "Einer der wenigen Überlebenden beider Großschlachten (Yavin 0 BBY und Endor 4 ABY).",
+      "knownPreferences": [
+        "präzises Fliegen statt Heldenmut",
+        "Kameradschaft unter Piloten",
+        "überleben (was er tatsächlich schafft – beide Schlachten)"
+      ]
+    },
+    {
+      "id": 13,
+      "name": "Biggs Darklighter",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance / Red Squadron",
+      "metAt": "Anchorhead / Lars-Farm-Umgebung, Tatooine (Kindheit) → Yavin IV (letztes Wiedersehen, 0 BBY)",
+      "metWhen": "Kindheit (aufgewachsen zusammen) / 0 BBY (Wiedersehen und Tod)",
+      "relationshipToLuke": "Bester Freund aus der Kindheit",
+      "notes": "Gefallen bei der Yavin-Angriffsrunde (0 BBY). Sein Tod traf Luke tief – sie hatten sich gerade erst wiedergefunden.",
+      "knownPreferences": [
+        "Freiheit (desertierte von der Imperialen Akademie)",
+        "Fliegen und Abenteuer",
+        "ehrliche Kameradschaft"
+      ]
+    },
+    {
+      "id": 14,
+      "name": "Boba Fett",
+      "species": "Mensch (Klon-Abstammung von Jango Fett)",
+      "affiliation": "Kopfgeldjäger (freiberuflich / Imperium / Jabba)",
+      "metAt": "Jabba's Palast, Tatooine / Sail Barge, Carkoon-Wüste",
+      "metWhen": "4 ABY (direkte Konfrontation)",
+      "relationshipToLuke": "Feind / gefährlicher Kopfgeldjäger",
+      "notes": "Lieferte Han eingefroren in Karbonit an Jabba aus. Fiel in den Sarlacc-Pit bei der Sail-Barge-Konfrontation (4 ABY).",
+      "knownPreferences": [
+        "Professionalität und Schweigen",
+        "minimale Kommunikation – handelt lieber",
+        "mandalorianische Rüstung und Jetpack"
+      ]
+    },
+    {
+      "id": 15,
+      "name": "Jabba the Hutt",
+      "species": "Hutt",
+      "affiliation": "Hutt-Kriminelles Syndikat / Tatooine-Unterwelt",
+      "metAt": "Jabba's Palast, Tatooine",
+      "metWhen": "4 ABY (direkte Konfrontation bei Hans Befreiung)",
+      "relationshipToLuke": "Feind / Wächter des eingefrorenen Han Solo",
+      "notes": "Starb durch Leia (Würgekette) während der Befreiungsaktion auf der Sail Barge.",
+      "knownPreferences": [
+        "Macht, Geld, öffentliche Demütigungen",
+        "exotische Speisen (Gorg, Klatooinische Frösche)",
+        "Unterhaltung durch sein Hoforchester und Tänzerinnen"
+      ]
+    },
+    {
+      "id": 16,
+      "name": "Emperor Palpatine",
+      "alias": "Darth Sidious",
+      "species": "Mensch",
+      "affiliation": "Galaktisches Imperium / Sith",
+      "metAt": "Death Star II, Endor-Orbit",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Erzfeind – will Luke auf die dunkle Seite zwingen",
+      "notes": "Stirbt durch Vader/Anakin, der Luke rettet. Sein Fall bedeutet das Ende des Galaktischen Imperiums.",
+      "knownPreferences": [
+        "absolute Macht durch Manipulation",
+        "nutzt Wut und Schmerz als Werkzeuge",
+        "Kraft-Blitz als bevorzugte Waffe"
+      ]
+    },
+    {
+      "id": 17,
+      "name": "Admiral Gial Ackbar",
+      "species": "Mon Calamari",
+      "affiliation": "Rebel Alliance / Mon-Calamari-Flotte",
+      "metAt": "Rebellenflotte, Endor-Briefing",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Respektierter Flottenkommandant",
+      "notes": "Führt die Rebellionsflotte bei der Endor-Seeschlacht. Erkannte die imperiale Falle – zu spät, um sie zu umgehen.",
+      "knownPreferences": [
+        "taktische Präzision und Vorsicht",
+        "Mon-Calamari-Kultur und Meeresumgebung"
+      ]
+    },
+    {
+      "id": 18,
+      "name": "Mon Mothma",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance (politische Führung)",
+      "metAt": "Rebellenbasis (Yavin / später Endor-Briefing)",
+      "metWhen": "0 BBY / 4 ABY",
+      "relationshipToLuke": "Politische Anführerin der Rebellion",
+      "notes": "Briefte die Rebellion zum Angriff auf den zweiten Death Star. Politisches Rückgrat der Allianz.",
+      "knownPreferences": [
+        "diplomatische Lösungen vor militärischen",
+        "minimale Verluste, maximale politische Wirkung"
+      ]
+    },
+    {
+      "id": 19,
+      "name": "General Jan Dodonna",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance",
+      "metAt": "Yavin IV, Rebellenbasis",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Strategischer Befehlshaber der Yavin-Operation",
+      "notes": "Entwickelte den Angriffsplan auf den ersten Death Star – präziser Torpedoschuss in den Thermal Exhaust Port.",
+      "knownPreferences": []
+    },
+    {
+      "id": 20,
+      "name": "Dak Ralter",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance / Echo Base",
+      "metAt": "Echo Base, Hoth",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Gunner / Rücksitzpilot im AT-AT-Gefecht",
+      "notes": "Getötet durch AT-AT-Treffer auf Hoth, bevor er schießen konnte. Luke musste danach allein weiterkämpfen und das Schiff verlassen.",
+      "knownPreferences": [
+        "enthusiastisch und mutig",
+        "bewunderte Luke und wollte mehr lernen"
+      ]
+    },
+    {
+      "id": 21,
+      "name": "Zev Senesca",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance / Rogue Squadron",
+      "metAt": "Echo Base, Hoth",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Retterpilot – fand Luke und Han im Schnee",
+      "notes": "Geortet Luke und Han nach ihrer Nacht im Schnee. Gefallen kurz darauf im Hoth-Rückzugsgefecht.",
+      "knownPreferences": []
+    },
+    {
+      "id": 22,
+      "name": "General Carlist Rieekan",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance",
+      "metAt": "Echo Base, Hoth",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Kommandant der Echo Base",
+      "notes": "Befahl rechtzeitig die Evakuierung von Hoth – rettete damit viele Rebel-Leben.",
+      "knownPreferences": [
+        "Vorsicht und Risikoabwägung",
+        "schützt seine Leute"
+      ]
+    },
+    {
+      "id": 23,
+      "name": "Lobot",
+      "species": "Mensch (mit Cyborg-Kopfinterface)",
+      "affiliation": "Cloud City, Bespin",
+      "metAt": "Cloud City, Bespin",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Neutral / Landos stiller Assistent",
+      "notes": "Koordinierte die Cloud-City-Sicherheit, half Lando die imperiale Übernahme rückgängig zu machen.",
+      "knownPreferences": [
+        "direkte Kommunikation über sein Computerinterface",
+        "Loyalität gegenüber Lando"
+      ]
+    },
+    {
+      "id": 24,
+      "name": "Wes Janson",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance / Rogue Squadron",
+      "metAt": "Echo Base, Hoth",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Staffelkamerad",
+      "knownPreferences": [
+        "Humor und lockerer Umgang auch in Gefahrensituationen",
+        "Tow-Kabel-Manöver (schoss AT-AT erfolgreich ab)"
+      ]
+    },
+    {
+      "id": 25,
+      "name": "Derek Klivian",
+      "alias": "Hobbie",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance / Rogue Squadron",
+      "metAt": "Echo Base, Hoth",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Staffelkamerad",
+      "knownPreferences": [
+        "zuverlässig – wenn auch mit pessimistischem Grundton"
+      ]
+    },
+    {
+      "id": 26,
+      "name": "2-1B",
+      "alias": "Too-Onebee",
+      "species": "Medizin-Droid (2-1B-Serie)",
+      "affiliation": "Rebel Alliance",
+      "metAt": "Echo Base, Hoth",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Arzt – behandelte Wampa-Verletzungen und Prothesenhand",
+      "notes": "Behandelte Luke nach der Wampa-Attacke (Hoth) und passte die Neuroprothesenhand nach Bespin an.",
+      "knownPreferences": [
+        "präzise medizinische Sprache",
+        "Patientenwohl als oberste Priorität"
+      ]
+    },
+    {
+      "id": 27,
+      "name": "Wicket W. Warrick",
+      "species": "Ewok",
+      "affiliation": "Bright Tree Village, Endor-Mond",
+      "metAt": "Wald des Endor-Monds",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Verbündeter – über Leia zuerst kontaktiert",
+      "notes": "Erster Ewok-Kontakt der Gruppe. Schlüsselfigur für die Allianz mit dem Ewok-Stamm.",
+      "knownPreferences": [
+        "neugierig und mutig für seine Größe",
+        "Fremden gegenüber zunächst misstrauisch, dann loyal"
+      ]
+    },
+    {
+      "id": 28,
+      "name": "Chief Chirpa",
+      "species": "Ewok",
+      "affiliation": "Bright Tree Village, Endor-Mond",
+      "metAt": "Bright Tree Village, Endor-Mond",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Stammesoberhaupt der verbündeten Ewoks",
+      "notes": "Beschloss nach C-3POs Erzählungen, der Rebellion zu helfen. Mobilisierte den gesamten Stamm für den Bodenkrieg.",
+      "knownPreferences": []
+    },
+    {
+      "id": 29,
+      "name": "Logray",
+      "species": "Ewok",
+      "affiliation": "Bright Tree Village, Endor-Mond",
+      "metAt": "Bright Tree Village, Endor-Mond",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Ewok-Schamane – zunächst feindlich",
+      "notes": "Schamane des Stammes. Wurde durch C-3POs „göttliche\" Vorführung überzeugt.",
+      "knownPreferences": [
+        "Rituale und Stammestradition",
+        "anfangs wollte er Luke und die Gruppe als Festessen"
+      ]
+    },
+    {
+      "id": 30,
+      "name": "Bib Fortuna",
+      "species": "Twi'lek",
+      "affiliation": "Jabba's Palast / Tatooine-Unterwelt",
+      "metAt": "Jabba's Palast, Tatooine",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Türsteher und Majordomo Jabbas – feindlich",
+      "notes": "Luke verwendete einen Gedankentrick auf ihn – erste klare Jedi-Fähigkeiten-Demonstration in Episode VI.",
+      "knownPreferences": [
+        "Jabbas Gunst erhalten um jeden Preis",
+        "misstrauisch gegenüber allen Besuchern"
+      ]
+    },
+    {
+      "id": 31,
+      "name": "Salacious B. Crumb",
+      "species": "Kowakianischer Affenlizard",
+      "affiliation": "Jabba's Palast",
+      "metAt": "Jabba's Palast, Tatooine",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "irrelevante Nervensäge in Jabbas Hof",
+      "notes": "Wurde von R2-D2 auf der Sail Barge besiegt.",
+      "knownPreferences": [
+        "lachen, spotten, quälen (z. B. C-3POs Auge)",
+        "Jabbas Unterhaltung sicherstellen"
+      ]
+    },
+    {
+      "id": 32,
+      "name": "Malakili",
+      "alias": "Der Rancor-Wächter",
+      "species": "Mensch",
+      "affiliation": "Jabba's Palast",
+      "metAt": "Jabba's Palast / Rancor-Grube, Tatooine",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Bewacher des Rancors (von Luke besiegt)",
+      "notes": "Der Rancor wurde von Luke durch ein herabfallendes Falltor getötet. Malakili war untröstlich – eine der menschlichsten Szenen des Films.",
+      "knownPreferences": [
+        "seinen Rancor wie ein Haustier / echte Zuneigung",
+        "weinte offen nach dem Tod des Tiers"
+      ]
+    },
+    {
+      "id": 33,
+      "name": "Max Rebo",
+      "species": "Ortolan",
+      "affiliation": "Max Rebo Band / Jabba's Palast",
+      "metAt": "Jabba's Palast, Tatooine",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Hofmusiker in Jabbas Palast",
+      "knownPreferences": [
+        "Essen (arbeitete für Jabba nur gegen freie Verpflegung – kein Geld)",
+        "Musik / Red Ball Organ (Keyboard-Synthesizer)"
+      ]
+    },
+    {
+      "id": 34,
+      "name": "Sy Snootles",
+      "species": "Pa'lowick",
+      "affiliation": "Max Rebo Band / Jabba's Palast",
+      "metAt": "Jabba's Palast, Tatooine",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Sängerin in Jabbas Hof",
+      "knownPreferences": [
+        "Rampenlicht und Aufmerksamkeit"
+      ]
+    },
+    {
+      "id": 35,
+      "name": "Nien Nunb",
+      "species": "Sullustan",
+      "affiliation": "Rebel Alliance",
+      "metAt": "Rebellenflotte, Endor-Orbit",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Verbündeter / Co-Pilot Landos bei Endor",
+      "knownPreferences": [
+        "freundlicher Charakter, lacht häufig",
+        "präzises Fliegen"
+      ]
+    },
+    {
+      "id": 36,
+      "name": "Greedo",
+      "species": "Rodian",
+      "affiliation": "Kopfgeldjäger (für Jabba)",
+      "metAt": "Mos Eisley Cantina, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "kurze Beobachtung (Scharmützel mit Han)",
+      "notes": "Wurde von Han Solo in der Cantina erschossen. Luke war Augenzeuge.",
+      "knownPreferences": [
+        "Kopfgelder pünktlich eintreiben",
+        "überschätzt sich gelegentlich"
+      ]
+    },
+    {
+      "id": 37,
+      "name": "Ponda Baba",
+      "alias": "Walrus Man",
+      "species": "Aqualish",
+      "affiliation": "Kriminell",
+      "metAt": "Mos Eisley Cantina, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "kurze Bedrohung in der Cantina",
+      "notes": "Bedrohte Luke zusammen mit Dr. Evazan. Arm von Obi-Wan Kenobis Lichtschwert abgetrennt.",
+      "knownPreferences": []
+    },
+    {
+      "id": 38,
+      "name": "Dr. Cornelius Evazan",
+      "species": "Mensch",
+      "affiliation": "Kriminell (Todesstrafe in 12 Systemen)",
+      "metAt": "Mos Eisley Cantina, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "kurze Bedrohung in der Cantina",
+      "notes": "Bedrohte Luke gemeinsam mit Ponda Baba. Beide von Obi-Wan außer Gefecht gesetzt.",
+      "knownPreferences": [
+        "Einschüchterung als erste Gesprächsstrategie"
+      ]
+    },
+    {
+      "id": 39,
+      "name": "Wuher",
+      "species": "Mensch",
+      "affiliation": "Mos Eisley Cantina (Barkeeper)",
+      "metAt": "Mos Eisley Cantina, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "gleichgültig / kein Interesse an Luke",
+      "notes": "Verweigerte R2-D2 und C-3PO den Zutritt: „Wir bedienen hier keine Droiden.\"",
+      "knownPreferences": [
+        "hasst Droiden kategorisch",
+        "Ruhe und Ordnung in seiner Bar"
+      ]
+    },
+    {
+      "id": 40,
+      "name": "Momaw Nadon",
+      "alias": "Hammerhead",
+      "species": "Ithorianisch",
+      "affiliation": "Rebellions-Sympathisant (nicht öffentlich)",
+      "metAt": "Mos Eisley Cantina, Tatooine",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "beiläufige Cantina-Bekanntschaft",
+      "notes": "War in Wirklichkeit Rebellions-Informant. Luke wusste das nicht – ein gutes Beispiel für „Kontext, den man nicht im Adressbuch hat\".",
+      "knownPreferences": [
+        "Botanik und ökologisches Gleichgewicht",
+        "Ithorianische Philosophie der Naturverbundenheit"
+      ]
+    },
+    {
+      "id": 41,
+      "name": "General Crix Madine",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance (ehemaliger Imperialer Offizier)",
+      "metAt": "Rebellenflotte, Endor-Briefing",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "Taktischer Planer der Endor-Bodenoperation",
+      "notes": "Plante den Bodeneinsatz zur Zerstörung des Bunker-Schildgenerators.",
+      "knownPreferences": [
+        "Spezialoperationen und Guerillataktik"
+      ]
+    },
+    {
+      "id": 42,
+      "name": "Jek Tono Porkins",
+      "alias": "Red Six",
+      "species": "Mensch",
+      "affiliation": "Rebel Alliance / Red Squadron",
+      "metAt": "Yavin IV, Rebellenbasis",
+      "metWhen": "0 BBY",
+      "relationshipToLuke": "Staffelkamerad",
+      "notes": "Gefallen in der Yavin-Angriffsrunde – ignorierte eine Systemwarnung und flog weiter.",
+      "knownPreferences": []
+    },
+    {
+      "id": 43,
+      "name": "Dengar",
+      "species": "Mensch (teilweise cybernetisch)",
+      "affiliation": "Kopfgeldjäger",
+      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "relationshipToLuke": "Feind-Netzwerk / indirekte Bedrohung",
+      "notes": "Wurde von Vader zur Han-Suche engagiert. Luke war bei diesem Briefing nicht anwesend – kennt ihn nur aus Berichten. DEMO-HINWEIS: Zeigt, dass ein Kontakt-System nicht nur direkte Bekanntschaften enthält.",
+      "knownPreferences": [
+        "zäh, verbittert, kein Interesse an Stil"
+      ]
+    },
+    {
+      "id": 44,
+      "name": "Bossk",
+      "species": "Trandoshaner",
+      "affiliation": "Kopfgeldjäger",
+      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "relationshipToLuke": "Feind-Netzwerk / indirekte Bedrohung",
+      "notes": "Wie Dengar: nie direkt getroffen. Nur aus Berichten bekannt.",
+      "knownPreferences": [
+        "hasst Wookiees (Spezies-Antagonismus)",
+        "brutale Direktheit"
+      ]
+    },
+    {
+      "id": 45,
+      "name": "IG-88",
+      "species": "IG-Serie Assassinen-Droid",
+      "affiliation": "Kopfgeldjäger",
+      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "relationshipToLuke": "Feind-Netzwerk",
+      "notes": "Gefährlichster der engagierten Droiden-Kopfgeldjäger. Luke kennt ihn nur aus Geheimdienstberichten.",
+      "knownPreferences": []
+    },
+    {
+      "id": 46,
+      "name": "4-LOM",
+      "species": "Protokoll-Droid (zu Kopfgeldjäger umgebaut)",
+      "affiliation": "Kopfgeldjäger",
+      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "relationshipToLuke": "Feind-Netzwerk",
+      "knownPreferences": [
+        "analytische Vorgehensweise"
+      ]
+    },
+    {
+      "id": 47,
+      "name": "Zuckuss",
+      "species": "Gand",
+      "affiliation": "Kopfgeldjäger",
+      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "relationshipToLuke": "Feind-Netzwerk",
+      "knownPreferences": []
+    },
+    {
+      "id": 48,
+      "name": "Admiral Firmus Piett",
+      "species": "Mensch",
+      "affiliation": "Galaktisches Imperium / Vaders Flotte",
+      "metAt": "kein direkter Kontakt",
+      "metWhen": "3–4 ABY (Kommandant der Verfolgungsflotte)",
+      "relationshipToLuke": "Feind-Netzwerk / militärische Bedrohung",
+      "notes": "Kommandierte Vaders Superintendantur-Flotte bei Hoth und Endor. Kein direkter Kontakt zu Luke – präsente institutionelle Bedrohung. Starb beim Endor-Raumkampf (Kamikaze-A-Wing).",
+      "knownPreferences": [
+        "Pflichterfüllung – auch unter Todesangst (Vader)"
+      ]
+    },
+    {
+      "id": 49,
+      "name": "FX-7",
+      "alias": "Effex-Seven",
+      "species": "Medizin-Assistent-Droid",
+      "affiliation": "Rebel Alliance",
+      "metAt": "Echo Base, Hoth",
+      "metWhen": "3 ABY",
+      "relationshipToLuke": "Medizinische Erstversorgung nach Wampa-Attacke",
+      "notes": "Assistierte 2-1B bei Lukes Behandlung in der Bacta-Tank-Vorbereitung.",
+      "knownPreferences": [
+        "unterstützende Rolle / arbeitet 2-1B zu"
+      ]
+    },
+    {
+      "id": 50,
+      "name": "Paploo",
+      "species": "Ewok",
+      "affiliation": "Bright Tree Village, Endor-Mond",
+      "metAt": "Endor-Mond, imperialer Bunker-Bereich",
+      "metWhen": "4 ABY",
+      "relationshipToLuke": "verbündeter Ewok / Ablenkungsmanöver",
+      "notes": "Stahl spontan ein imperiales Speeder Bike – lenkte die Wachen ab und ermöglichte der Gruppe den Zugang zum Bunker. Kleiner Held des Endor-Bodenfeldzugs.",
+      "knownPreferences": [
+        "draufgängerisch und impulsiv",
+        "technisch neugierig (Speeder Bike sofort fasziniert)"
+      ]
+    }
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "name": "Familie"
+    },
+    {
+      "id": 2,
+      "name": "Tatooine"
+    },
+    {
+      "id": 3,
+      "name": "Jedi"
+    },
+    {
+      "id": 4,
+      "name": "Mentor"
+    },
+    {
+      "id": 5,
+      "name": "Crew"
+    },
+    {
+      "id": 6,
+      "name": "Droiden"
+    },
+    {
+      "id": 7,
+      "name": "Rebel Alliance"
+    },
+    {
+      "id": 8,
+      "name": "Schmuggler-Netzwerk"
+    },
+    {
+      "id": 9,
+      "name": "Führung"
+    },
+    {
+      "id": 10,
+      "name": "Imperium"
+    },
+    {
+      "id": 11,
+      "name": "Sith"
+    },
+    {
+      "id": 12,
+      "name": "Cloud City"
+    },
+    {
+      "id": 13,
+      "name": "Rogue Squadron"
+    },
+    {
+      "id": 14,
+      "name": "Red Squadron"
+    },
+    {
+      "id": 15,
+      "name": "Kopfgeldjäger"
+    },
+    {
+      "id": 16,
+      "name": "Jabba's Hof"
+    },
+    {
+      "id": 17,
+      "name": "Unterwelt"
+    },
+    {
+      "id": 18,
+      "name": "Ewoks"
+    },
+    {
+      "id": 19,
+      "name": "Endor-Allianz"
+    }
+  ],
+  "contactGroups": [
+    {
+      "id": 1,
+      "contactId": 1,
+      "groupId": 1
+    },
+    {
+      "id": 2,
+      "contactId": 1,
+      "groupId": 2
+    },
+    {
+      "id": 3,
+      "contactId": 2,
+      "groupId": 1
+    },
+    {
+      "id": 4,
+      "contactId": 2,
+      "groupId": 2
+    },
+    {
+      "id": 5,
+      "contactId": 3,
+      "groupId": 3
+    },
+    {
+      "id": 6,
+      "contactId": 3,
+      "groupId": 4
+    },
+    {
+      "id": 7,
+      "contactId": 3,
+      "groupId": 2
+    },
+    {
+      "id": 8,
+      "contactId": 4,
+      "groupId": 5
+    },
+    {
+      "id": 9,
+      "contactId": 4,
+      "groupId": 6
+    },
+    {
+      "id": 10,
+      "contactId": 4,
+      "groupId": 7
+    },
+    {
+      "id": 11,
+      "contactId": 5,
+      "groupId": 5
+    },
+    {
+      "id": 12,
+      "contactId": 5,
+      "groupId": 6
+    },
+    {
+      "id": 13,
+      "contactId": 5,
+      "groupId": 7
+    },
+    {
+      "id": 14,
+      "contactId": 6,
+      "groupId": 5
+    },
+    {
+      "id": 15,
+      "contactId": 6,
+      "groupId": 7
+    },
+    {
+      "id": 16,
+      "contactId": 6,
+      "groupId": 8
+    },
+    {
+      "id": 17,
+      "contactId": 7,
+      "groupId": 7
+    },
+    {
+      "id": 18,
+      "contactId": 7,
+      "groupId": 1
+    },
+    {
+      "id": 19,
+      "contactId": 7,
+      "groupId": 9
+    },
+    {
+      "id": 20,
+      "contactId": 8,
+      "groupId": 5
+    },
+    {
+      "id": 21,
+      "contactId": 8,
+      "groupId": 7
+    },
+    {
+      "id": 22,
+      "contactId": 9,
+      "groupId": 10
+    },
+    {
+      "id": 23,
+      "contactId": 9,
+      "groupId": 11
+    },
+    {
+      "id": 24,
+      "contactId": 9,
+      "groupId": 1
+    },
+    {
+      "id": 25,
+      "contactId": 10,
+      "groupId": 3
+    },
+    {
+      "id": 26,
+      "contactId": 10,
+      "groupId": 4
+    },
+    {
+      "id": 27,
+      "contactId": 11,
+      "groupId": 7
+    },
+    {
+      "id": 28,
+      "contactId": 11,
+      "groupId": 12
+    },
+    {
+      "id": 29,
+      "contactId": 12,
+      "groupId": 7
+    },
+    {
+      "id": 30,
+      "contactId": 12,
+      "groupId": 13
+    },
+    {
+      "id": 31,
+      "contactId": 13,
+      "groupId": 2
+    },
+    {
+      "id": 32,
+      "contactId": 13,
+      "groupId": 7
+    },
+    {
+      "id": 33,
+      "contactId": 13,
+      "groupId": 14
+    },
+    {
+      "id": 34,
+      "contactId": 14,
+      "groupId": 15
+    },
+    {
+      "id": 35,
+      "contactId": 14,
+      "groupId": 16
+    },
+    {
+      "id": 36,
+      "contactId": 15,
+      "groupId": 17
+    },
+    {
+      "id": 37,
+      "contactId": 15,
+      "groupId": 2
+    },
+    {
+      "id": 38,
+      "contactId": 16,
+      "groupId": 10
+    },
+    {
+      "id": 39,
+      "contactId": 16,
+      "groupId": 11
+    },
+    {
+      "id": 40,
+      "contactId": 17,
+      "groupId": 7
+    },
+    {
+      "id": 41,
+      "contactId": 17,
+      "groupId": 9
+    },
+    {
+      "id": 42,
+      "contactId": 18,
+      "groupId": 7
+    },
+    {
+      "id": 43,
+      "contactId": 18,
+      "groupId": 9
+    },
+    {
+      "id": 44,
+      "contactId": 19,
+      "groupId": 7
+    },
+    {
+      "id": 45,
+      "contactId": 19,
+      "groupId": 9
+    },
+    {
+      "id": 46,
+      "contactId": 20,
+      "groupId": 7
+    },
+    {
+      "id": 47,
+      "contactId": 21,
+      "groupId": 7
+    },
+    {
+      "id": 48,
+      "contactId": 21,
+      "groupId": 13
+    },
+    {
+      "id": 49,
+      "contactId": 22,
+      "groupId": 7
+    },
+    {
+      "id": 50,
+      "contactId": 22,
+      "groupId": 9
+    },
+    {
+      "id": 51,
+      "contactId": 23,
+      "groupId": 12
+    },
+    {
+      "id": 52,
+      "contactId": 24,
+      "groupId": 7
+    },
+    {
+      "id": 53,
+      "contactId": 24,
+      "groupId": 13
+    },
+    {
+      "id": 54,
+      "contactId": 25,
+      "groupId": 7
+    },
+    {
+      "id": 55,
+      "contactId": 25,
+      "groupId": 13
+    },
+    {
+      "id": 56,
+      "contactId": 26,
+      "groupId": 6
+    },
+    {
+      "id": 57,
+      "contactId": 26,
+      "groupId": 7
+    },
+    {
+      "id": 58,
+      "contactId": 27,
+      "groupId": 18
+    },
+    {
+      "id": 59,
+      "contactId": 27,
+      "groupId": 19
+    },
+    {
+      "id": 60,
+      "contactId": 28,
+      "groupId": 18
+    },
+    {
+      "id": 61,
+      "contactId": 28,
+      "groupId": 19
+    },
+    {
+      "id": 62,
+      "contactId": 29,
+      "groupId": 18
+    },
+    {
+      "id": 63,
+      "contactId": 30,
+      "groupId": 16
+    },
+    {
+      "id": 64,
+      "contactId": 30,
+      "groupId": 17
+    },
+    {
+      "id": 65,
+      "contactId": 31,
+      "groupId": 16
+    },
+    {
+      "id": 66,
+      "contactId": 32,
+      "groupId": 16
+    },
+    {
+      "id": 67,
+      "contactId": 33,
+      "groupId": 16
+    },
+    {
+      "id": 68,
+      "contactId": 34,
+      "groupId": 16
+    },
+    {
+      "id": 69,
+      "contactId": 35,
+      "groupId": 7
+    },
+    {
+      "id": 70,
+      "contactId": 36,
+      "groupId": 15
+    },
+    {
+      "id": 71,
+      "contactId": 36,
+      "groupId": 2
+    },
+    {
+      "id": 72,
+      "contactId": 37,
+      "groupId": 2
+    },
+    {
+      "id": 73,
+      "contactId": 37,
+      "groupId": 17
+    },
+    {
+      "id": 74,
+      "contactId": 38,
+      "groupId": 2
+    },
+    {
+      "id": 75,
+      "contactId": 38,
+      "groupId": 17
+    },
+    {
+      "id": 76,
+      "contactId": 39,
+      "groupId": 2
+    },
+    {
+      "id": 77,
+      "contactId": 40,
+      "groupId": 2
+    },
+    {
+      "id": 78,
+      "contactId": 41,
+      "groupId": 7
+    },
+    {
+      "id": 79,
+      "contactId": 41,
+      "groupId": 9
+    },
+    {
+      "id": 80,
+      "contactId": 42,
+      "groupId": 7
+    },
+    {
+      "id": 81,
+      "contactId": 42,
+      "groupId": 14
+    },
+    {
+      "id": 82,
+      "contactId": 43,
+      "groupId": 15
+    },
+    {
+      "id": 83,
+      "contactId": 44,
+      "groupId": 15
+    },
+    {
+      "id": 84,
+      "contactId": 45,
+      "groupId": 15
+    },
+    {
+      "id": 85,
+      "contactId": 45,
+      "groupId": 6
+    },
+    {
+      "id": 86,
+      "contactId": 46,
+      "groupId": 15
+    },
+    {
+      "id": 87,
+      "contactId": 47,
+      "groupId": 15
+    },
+    {
+      "id": 88,
+      "contactId": 48,
+      "groupId": 10
+    },
+    {
+      "id": 89,
+      "contactId": 49,
+      "groupId": 6
+    },
+    {
+      "id": 90,
+      "contactId": 49,
+      "groupId": 7
+    },
+    {
+      "id": 91,
+      "contactId": 50,
+      "groupId": 18
+    },
+    {
+      "id": 92,
+      "contactId": 50,
+      "groupId": 19
+    }
+  ],
+  "relationships": [
+    {
+      "id": 1,
+      "fromContactId": 1,
+      "toContactId": 2
+    },
+    {
+      "id": 2,
+      "fromContactId": 1,
+      "toContactId": 9
+    },
+    {
+      "id": 3,
+      "fromContactId": 2,
+      "toContactId": 1
+    },
+    {
+      "id": 4,
+      "fromContactId": 3,
+      "toContactId": 9
+    },
+    {
+      "id": 5,
+      "fromContactId": 3,
+      "toContactId": 10
+    },
+    {
+      "id": 6,
+      "fromContactId": 3,
+      "toContactId": 1
+    },
+    {
+      "id": 7,
+      "fromContactId": 4,
+      "toContactId": 5
+    },
+    {
+      "id": 8,
+      "fromContactId": 4,
+      "toContactId": 7
+    },
+    {
+      "id": 9,
+      "fromContactId": 5,
+      "toContactId": 4
+    },
+    {
+      "id": 10,
+      "fromContactId": 6,
+      "toContactId": 8
+    },
+    {
+      "id": 11,
+      "fromContactId": 6,
+      "toContactId": 7
+    },
+    {
+      "id": 12,
+      "fromContactId": 6,
+      "toContactId": 15
+    },
+    {
+      "id": 13,
+      "fromContactId": 6,
+      "toContactId": 11
+    },
+    {
+      "id": 14,
+      "fromContactId": 7,
+      "toContactId": 6
+    },
+    {
+      "id": 15,
+      "fromContactId": 7,
+      "toContactId": 9
+    },
+    {
+      "id": 16,
+      "fromContactId": 7,
+      "toContactId": 4
+    },
+    {
+      "id": 17,
+      "fromContactId": 8,
+      "toContactId": 6
+    },
+    {
+      "id": 18,
+      "fromContactId": 9,
+      "toContactId": 16
+    },
+    {
+      "id": 19,
+      "fromContactId": 9,
+      "toContactId": 3
+    },
+    {
+      "id": 20,
+      "fromContactId": 9,
+      "toContactId": 7
+    },
+    {
+      "id": 21,
+      "fromContactId": 10,
+      "toContactId": 3
+    },
+    {
+      "id": 22,
+      "fromContactId": 11,
+      "toContactId": 6
+    },
+    {
+      "id": 23,
+      "fromContactId": 11,
+      "toContactId": 23
+    },
+    {
+      "id": 24,
+      "fromContactId": 11,
+      "toContactId": 35
+    },
+    {
+      "id": 25,
+      "fromContactId": 12,
+      "toContactId": 13
+    },
+    {
+      "id": 26,
+      "fromContactId": 12,
+      "toContactId": 24
+    },
+    {
+      "id": 27,
+      "fromContactId": 13,
+      "toContactId": 12
+    },
+    {
+      "id": 28,
+      "fromContactId": 14,
+      "toContactId": 15
+    },
+    {
+      "id": 29,
+      "fromContactId": 14,
+      "toContactId": 9
+    },
+    {
+      "id": 30,
+      "fromContactId": 15,
+      "toContactId": 14
+    },
+    {
+      "id": 31,
+      "fromContactId": 15,
+      "toContactId": 30
+    },
+    {
+      "id": 32,
+      "fromContactId": 15,
+      "toContactId": 6
+    },
+    {
+      "id": 33,
+      "fromContactId": 16,
+      "toContactId": 9
+    },
+    {
+      "id": 34,
+      "fromContactId": 23,
+      "toContactId": 11
+    },
+    {
+      "id": 35,
+      "fromContactId": 24,
+      "toContactId": 25
+    },
+    {
+      "id": 36,
+      "fromContactId": 25,
+      "toContactId": 24
+    },
+    {
+      "id": 37,
+      "fromContactId": 27,
+      "toContactId": 7
+    },
+    {
+      "id": 38,
+      "fromContactId": 27,
+      "toContactId": 28
+    },
+    {
+      "id": 39,
+      "fromContactId": 30,
+      "toContactId": 15
+    },
+    {
+      "id": 40,
+      "fromContactId": 35,
+      "toContactId": 11
+    },
+    {
+      "id": 41,
+      "fromContactId": 46,
+      "toContactId": 47
+    },
+    {
+      "id": 42,
+      "fromContactId": 47,
+      "toContactId": 46
+    }
+  ]
+}

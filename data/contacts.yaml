@@ -201,7 +201,7 @@ contacts:
     name: Darth Vader
     alias: Anakin Skywalker
     species: Mensch (teilweise cybernetisch)
-    affiliation: Galaktisches Imperium / Sith / später: erlöst
+    affiliation: "Galaktisches Imperium / Sith / später: erlöst"
     met_at: >
       Death Star (0 BBY, indirekt / Kampf) →
       Cloud City, Bespin (3 ABY, Falle) →
