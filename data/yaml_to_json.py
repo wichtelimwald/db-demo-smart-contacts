@@ -112,7 +112,7 @@ def build_contact_groups(raw_contacts: list, name_to_id: dict) -> list:
             gid = name_to_id.get(group_name)
             if gid:
                 contact_groups.append(
-                    {"id": cg_id, "contactId": contact_id, "groupId": gid}
+                    {"id": cg_id, "contact_id": contact_id, "group_id": gid}
                 )
                 cg_id += 1
 
@@ -139,8 +139,8 @@ def build_relationships(raw_contacts: list) -> list:
                 relationships.append(
                     {
                         "id": rel_id,
-                        "fromContactId": from_id,
-                        "toContactId": to_id,
+                        "from_contact_id": from_id,
+                        "to_contact_id": to_id,
                     }
                 )
                 rel_id += 1
