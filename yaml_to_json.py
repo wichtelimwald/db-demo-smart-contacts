@@ -8,8 +8,9 @@ Erzeugte Collections:
   contacts          Haupttabelle
   groups            Eindeutige Gruppen / Kategorien
   contactGroups     Kontakt ↔ Gruppe (n:m Junction, contact_id + group_id)
-  relations         Beziehungstypen (wie groups)
-  contactRelations  Junction: contact_id + relation_id (bidirektional)
+  Hinweis: relatedTo bleibt als Integer-ID-Array eingebettet.
+  json-graphql-server kann selbstreferentielle Traversierung nicht auflösen.
+  → Demo-Punkt: Grenze des Tools, Übergang zu echter DB.
 
 Usage:
   python yaml_to_json.py
@@ -89,6 +90,9 @@ def convert_contact(contact: dict) -> dict:
     result["knownPreferences"] = [clean_string(p) for p in prefs]
 
 
+    # related_to → eingebettetes [{id, relation}]-Array
+    result["relatedTo"] = extract_related_ids(contact.get("related_to") or [])
+
     return result
 
 
@@ -124,47 +128,23 @@ def build_contact_groups(raw_contacts: list, name_to_id: dict) -> list:
     return contact_groups
 
 
-def build_relations(raw_contacts: list) -> tuple[list, dict]:
-    """Eindeutige Beziehungstypen als eigene Tabelle (wie groups)."""
-    name_to_id: dict[str, int] = {}
-    relations: list[dict] = []
-    rid = 1
-    for contact in raw_contacts:
-        for rel in contact.get("related_to") or []:
-            name = rel.get("relation", "Bekannt") if isinstance(rel, dict) else "Bekannt"
-            if name not in name_to_id:
-                name_to_id[name] = rid
-                relations.append({"id": rid, "name": name})
-                rid += 1
-    return relations, name_to_id
-
-
-def build_contact_relations(raw_contacts: list, name_to_id: dict) -> list:
-    """Junction: contact_id + relation_id (wie contactGroups)."""
-    contact_relations = []
-    crid = 1
-    seen = set()
-    for contact in raw_contacts:
-        from_id = contact["id"]
-        for rel in contact.get("related_to") or []:
-            if not isinstance(rel, dict):
-                continue
-            to_id      = rel.get("id")
-            rel_name   = rel.get("relation", "Bekannt")
-            relation_id = name_to_id.get(rel_name)
-            if to_id is None or relation_id is None:
-                continue
-            # Vorwärts
-            if (from_id, to_id, relation_id) not in seen:
-                contact_relations.append({"id": crid, "contact_id": from_id, "relation_id": relation_id})
-                seen.add((from_id, to_id, relation_id))
-                crid += 1
-            # Rückwärts (bidirektional)
-            if (to_id, from_id, relation_id) not in seen:
-                contact_relations.append({"id": crid, "contact_id": to_id, "relation_id": relation_id})
-                seen.add((to_id, from_id, relation_id))
-                crid += 1
-    return contact_relations
+def extract_related_ids(related_to: list) -> list:
+    """Extrahiert Ziel-IDs + Relationsname aus related_to."""
+    ids = []
+    for rel in related_to or []:
+        if isinstance(rel, dict):
+            to_id = rel.get("id")
+            relation = rel.get("relation")
+        elif isinstance(rel, int):
+            to_id, relation = rel, None
+        else:
+            continue
+        if to_id is not None:
+            entry = {"id": to_id}
+            if relation:
+                entry["relation"] = relation
+            ids.append(entry)
+    return ids
 
 
 def main(input_path: Path, output_path: Path, verbose: bool = False):
@@ -182,15 +162,11 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
     groups, name_to_id  = build_groups(raw_contacts)
     contacts            = [convert_contact(c) for c in raw_contacts]
     contact_groups      = build_contact_groups(raw_contacts, name_to_id)
-    relations, rel_name_to_id = build_relations(raw_contacts)
-    contact_relations   = build_contact_relations(raw_contacts, rel_name_to_id)
 
     output = {
         "contacts":         contacts,
         "groups":           groups,
         "contactGroups":    contact_groups,
-        "relations":        relations,
-        "contactRelations": contact_relations,
     }
 
     output_path.parent.mkdir(parents=True, exist_ok=True)
@@ -200,8 +176,6 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
     print(f"✓  {len(contacts):>3} contacts")
     print(f"✓  {len(groups):>3} groups")
     print(f"✓  {len(contact_groups):>3} contactGroups    (n:m Junction)")
-    print(f"✓  {len(relations):>3} relations        (Beziehungstypen)")
-    print(f"✓  {len(contact_relations):>3} contactRelations (bidirektional, contact_id + relation_id)")
     print(f"→  {output_path}")
 
     if verbose:

@@ -1,15 +1,16 @@
 # Innovative Datenbank- und Informationssysteme
-### Live-Demo · 30min Vorlesung DHBW Karlsruhe
+### Live-Demo - Vorlesung DHBW Karlsruhe
 
-> **Leitfrage der Demo:**
-> Daten zu speichern ist einfach. Daten dauerhaft korrekt, verständlich, integrierbar, sicher und nutzbar zu halten – das ist der eigentliche Engpass moderner Informationssysteme.
+> **Leitthese:**  
+> Daten zu speichern ist einfach. Daten dauerhaft korrekt, verständlich, integrierbar, sicher und nutzbar zu halten - das ist der eigentliche Engpass moderner Informationssysteme.
 
 ---
 
 ## Kontext
 
-Dieses Repository enthält die Live-Demo zur 30-minütigen Vorlesung
-**„Innovative Datenbank- und Informations-Systeme – Herausforderungen und Potentiale"**
+Live-Demo zur 30-minütigen Vorlesung  
+**"Innovative Datenbank- und Informations-Systeme - Herausforderungen und Potentiale"**  
+Informatik - DHBW Karlsruhe
 
 Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
 
@@ -17,11 +18,9 @@ Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
 
 ## Demo-Konzept: Die progressive Kontakt-Datenbank
 
-Die gesamte Demo dreht sich um **ein einziges, vertrautes Szenario:**
+Ein einziges, vertrautes Szenario als roter Faden:
 
-> _„Ich möchte festhalten, wen ich kenne – und das nutzbar machen."_
-
-Sieben Leitfragen bauen aufeinander auf und zeigen, wie ein scheinbar einfaches Problem Schicht für Schicht komplexer wird:
+> _"Ich möchte festhalten, wen ich kenne - und das nutzbar machen."_
 
 | # | Leitfrage | Konzept |
 |---|-----------|---------|
@@ -33,8 +32,21 @@ Sieben Leitfragen bauen aufeinander auf und zeigen, wie ein scheinbar einfaches 
 | 6 | Wer hat Recht, wenn zwei Quellen widersprechen? | Konsistenz, Merge-Konflikte |
 | 7 | Wer darf was sehen? | Zugriffskontrolle, Governance |
 
-**Dramaturgie:** Start mit einer einfachen JSON-Datei – jeder versteht es sofort.  
-Dann zeigen wir live, wo es zerfällt. Am Ende entsteht das Datenbankproblem von selbst.
+**Dramaturgie:** Start mit einer einfachen YAML-Datei - jeder versteht es sofort. Dann zeigen, wo es zerfällt. Das Datenbankproblem entsteht von selbst.
+
+---
+
+## Datenbasis: 50 Star-Wars-Kontakte aus Lukes Perspektive
+
+`data/contacts.yaml` ist die menschenlesbare Quelle. `data/contacts.json` wird daraus generiert und enthält vier Collections:
+
+| Collection | Einträge | Beschreibung |
+|---|---|---|
+| `contacts` | 50 | Alle Charaktere mit `relatedTo` als eingebettetem ID-Array |
+| `groups` | 19 | Rebel Alliance, Jedi, Jabba's Hof, ... |
+| `contactGroups` | 92 | n:m Junction: Kontakt <-> Gruppe |
+
+> **Bekannte Grenze (Demo-Punkt):** `relatedTo` ist als Integer-Array direkt im Kontakt eingebettet. `json-graphql-server` kann selbstreferentielle Traversierung (`Contact -> Contact`) nicht auflösen - d. h. aus einer ID kann kein verschachteltes Contact-Objekt abgefragt werden. Diese Grenze ist bewusst Teil der Demo: Sie zeigt, wo ein Prototyping-Tool endet und eine echte Datenbank beginnt.
 
 ---
 
@@ -42,44 +54,14 @@ Dann zeigen wir live, wo es zerfällt. Am Ende entsteht das Datenbankproblem von
 
 | Komponente | Tool | Warum |
 |---|---|---|
-| Datenbasis | `contacts.json` | Kein Setup, sofort verständlich |
-| Lesbare Version | `contacts.yaml` | Erklärung für Menschen |
-| API + GraphQL | `json-graphql-server` | Auto-generiertes GraphQL-Schema + GraphiQL eingebaut |
-| Editor | VS Code | Schema live editieren |
+| Datenbasis (lesbar) | `contacts.yaml` | Kein Setup, sofort verständlich |
+| Datenbasis (technisch) | `contacts.json` | Generiert, für json-graphql-server |
+| Konvertierung | `yaml_to_json.py` | Python, keine Abhängigkeiten außer PyYAML |
+| API + GraphQL | `json-graphql-server` | Auto-generiertes Schema + GraphiQL eingebaut |
+| Editor | VS Code | Schema live zeigen |
 | Browser | beliebig | GraphiQL auf `localhost:3000` |
 
 **Kein Docker. Kein Build. Kein Internet notwendig.**
-
----
-
-## Voraussetzungen
-
-```bash
-node --version   # v18 oder neuer empfohlen
-npm --version
-```
-
-Falls Node.js fehlt: [nodejs.org/en/download](https://nodejs.org/en/download)
-
----
-
-## Setup
-
-```bash
-# Repository klonen
-git clone https://github.com/<dein-username>/dhbw-db-demo.git
-cd dhbw-db-demo
-
-# json-graphql-server installieren (einmalig, global)
-npm install -g json-graphql-server
-
-# Demo starten
-json-graphql-server data/contacts.json
-
-# → GraphiQL läuft auf: http://localhost:3000
-```
-
-Fertig. Der gesamte Start dauert unter 30 Sekunden.
 
 ---
 
@@ -89,133 +71,142 @@ Fertig. Der gesamte Start dauert unter 30 Sekunden.
 dhbw-db-demo/
 │
 ├── data/
-│   ├── contacts.json        ← Datenbasis (wird von json-graphql-server gelesen)
-│   └── contacts.yaml        ← Lesbare Version zur Erklärung (VS Code)
+│   ├── contacts.yaml        <- menschenlesbare Quelle (hier editieren)
+│   └── contacts.json        <- generiert, nie manuell editieren
 │
 ├── queries/
 │   ├── 01_alle_kontakte.graphql
-│   ├── 02_kontakt_mit_gruppe.graphql
-│   ├── 03_kontakte_nach_location.graphql
-│   └── 04_merge_konflikt_beispiel.graphql
+│   ├── 02_gruppe_mit_kontakten.graphql
+│   ├── 03_suche.graphql
+│   └── 04_grenzen.graphql
 │
-├── slides/                  ← (optional) Begleitfolien / Whiteboard-Skizzen
-│
+├── yaml_to_json.py          ← Konvertierungsskript
 └── README.md
 ```
 
 ---
 
-## Demo-Ablauf (Schritt für Schritt)
+## Voraussetzungen
 
-### Schritt 1 – „Fangen wir einfach an"
-
-`contacts.yaml` in VS Code öffnen und zeigen:
-
-```yaml
-# contacts.yaml – lesbare Version
-- id: 1
-  name: Anna Bauer
-  email: anna@example.com
-  met_at: "re:publica Berlin 2024"
-  group: "Konferenz-Kontakte"
-
-- id: 2
-  name: Jonas Weber
-  email: jonas@example.com
-  met_at: "Bosch Workshop Stuttgart"
-  group: "Arbeit"
+```bash
+node --version   # v18+
+python3 --version
+pip install pyyaml
 ```
 
-> _„Jeder kennt das. Vielleicht habt ihr sowas ähnliches in einer Notiz-App."_
+---
+
+## Setup
+
+```bash
+git clone https://github.com/<username>/dhbw-db-demo.git
+cd dhbw-db-demo
+
+# JSON aus YAML generieren
+python3 yaml_to_json.py
+
+# Server starten
+npx json-graphql-server data/contacts.json
+
+# -> GraphiQL: http://localhost:3000
+```
+
+Nach Änderungen an `contacts.yaml`:
+```bash
+python3 yaml_to_json.py && npx json-graphql-server data/contacts.json
+```
 
 ---
 
-### Schritt 2 – Beziehungen werden unübersichtlich
+## Demo-Abfragen
 
-Zeigen: Was passiert, wenn Anna in **zwei Gruppen** ist?  
-Was passiert, wenn eine Gruppe **50 Mitglieder** hat?
-
-→ JSON wächst unkontrolliert, Redundanz entsteht, Suchen werden fragil.
-
-> _„Genau hier fängt das Datenbankproblem an."_
-
----
-
-### Schritt 3 – GraphQL-API live (json-graphql-server)
-
-Browser öffnen: [http://localhost:3000](http://localhost:3000)
-
-**Abfrage 1: Alle Kontakte**
+### Alle Kontakte
 ```graphql
 {
   allContacts {
     id
     name
-    email
     metAt
+    organization
   }
 }
 ```
 
-**Abfrage 2: Kontakt mit Gruppe**
+### Einen Kontakt abrufen
 ```graphql
 {
-  allContacts {
+  Contact(id: "6") {
     name
-    group {
-      name
-      category
+    relationship
+    organization
+    metAt
+    metWhen
+    knownPreferences
+    relatedTo
+  }
+}
+```
+
+### Alle Kontakte einer Gruppe
+```graphql
+{
+  allGroups(filter: { name: "Rebel Alliance" }) {
+    id
+    name
+    contactGroups {
+      contact {
+        name
+        organization
+      }
     }
   }
 }
 ```
 
-**Abfrage 3: Nur Kontakte aus einer bestimmten Stadt**
+### Suche (case-insensitiv, Substring)
 ```graphql
 {
-  allContacts(filter: { city: "Berlin" }) {
+  allContacts(filter: { q: "kriminell" }) {
     name
-    email
-    metAt
+    organization
   }
 }
 ```
 
-→ Zeigen: **Gleiche Daten, anderes Zugriffsmodell.**  
-SQL hätte das mit einem JOIN gelöst. GraphQL gibt verschachteltes JSON zurück.
+### Alle Gruppen eines Kontakts
+```graphql
+{
+  allContactGroups(filter: { contact_id: 9 }) {
+    group {
+      name
+    }
+  }
+}
+```
 
 ---
 
-### Schritt 4 – Merge-Konflikt live erzeugen
+## Die Grenze - Demo-Punkt
 
-`contacts.json` direkt in VS Code editieren:  
-Anna Bauers E-Mail in zwei „Geräten" (zwei VS-Code-Tabs) unterschiedlich setzen.
+Diese Abfrage **funktioniert nicht**:
+```graphql
+{
+  Contact(id: "6") {
+    relatedTo {
+      name        # <- geht nicht: relatedTo ist ein Integer-Array, kein Objekt
+    }
+  }
+}
+```
 
-> _„Wer hat Recht? Das ist kein technisches Problem – das ist ein Architekturproblem."_
+`relatedTo` liefert nur `[8, 7, 15, 11]` - IDs, keine Namen.
 
-Konzept zeigen: **Last-Write-Wins vs. Konfliktauflösung vs. Versionierung.**
+> _"Um aus einer ID einen Namen zu machen, brauchen wir eine echte Datenbank mit Fremdschlüsseln, Joins und einem sauberen Schema. Genau das ist der Unterschied zwischen einem Prototyping-Tool und einem Informationssystem."_
 
----
-
-### Schritt 5 – Übergang zur Kernaussage
-
-> _„Wir haben gerade in 5 Minuten die wichtigsten Fragen moderner Informationssysteme berührt:  
-> Struktur, Beziehungen, Konsistenz, Zugriffsmuster, Zugriffsrechte.  
-> Das war noch keine Datenbank – aber genau deshalb brauchen wir eine."_
-
----
-
-## Konzeptuelle Erweiterungen (Whiteboard / Folie)
-
-Folgende Fragen werden **nicht live demonstriert**, aber direkt aus dem Demo-Szenario abgeleitet:
-
-- **Zugriffsrechte:** Wer darf Annas private E-Mail sehen? → Zugriffskontrolle, Row-Level Security
-- **Automatische Updates:** Kontakt ändert Arbeitgeber auf LinkedIn → CDC / Event-Driven
-- **Orte mit Kontext:** „Welche Kontakte sind in München relevant?" → Geo, Graph, Kontext
-- **Suche:** „Zeig mir alle, die ich auf Konferenzen 2024 kennengelernt habe" → Volltext, Semantik
+**Nächster Schritt:** PostgreSQL + Hasura -> verschachtelte GraphQL-Abfragen mit echten Joins out of the box.
 
 ---
 
 ## Lizenz
 
-MIT – frei nutzbar für Lehr- und Bildungszwecke.
+MIT - frei nutzbar für Lehr- und Bildungszwecke.
