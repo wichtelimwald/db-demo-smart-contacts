@@ -1,0 +1,916 @@
+# contacts.yaml – Star Wars Kontakte aus Lukes Perspektive
+# -------------------------------------------------------
+# Perspektive:  Luke Skywalker
+# Zeitraum:     19 BBY – 4 ABY (Geburt bis Endor)
+# BBY = Before Battle of Yavin / ABY = After Battle of Yavin
+# Hinweis:      Einige Kontakte wurden nie persönlich getroffen
+#               (Feind-Netzwerk / Berichte) – das ist bewusst so.
+#               Zeigt: Ein Informationssystem enthält nicht nur
+#               direkte Kontakte, sondern auch Kontext-Wissen.
+# -------------------------------------------------------
+# Technische Basis: contacts.json (maschinenlesbar)
+# Dieses File: menschenlesbare Erklärungsschicht (Demo-Zweck)
+# -------------------------------------------------------
+
+contacts:
+
+  - id: 1
+    name: Owen Lars
+    species: Mensch
+    affiliation: Zivilist / Vaporfarmer
+    met_at: Lars-Moisture-Farm, Tatooine
+    met_when: Geburt (19 BBY) – aufgewachsen
+    relationship_to_luke: Ziehvater (Halbbruder von Anakin Skywalker)
+    groups:
+      - Familie
+      - Tatooine
+    known_preferences:
+      - Ruhe und Anonymität, nie auffallen
+      - harte Arbeit auf der Farm
+      - kein Kontakt zu Rebellion oder Jedi
+    related_to:
+      - id: 2   # Beru Lars (Ehefrau)
+      - id: 9   # Anakin Skywalker / Darth Vader (Halbbruder)
+    notes: >
+      Hat Luke bewusst von seiner Herkunft ferngehalten.
+      Starb beim imperialen Angriff auf die Farm (0 BBY).
+
+  - id: 2
+    name: Beru Whitesun Lars
+    species: Mensch
+    affiliation: Zivilist / Vaporfarmer
+    met_at: Lars-Moisture-Farm, Tatooine
+    met_when: Geburt (19 BBY) – aufgewachsen
+    relationship_to_luke: Ziehtante
+    groups:
+      - Familie
+      - Tatooine
+    known_preferences:
+      - Wärme und Fürsorge
+      - gutes Essen zubereiten
+      - wollte, dass Luke mehr Freiheit bekommt als Owen zugestand
+    related_to:
+      - id: 1   # Owen Lars (Ehemann)
+    notes: >
+      Verständnisvoller als Owen gegenüber Lukes Ambitionen.
+      Starb beim imperialen Angriff auf die Farm (0 BBY).
+
+  - id: 3
+    name: Obi-Wan Kenobi
+    alias: Ben Kenobi
+    species: Mensch
+    affiliation: Jedi Order (im Exil) / später Eins-mit-der-Macht
+    met_at: Jundland Wastes / Obi-Wans Hütte, Tatooine
+    met_when: 0 BBY (kurz vor der Yavin-Schlacht)
+    relationship_to_luke: Erster Jedi-Mentor
+    groups:
+      - Jedi
+      - Mentor
+      - Tatooine
+    known_preferences:
+      - Geduld und genaues Beobachten
+      - einfaches Leben / kein Überfluss
+      - Wahrheit – wenn auch manchmal aus „einer bestimmten Perspektive"
+    related_to:
+      - id: 9   # Anakin Skywalker (ehemaliger Padawan)
+      - id: 10  # Yoda (Jedi-Meister und enger Vertrauter)
+      - id: 1   # Owen Lars (Luke anvertraut)
+    notes: >
+      Starb im Lichtschwert-Duell mit Vader auf dem ersten Death Star.
+      Erscheint Luke seitdem als Kraft-Geist.
+      Verschwieg Luke seine Vaterschaft – was Luke ihm später vorwarf.
+
+  - id: 4
+    name: R2-D2
+    species: Astromech-Droid (R2-Serie)
+    affiliation: Rebel Alliance
+    met_at: Lars-Moisture-Farm, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: Treuer Copilot und Begleiter
+    groups:
+      - Crew
+      - Droiden
+      - Rebel Alliance
+    known_preferences:
+      - Abenteuer und aktives Handeln
+      - beschützt Freunde eigenmächtig
+      - scheinbar eigenwillig, aber immer loyal
+    related_to:
+      - id: 5   # C-3PO (langjähriger Begleiter)
+      - id: 7   # Leia Organa (Auftraggeberin der Obi-Wan-Mission)
+    notes: >
+      Trägt Leias Hilfsbotschaft und die Death-Star-Pläne.
+      Unverzichtbarer Begleiter in jedem X-Wing.
+      Hat mehr Geheimnisse als er preisgibt.
+
+  - id: 5
+    name: C-3PO
+    alias: Threepio
+    species: Humanoider Protokoll-Droid
+    affiliation: Rebel Alliance
+    met_at: Lars-Moisture-Farm, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: Droid-Begleiter – nützlich, manchmal nervig
+    groups:
+      - Crew
+      - Droiden
+      - Rebel Alliance
+    known_preferences:
+      - Höflichkeit und Protokoll
+      - vermeidet gefährliche Situationen (spricht es aber laut aus)
+      - über 6 Millionen Kommunikationsformen beherrschen
+    related_to:
+      - id: 4   # R2-D2 (Begleiter)
+    notes: >
+      Übersetzt Ewokisch auf Endor – entscheidend für die Allianz.
+      Erbaut ursprünglich von Anakin Skywalker (Hintergrund-Lore).
+
+  - id: 6
+    name: Han Solo
+    species: Mensch
+    affiliation: Schmuggler / Rebel Alliance (widerwillig, dann überzeugt)
+    met_at: Mos Eisley Cantina, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: Bester Freund / Bruder im Geiste
+    groups:
+      - Crew
+      - Rebel Alliance
+      - Schmuggler-Netzwerk
+    known_preferences:
+      - Freiheit und Unabhängigkeit
+      - die Millennium Falcon über alles
+      - Sabacc spielen
+      - hasst schlechte Quoten und Wahrscheinlichkeitsrechnungen
+    related_to:
+      - id: 8   # Chewbacca (Partner / Life Debt)
+      - id: 7   # Leia Organa (Liebesinteresse, später Ehepartner)
+      - id: 15  # Jabba the Hutt (offene Schulden)
+      - id: 11  # Lando Calrissian (alter Freund / Rivale)
+    notes: >
+      Kehrt spontan zur Yavin-Schlacht zurück und rettet Luke.
+      Wird auf Bespin in Karbonit eingefroren (3 ABY).
+      Von Luke und Leia aus Jabbas Palast befreit (4 ABY).
+
+  - id: 7
+    name: Leia Organa
+    alias: Prinzessin Leia
+    species: Mensch
+    affiliation: Alderaan (zerstört) / Rebel Alliance / Galaktischer Senat
+    met_at: Death Star, Orbit Alderaan
+    met_when: 0 BBY
+    relationship_to_luke: Zwillingsschwester (enthüllt Endor, 4 ABY) / enge Vertraute
+    groups:
+      - Rebel Alliance
+      - Familie
+      - Führung
+    known_preferences:
+      - Gerechtigkeit und Freiheit der Galaxis
+      - direkte, klare Kommunikation
+      - diplomatisches Geschick – aber auch zu Waffen greifend
+    related_to:
+      - id: 6   # Han Solo (Liebesinteresse)
+      - id: 9   # Anakin Skywalker / Darth Vader (leiblicher Vater)
+      - id: 4   # R2-D2 (Bote ihrer Hilfsbotschaft)
+    notes: >
+      Luke erkennt die Geschwister-Verbindung auf Endor durch die Macht.
+      Hat selbst Macht-Sensitivität – nutzt sie intuitiv.
+
+  - id: 8
+    name: Chewbacca
+    alias: Chewie
+    species: Wookiee
+    affiliation: Rebel Alliance / Co-Pilot Millennium Falcon
+    met_at: Mos Eisley Cantina, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: Verlässlicher Verbündeter
+    groups:
+      - Crew
+      - Rebel Alliance
+    known_preferences:
+      - Loyalität (vor allem gegenüber Han – Life Debt)
+      - Dejarik (holografisches Schachspiel) – verliert nicht gern
+      - Wookiee-Stolz
+    related_to:
+      - id: 6   # Han Solo (lebenslanger Partner)
+    notes: >
+      Über 200 Jahre alt. Kommuniziert in Shyriiwook.
+      Außerordentliche Stärke – reißt Arme aus Schultergelenken
+      (laut Han eine bekannte Gewohnheit von Wookiees).
+
+  - id: 9
+    name: Darth Vader
+    alias: Anakin Skywalker
+    species: Mensch (teilweise cybernetisch)
+    affiliation: Galaktisches Imperium / Sith / später: erlöst
+    met_at: >
+      Death Star (0 BBY, indirekt / Kampf) →
+      Cloud City, Bespin (3 ABY, Falle) →
+      Death Star II, Endor-Orbit (4 ABY, Finale)
+    met_when: 0 BBY – 4 ABY
+    relationship_to_luke: Vater (enthüllt Bespin, 3 ABY)
+    groups:
+      - Imperium
+      - Sith
+      - Familie
+    known_preferences:
+      - Kontrolle und militärische Ordnung
+      - sieht Potenzial in Luke – will ihn auf die dunkle Seite
+      - duldet keine Inkompetenz
+    related_to:
+      - id: 16  # Emperor Palpatine (Meister)
+      - id: 3   # Obi-Wan Kenobi (ehemaliger Jedi-Meister)
+      - id: 7   # Leia Organa (Tochter)
+    notes: >
+      Enthüllt Vaterschaft auf Bespin: „Ich bin dein Vater."
+      Rettet Luke schließlich durch Töten des Imperators.
+      Stirbt als Anakin Skywalker – zurück zur hellen Seite.
+
+  - id: 10
+    name: Yoda
+    species: Unbekannte Art
+    affiliation: Jedi Order (im Exil auf Dagobah)
+    met_at: Dagobah
+    met_when: 3 ABY
+    relationship_to_luke: Zweiter Jedi-Meister / wichtigster Lehrmeister
+    groups:
+      - Jedi
+      - Mentor
+    known_preferences:
+      - Geduld und Demut als erste Lektionen
+      - Rootleaf-Eintopf (einfaches, selbst gekochtes Essen)
+      - direkte Sprache mit unkonventioneller Satzstellung
+    related_to:
+      - id: 3   # Obi-Wan Kenobi (enger Vertrauter und Kollege)
+    notes: >
+      900 Jahre alt. Bildet Luke zunächst widerwillig aus.
+      Stirbt friedlich auf Dagobah (4 ABY).
+      Erscheint danach als Kraft-Geist.
+
+  - id: 11
+    name: Lando Calrissian
+    species: Mensch
+    affiliation: Administrator Cloud City, Bespin / Rebel Alliance (ab Endor)
+    met_at: Cloud City, Bespin
+    met_when: 3 ABY
+    relationship_to_luke: Verbündeter – zunächst als Verräter wahrgenommen
+    groups:
+      - Rebel Alliance
+      - Cloud City
+    known_preferences:
+      - Stil und Eleganz in jedem Kontext
+      - Glücksspiel (verlor die Millennium Falcon beim Sabacc)
+      - guter Wein und gute Gesellschaft
+    related_to:
+      - id: 6   # Han Solo (alter Freund, ehemaliger Falcon-Besitzer)
+      - id: 23  # Lobot (Assistent in Cloud City)
+      - id: 35  # Nien Nunb (Co-Pilot Endor)
+    notes: >
+      Stand unter imperialem Druck und lieferte Han aus.
+      Bereut es und hilft anschließend bei der Befreiung.
+      Führt den Angriff auf den zweiten Death Star (4 ABY).
+
+  - id: 12
+    name: Wedge Antilles
+    species: Mensch
+    affiliation: Rebel Alliance / Red Squadron / Rogue Squadron
+    met_at: Yavin IV, Rebellenbasis
+    met_when: 0 BBY
+    relationship_to_luke: Kampfgefährte – verlässlichster Pilot
+    groups:
+      - Rebel Alliance
+      - Rogue Squadron
+    known_preferences:
+      - präzises Fliegen statt Heldenmut
+      - Kameradschaft unter Piloten
+      - überleben (was er tatsächlich schafft – beide Schlachten)
+    related_to:
+      - id: 13  # Biggs Darklighter (Staffelkamerad, gefallen Yavin)
+      - id: 24  # Wes Janson (Rogue-Squadron-Kamerad)
+    notes: >
+      Einer der wenigen Überlebenden beider Großschlachten
+      (Yavin 0 BBY und Endor 4 ABY).
+
+  - id: 13
+    name: Biggs Darklighter
+    species: Mensch
+    affiliation: Rebel Alliance / Red Squadron
+    met_at: >
+      Anchorhead / Lars-Farm-Umgebung, Tatooine (Kindheit) →
+      Yavin IV (letztes Wiedersehen, 0 BBY)
+    met_when: Kindheit (aufgewachsen zusammen) / 0 BBY (Wiedersehen und Tod)
+    relationship_to_luke: Bester Freund aus der Kindheit
+    groups:
+      - Tatooine
+      - Rebel Alliance
+      - Red Squadron
+    known_preferences:
+      - Freiheit (desertierte von der Imperialen Akademie)
+      - Fliegen und Abenteuer
+      - ehrliche Kameradschaft
+    related_to:
+      - id: 12  # Wedge Antilles (Staffelkamerad)
+    notes: >
+      Gefallen bei der Yavin-Angriffsrunde (0 BBY).
+      Sein Tod traf Luke tief – sie hatten sich gerade erst wiedergefunden.
+
+  - id: 14
+    name: Boba Fett
+    species: Mensch (Klon-Abstammung von Jango Fett)
+    affiliation: Kopfgeldjäger (freiberuflich / Imperium / Jabba)
+    met_at: Jabba's Palast, Tatooine / Sail Barge, Carkoon-Wüste
+    met_when: 4 ABY (direkte Konfrontation)
+    relationship_to_luke: Feind / gefährlicher Kopfgeldjäger
+    groups:
+      - Kopfgeldjäger
+      - Jabba's Hof
+    known_preferences:
+      - Professionalität und Schweigen
+      - minimale Kommunikation – handelt lieber
+      - mandalorianische Rüstung und Jetpack
+    related_to:
+      - id: 15  # Jabba the Hutt (Hauptauftraggeber)
+      - id: 9   # Darth Vader (Auftraggeber Bespin, Han-Transport)
+    notes: >
+      Lieferte Han eingefroren in Karbonit an Jabba aus.
+      Fiel in den Sarlacc-Pit bei der Sail-Barge-Konfrontation (4 ABY).
+
+  - id: 15
+    name: Jabba the Hutt
+    species: Hutt
+    affiliation: Hutt-Kriminelles Syndikat / Tatooine-Unterwelt
+    met_at: Jabba's Palast, Tatooine
+    met_when: 4 ABY (direkte Konfrontation bei Hans Befreiung)
+    relationship_to_luke: Feind / Wächter des eingefrorenen Han Solo
+    groups:
+      - Unterwelt
+      - Tatooine
+    known_preferences:
+      - Macht, Geld, öffentliche Demütigungen
+      - exotische Speisen (Gorg, Klatooinische Frösche)
+      - Unterhaltung durch sein Hoforchester und Tänzerinnen
+    related_to:
+      - id: 14  # Boba Fett (Kopfgeldjäger)
+      - id: 30  # Bib Fortuna (Majordomo)
+      - id: 6   # Han Solo (Schuldner)
+    notes: >
+      Starb durch Leia (Würgekette) während der Befreiungsaktion auf der Sail Barge.
+
+  - id: 16
+    name: Emperor Palpatine
+    alias: Darth Sidious
+    species: Mensch
+    affiliation: Galaktisches Imperium / Sith
+    met_at: Death Star II, Endor-Orbit
+    met_when: 4 ABY
+    relationship_to_luke: Erzfeind – will Luke auf die dunkle Seite zwingen
+    groups:
+      - Imperium
+      - Sith
+    known_preferences:
+      - absolute Macht durch Manipulation
+      - nutzt Wut und Schmerz als Werkzeuge
+      - Kraft-Blitz als bevorzugte Waffe
+    related_to:
+      - id: 9   # Darth Vader (Schüler und Handlanger)
+    notes: >
+      Stirbt durch Vader/Anakin, der Luke rettet.
+      Sein Fall bedeutet das Ende des Galaktischen Imperiums.
+
+  - id: 17
+    name: Admiral Gial Ackbar
+    species: Mon Calamari
+    affiliation: Rebel Alliance / Mon-Calamari-Flotte
+    met_at: Rebellenflotte, Endor-Briefing
+    met_when: 4 ABY
+    relationship_to_luke: Respektierter Flottenkommandant
+    groups:
+      - Rebel Alliance
+      - Führung
+    known_preferences:
+      - taktische Präzision und Vorsicht
+      - Mon-Calamari-Kultur und Meeresumgebung
+    notes: >
+      Führt die Rebellionsflotte bei der Endor-Seeschlacht.
+      Erkannte die imperiale Falle – zu spät, um sie zu umgehen.
+
+  - id: 18
+    name: Mon Mothma
+    species: Mensch
+    affiliation: Rebel Alliance (politische Führung)
+    met_at: Rebellenbasis (Yavin / später Endor-Briefing)
+    met_when: 0 BBY / 4 ABY
+    relationship_to_luke: Politische Anführerin der Rebellion
+    groups:
+      - Rebel Alliance
+      - Führung
+    known_preferences:
+      - diplomatische Lösungen vor militärischen
+      - minimale Verluste, maximale politische Wirkung
+    notes: >
+      Briefte die Rebellion zum Angriff auf den zweiten Death Star.
+      Politisches Rückgrat der Allianz.
+
+  - id: 19
+    name: General Jan Dodonna
+    species: Mensch
+    affiliation: Rebel Alliance
+    met_at: Yavin IV, Rebellenbasis
+    met_when: 0 BBY
+    relationship_to_luke: Strategischer Befehlshaber der Yavin-Operation
+    groups:
+      - Rebel Alliance
+      - Führung
+    notes: >
+      Entwickelte den Angriffsplan auf den ersten Death Star –
+      präziser Torpedoschuss in den Thermal Exhaust Port.
+
+  - id: 20
+    name: Dak Ralter
+    species: Mensch
+    affiliation: Rebel Alliance / Echo Base
+    met_at: Echo Base, Hoth
+    met_when: 3 ABY
+    relationship_to_luke: Gunner / Rücksitzpilot im AT-AT-Gefecht
+    groups:
+      - Rebel Alliance
+    known_preferences:
+      - enthusiastisch und mutig
+      - bewunderte Luke und wollte mehr lernen
+    notes: >
+      Getötet durch AT-AT-Treffer auf Hoth, bevor er schießen konnte.
+      Luke musste danach allein weiterkämpfen und das Schiff verlassen.
+
+  - id: 21
+    name: Zev Senesca
+    species: Mensch
+    affiliation: Rebel Alliance / Rogue Squadron
+    met_at: Echo Base, Hoth
+    met_when: 3 ABY
+    relationship_to_luke: Retterpilot – fand Luke und Han im Schnee
+    groups:
+      - Rebel Alliance
+      - Rogue Squadron
+    notes: >
+      Geortet Luke und Han nach ihrer Nacht im Schnee.
+      Gefallen kurz darauf im Hoth-Rückzugsgefecht.
+
+  - id: 22
+    name: General Carlist Rieekan
+    species: Mensch
+    affiliation: Rebel Alliance
+    met_at: Echo Base, Hoth
+    met_when: 3 ABY
+    relationship_to_luke: Kommandant der Echo Base
+    groups:
+      - Rebel Alliance
+      - Führung
+    known_preferences:
+      - Vorsicht und Risikoabwägung
+      - schützt seine Leute
+    notes: >
+      Befahl rechtzeitig die Evakuierung von Hoth
+      – rettete damit viele Rebel-Leben.
+
+  - id: 23
+    name: Lobot
+    species: Mensch (mit Cyborg-Kopfinterface)
+    affiliation: Cloud City, Bespin
+    met_at: Cloud City, Bespin
+    met_when: 3 ABY
+    relationship_to_luke: Neutral / Landos stiller Assistent
+    groups:
+      - Cloud City
+    known_preferences:
+      - direkte Kommunikation über sein Computerinterface
+      - Loyalität gegenüber Lando
+    related_to:
+      - id: 11  # Lando Calrissian (Arbeitgeber)
+    notes: >
+      Koordinierte die Cloud-City-Sicherheit, half Lando
+      die imperiale Übernahme rückgängig zu machen.
+
+  - id: 24
+    name: Wes Janson
+    species: Mensch
+    affiliation: Rebel Alliance / Rogue Squadron
+    met_at: Echo Base, Hoth
+    met_when: 3 ABY
+    relationship_to_luke: Staffelkamerad
+    groups:
+      - Rebel Alliance
+      - Rogue Squadron
+    known_preferences:
+      - Humor und lockerer Umgang auch in Gefahrensituationen
+      - Tow-Kabel-Manöver (schoss AT-AT erfolgreich ab)
+    related_to:
+      - id: 25  # Hobbie Klivian (Pilot-Partner)
+
+  - id: 25
+    name: Derek Klivian
+    alias: Hobbie
+    species: Mensch
+    affiliation: Rebel Alliance / Rogue Squadron
+    met_at: Echo Base, Hoth
+    met_when: 3 ABY
+    relationship_to_luke: Staffelkamerad
+    groups:
+      - Rebel Alliance
+      - Rogue Squadron
+    known_preferences:
+      - zuverlässig – wenn auch mit pessimistischem Grundton
+    related_to:
+      - id: 24  # Wes Janson (Pilot-Partner)
+
+  - id: 26
+    name: 2-1B
+    alias: Too-Onebee
+    species: Medizin-Droid (2-1B-Serie)
+    affiliation: Rebel Alliance
+    met_at: Echo Base, Hoth
+    met_when: 3 ABY
+    relationship_to_luke: Arzt – behandelte Wampa-Verletzungen und Prothesenhand
+    groups:
+      - Droiden
+      - Rebel Alliance
+    known_preferences:
+      - präzise medizinische Sprache
+      - Patientenwohl als oberste Priorität
+    notes: >
+      Behandelte Luke nach der Wampa-Attacke (Hoth)
+      und passte die Neuroprothesenhand nach Bespin an.
+
+  - id: 27
+    name: Wicket W. Warrick
+    species: Ewok
+    affiliation: Bright Tree Village, Endor-Mond
+    met_at: Wald des Endor-Monds
+    met_when: 4 ABY
+    relationship_to_luke: Verbündeter – über Leia zuerst kontaktiert
+    groups:
+      - Ewoks
+      - Endor-Allianz
+    known_preferences:
+      - neugierig und mutig für seine Größe
+      - Fremden gegenüber zunächst misstrauisch, dann loyal
+    related_to:
+      - id: 7   # Leia Organa (erster Kontakt)
+      - id: 28  # Chief Chirpa (Stammesoberhaupt)
+    notes: >
+      Erster Ewok-Kontakt der Gruppe.
+      Schlüsselfigur für die Allianz mit dem Ewok-Stamm.
+
+  - id: 28
+    name: Chief Chirpa
+    species: Ewok
+    affiliation: Bright Tree Village, Endor-Mond
+    met_at: Bright Tree Village, Endor-Mond
+    met_when: 4 ABY
+    relationship_to_luke: Stammesoberhaupt der verbündeten Ewoks
+    groups:
+      - Ewoks
+      - Endor-Allianz
+    notes: >
+      Beschloss nach C-3POs Erzählungen, der Rebellion zu helfen.
+      Mobilisierte den gesamten Stamm für den Bodenkrieg.
+
+  - id: 29
+    name: Logray
+    species: Ewok
+    affiliation: Bright Tree Village, Endor-Mond
+    met_at: Bright Tree Village, Endor-Mond
+    met_when: 4 ABY
+    relationship_to_luke: Ewok-Schamane – zunächst feindlich
+    groups:
+      - Ewoks
+    known_preferences:
+      - Rituale und Stammestradition
+      - anfangs wollte er Luke und die Gruppe als Festessen
+    notes: >
+      Schamane des Stammes.
+      Wurde durch C-3POs „göttliche" Vorführung überzeugt.
+
+  - id: 30
+    name: Bib Fortuna
+    species: Twi'lek
+    affiliation: Jabba's Palast / Tatooine-Unterwelt
+    met_at: Jabba's Palast, Tatooine
+    met_when: 4 ABY
+    relationship_to_luke: Türsteher und Majordomo Jabbas – feindlich
+    groups:
+      - Jabba's Hof
+      - Unterwelt
+    known_preferences:
+      - Jabbas Gunst erhalten um jeden Preis
+      - misstrauisch gegenüber allen Besuchern
+    related_to:
+      - id: 15  # Jabba the Hutt (Herr)
+    notes: >
+      Luke verwendete einen Gedankentrick auf ihn –
+      erste klare Jedi-Fähigkeiten-Demonstration in Episode VI.
+
+  - id: 31
+    name: Salacious B. Crumb
+    species: Kowakianischer Affenlizard
+    affiliation: Jabba's Palast
+    met_at: Jabba's Palast, Tatooine
+    met_when: 4 ABY
+    relationship_to_luke: irrelevante Nervensäge in Jabbas Hof
+    groups:
+      - Jabba's Hof
+    known_preferences:
+      - lachen, spotten, quälen (z. B. C-3POs Auge)
+      - Jabbas Unterhaltung sicherstellen
+    notes: >
+      Wurde von R2-D2 auf der Sail Barge besiegt.
+
+  - id: 32
+    name: Malakili
+    alias: Der Rancor-Wächter
+    species: Mensch
+    affiliation: Jabba's Palast
+    met_at: Jabba's Palast / Rancor-Grube, Tatooine
+    met_when: 4 ABY
+    relationship_to_luke: Bewacher des Rancors (von Luke besiegt)
+    groups:
+      - Jabba's Hof
+    known_preferences:
+      - seinen Rancor wie ein Haustier / echte Zuneigung
+      - weinte offen nach dem Tod des Tiers
+    notes: >
+      Der Rancor wurde von Luke durch ein herabfallendes Falltor getötet.
+      Malakili war untröstlich – eine der menschlichsten Szenen des Films.
+
+  - id: 33
+    name: Max Rebo
+    species: Ortolan
+    affiliation: Max Rebo Band / Jabba's Palast
+    met_at: Jabba's Palast, Tatooine
+    met_when: 4 ABY
+    relationship_to_luke: Hofmusiker in Jabbas Palast
+    groups:
+      - Jabba's Hof
+    known_preferences:
+      - Essen (arbeitete für Jabba nur gegen freie Verpflegung – kein Geld)
+      - Musik / Red Ball Organ (Keyboard-Synthesizer)
+
+  - id: 34
+    name: Sy Snootles
+    species: Pa'lowick
+    affiliation: Max Rebo Band / Jabba's Palast
+    met_at: Jabba's Palast, Tatooine
+    met_when: 4 ABY
+    relationship_to_luke: Sängerin in Jabbas Hof
+    groups:
+      - Jabba's Hof
+    known_preferences:
+      - Rampenlicht und Aufmerksamkeit
+
+  - id: 35
+    name: Nien Nunb
+    species: Sullustan
+    affiliation: Rebel Alliance
+    met_at: Rebellenflotte, Endor-Orbit
+    met_when: 4 ABY
+    relationship_to_luke: Verbündeter / Co-Pilot Landos bei Endor
+    groups:
+      - Rebel Alliance
+    known_preferences:
+      - freundlicher Charakter, lacht häufig
+      - präzises Fliegen
+    related_to:
+      - id: 11  # Lando Calrissian (Pilot-Partner Endor)
+
+  - id: 36
+    name: Greedo
+    species: Rodian
+    affiliation: Kopfgeldjäger (für Jabba)
+    met_at: Mos Eisley Cantina, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: kurze Beobachtung (Scharmützel mit Han)
+    groups:
+      - Kopfgeldjäger
+      - Tatooine
+    known_preferences:
+      - Kopfgelder pünktlich eintreiben
+      - überschätzt sich gelegentlich
+    notes: >
+      Wurde von Han Solo in der Cantina erschossen.
+      Luke war Augenzeuge.
+
+  - id: 37
+    name: Ponda Baba
+    alias: Walrus Man
+    species: Aqualish
+    affiliation: Kriminell
+    met_at: Mos Eisley Cantina, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: kurze Bedrohung in der Cantina
+    groups:
+      - Tatooine
+      - Unterwelt
+    notes: >
+      Bedrohte Luke zusammen mit Dr. Evazan.
+      Arm von Obi-Wan Kenobis Lichtschwert abgetrennt.
+
+  - id: 38
+    name: Dr. Cornelius Evazan
+    species: Mensch
+    affiliation: Kriminell (Todesstrafe in 12 Systemen)
+    met_at: Mos Eisley Cantina, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: kurze Bedrohung in der Cantina
+    groups:
+      - Tatooine
+      - Unterwelt
+    known_preferences:
+      - Einschüchterung als erste Gesprächsstrategie
+    notes: >
+      Bedrohte Luke gemeinsam mit Ponda Baba.
+      Beide von Obi-Wan außer Gefecht gesetzt.
+
+  - id: 39
+    name: Wuher
+    species: Mensch
+    affiliation: Mos Eisley Cantina (Barkeeper)
+    met_at: Mos Eisley Cantina, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: gleichgültig / kein Interesse an Luke
+    groups:
+      - Tatooine
+    known_preferences:
+      - hasst Droiden kategorisch
+      - Ruhe und Ordnung in seiner Bar
+    notes: >
+      Verweigerte R2-D2 und C-3PO den Zutritt:
+      „Wir bedienen hier keine Droiden."
+
+  - id: 40
+    name: Momaw Nadon
+    alias: Hammerhead
+    species: Ithorianisch
+    affiliation: Rebellions-Sympathisant (nicht öffentlich)
+    met_at: Mos Eisley Cantina, Tatooine
+    met_when: 0 BBY
+    relationship_to_luke: beiläufige Cantina-Bekanntschaft
+    groups:
+      - Tatooine
+    known_preferences:
+      - Botanik und ökologisches Gleichgewicht
+      - Ithorianische Philosophie der Naturverbundenheit
+    notes: >
+      War in Wirklichkeit Rebellions-Informant.
+      Luke wusste das nicht – ein gutes Beispiel für
+      „Kontext, den man nicht im Adressbuch hat".
+
+  - id: 41
+    name: General Crix Madine
+    species: Mensch
+    affiliation: Rebel Alliance (ehemaliger Imperialer Offizier)
+    met_at: Rebellenflotte, Endor-Briefing
+    met_when: 4 ABY
+    relationship_to_luke: Taktischer Planer der Endor-Bodenoperation
+    groups:
+      - Rebel Alliance
+      - Führung
+    known_preferences:
+      - Spezialoperationen und Guerillataktik
+    notes: >
+      Plante den Bodeneinsatz zur Zerstörung des Bunker-Schildgenerators.
+
+  - id: 42
+    name: Jek Tono Porkins
+    alias: Red Six
+    species: Mensch
+    affiliation: Rebel Alliance / Red Squadron
+    met_at: Yavin IV, Rebellenbasis
+    met_when: 0 BBY
+    relationship_to_luke: Staffelkamerad
+    groups:
+      - Rebel Alliance
+      - Red Squadron
+    notes: >
+      Gefallen in der Yavin-Angriffsrunde –
+      ignorierte eine Systemwarnung und flog weiter.
+
+  - id: 43
+    name: Dengar
+    species: Mensch (teilweise cybernetisch)
+    affiliation: Kopfgeldjäger
+    met_at: nie persönlich getroffen (aus Berichten bekannt)
+    met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
+    relationship_to_luke: Feind-Netzwerk / indirekte Bedrohung
+    groups:
+      - Kopfgeldjäger
+    known_preferences:
+      - zäh, verbittert, kein Interesse an Stil
+    notes: >
+      Wurde von Vader zur Han-Suche engagiert.
+      Luke war bei diesem Briefing nicht anwesend –
+      kennt ihn nur aus Berichten.
+      DEMO-HINWEIS: Zeigt, dass ein Kontakt-System
+      nicht nur direkte Bekanntschaften enthält.
+
+  - id: 44
+    name: Bossk
+    species: Trandoshaner
+    affiliation: Kopfgeldjäger
+    met_at: nie persönlich getroffen (aus Berichten bekannt)
+    met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
+    relationship_to_luke: Feind-Netzwerk / indirekte Bedrohung
+    groups:
+      - Kopfgeldjäger
+    known_preferences:
+      - hasst Wookiees (Spezies-Antagonismus)
+      - brutale Direktheit
+    notes: >
+      Wie Dengar: nie direkt getroffen. Nur aus Berichten bekannt.
+
+  - id: 45
+    name: IG-88
+    species: IG-Serie Assassinen-Droid
+    affiliation: Kopfgeldjäger
+    met_at: nie persönlich getroffen (aus Berichten bekannt)
+    met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
+    relationship_to_luke: Feind-Netzwerk
+    groups:
+      - Kopfgeldjäger
+      - Droiden
+    notes: >
+      Gefährlichster der engagierten Droiden-Kopfgeldjäger.
+      Luke kennt ihn nur aus Geheimdienstberichten.
+
+  - id: 46
+    name: 4-LOM
+    species: Protokoll-Droid (zu Kopfgeldjäger umgebaut)
+    affiliation: Kopfgeldjäger
+    met_at: nie persönlich getroffen (aus Berichten bekannt)
+    met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
+    relationship_to_luke: Feind-Netzwerk
+    groups:
+      - Kopfgeldjäger
+    known_preferences:
+      - analytische Vorgehensweise
+    related_to:
+      - id: 47  # Zuckuss (Partner)
+
+  - id: 47
+    name: Zuckuss
+    species: Gand
+    affiliation: Kopfgeldjäger
+    met_at: nie persönlich getroffen (aus Berichten bekannt)
+    met_when: 3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)
+    relationship_to_luke: Feind-Netzwerk
+    groups:
+      - Kopfgeldjäger
+    related_to:
+      - id: 46  # 4-LOM (Partner)
+
+  - id: 48
+    name: Admiral Firmus Piett
+    species: Mensch
+    affiliation: Galaktisches Imperium / Vaders Flotte
+    met_at: kein direkter Kontakt
+    met_when: 3–4 ABY (Kommandant der Verfolgungsflotte)
+    relationship_to_luke: Feind-Netzwerk / militärische Bedrohung
+    groups:
+      - Imperium
+    known_preferences:
+      - Pflichterfüllung – auch unter Todesangst (Vader)
+    notes: >
+      Kommandierte Vaders Superintendantur-Flotte bei Hoth und Endor.
+      Kein direkter Kontakt zu Luke – präsente institutionelle Bedrohung.
+      Starb beim Endor-Raumkampf (Kamikaze-A-Wing).
+
+  - id: 49
+    name: FX-7
+    alias: Effex-Seven
+    species: Medizin-Assistent-Droid
+    affiliation: Rebel Alliance
+    met_at: Echo Base, Hoth
+    met_when: 3 ABY
+    relationship_to_luke: Medizinische Erstversorgung nach Wampa-Attacke
+    groups:
+      - Droiden
+      - Rebel Alliance
+    known_preferences:
+      - unterstützende Rolle / arbeitet 2-1B zu
+    notes: >
+      Assistierte 2-1B bei Lukes Behandlung in der Bacta-Tank-Vorbereitung.
+
+  - id: 50
+    name: Paploo
+    species: Ewok
+    affiliation: Bright Tree Village, Endor-Mond
+    met_at: Endor-Mond, imperialer Bunker-Bereich
+    met_when: 4 ABY
+    relationship_to_luke: verbündeter Ewok / Ablenkungsmanöver
+    groups:
+      - Ewoks
+      - Endor-Allianz
+    known_preferences:
+      - draufgängerisch und impulsiv
+      - technisch neugierig (Speeder Bike sofort fasziniert)
+    notes: >
+      Stahl spontan ein imperiales Speeder Bike –
+      lenkte die Wachen ab und ermöglichte der Gruppe den Zugang zum Bunker.
+      Kleiner Held des Endor-Bodenfeldzugs.
