@@ -1,0 +1,55 @@
+{
+  "name": "db-demo-smart-contacts",
+
+  // Bestehendes docker-compose.yml + Devcontainer-Overrides
+  "dockerComposeFile": [
+    "../docker-compose.yml",
+    "docker-compose.devcontainer.yml"
+  ],
+
+  // Hauptservice für Entwicklung (Python)
+  "service": "fastapi",
+  "workspaceFolder": "/workspace",
+
+  // Stufe 2 startet automatisch mit
+  "runServices": ["json-graphql"],
+  "shutdownAction": "stopCompose",
+
+  // Ports automatisch weiterleiten + Labels im VS Code Ports-Tab
+  "forwardPorts": [3000, 8000],
+  "portsAttributes": {
+    "3000": {
+      "label": "Stufe 2 · json-graphql-server",
+      "onAutoForward": "notify"
+    },
+    "8000": {
+      "label": "Stufe 3 · FastAPI + Strawberry",
+      "onAutoForward": "notify"
+    }
+  },
+
+  // Nach Container-Start: Dependencies + JSON generieren
+  "postCreateCommand": "pip install -r requirements.txt && python3 yaml_to_json.py",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "graphql.vscode-graphql-syntax",
+        "redhat.vscode-yaml",
+        "ms-azuretools.vscode-docker",
+        "GitHub.copilot",
+        "GitHub.copilot-chat"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/usr/local/bin/python3",
+        "editor.formatOnSave": true,
+        "editor.rulers": [88],
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.python"
+        }
+      }
+    }
+  }
+}

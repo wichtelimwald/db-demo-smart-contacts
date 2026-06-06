@@ -1,0 +1,8 @@
+services:
+
+  fastapi:
+    # Ganzes Projekt mounten (nicht nur data/)
+    volumes:
+      - ..:/workspace:cached
+    # Container am Leben halten – Server wird manuell oder per Task gestartet
+    command: sleep infinity

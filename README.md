@@ -102,7 +102,26 @@ cd db-demo-smart-contacts
 
 ---
 
-## Option A – Docker (empfohlen)
+## Option A – Dev Container in VS Code (empfohlen)
+
+Voraussetzung: Docker + Extension [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) installiert.
+
+```bash
+code .
+# → VS Code: „Reopen in Container" klicken
+```
+
+Beide Server starten danach per `Cmd+Shift+B` → **Demo: Alle Server starten**.
+
+| Server | URL |
+|---|---|
+| Stufe 2 · GraphiQL | http://localhost:3000 |
+| Stufe 3 · GraphQL + GraphiQL | http://localhost:8000/graphql |
+| Stufe 3 · REST + Swagger | http://localhost:8000/docs |
+
+---
+
+## Option B – Docker ohne VS Code
 
 Ein Befehl startet beide Server:
 
@@ -128,7 +147,7 @@ docker-compose down
 
 ---
 
-## Option B – Lokal
+## Option C – Lokal
 
 ```bash
 # Python-Abhängigkeiten
