@@ -1,16 +1,16 @@
 # Innovative Datenbank- und Informationssysteme
-### Live-Demo - Vorlesung DHBW Karlsruhe
+### Live-Demo · Probevorlesung DHBW Karlsruhe
 
 > **Leitthese:**  
-> Daten zu speichern ist einfach. Daten dauerhaft korrekt, verständlich, integrierbar, sicher und nutzbar zu halten - das ist der eigentliche Engpass moderner Informationssysteme.
+> Daten zu speichern ist einfach. Daten dauerhaft korrekt, verständlich, integrierbar, sicher und nutzbar zu halten – das ist der eigentliche Engpass moderner Informationssysteme.
 
 ---
 
 ## Kontext
 
-Live-Demo zur 30-minütigen Vorlesung  
-**"Innovative Datenbank- und Informations-Systeme - Herausforderungen und Potentiale"**  
-Informatik - DHBW Karlsruhe
+Live-Demo zur 30-minütigen Probevorlesung  
+**„Innovative Datenbank- und Informations-Systeme – Herausforderungen und Potentiale"**  
+Berufungsverfahren Professur Informatik · DHBW Karlsruhe
 
 Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
 
@@ -20,7 +20,7 @@ Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
 
 Ein einziges, vertrautes Szenario als roter Faden:
 
-> _"Ich möchte festhalten, wen ich kenne - und das nutzbar machen."_
+> _„Ich möchte festhalten, wen ich kenne – und das nutzbar machen."_
 
 | # | Leitfrage | Konzept |
 |---|-----------|---------|
@@ -32,36 +32,22 @@ Ein einziges, vertrautes Szenario als roter Faden:
 | 6 | Wer hat Recht, wenn zwei Quellen widersprechen? | Konsistenz, Merge-Konflikte |
 | 7 | Wer darf was sehen? | Zugriffskontrolle, Governance |
 
-**Dramaturgie:** Start mit einer einfachen YAML-Datei - jeder versteht es sofort. Dann zeigen, wo es zerfällt. Das Datenbankproblem entsteht von selbst.
-
 ---
 
-## Datenbasis: 50 Star-Wars-Kontakte aus Lukes Perspektive
+## Demo-Dramaturgie: Drei Stufen
 
-`data/contacts.yaml` ist die menschenlesbare Quelle. `data/contacts.json` wird daraus generiert und enthält vier Collections:
+```
+Stufe 1 · contacts.yaml          menschenlesbar, jeder versteht es
+              ↓                   → Grenze: keine Abfragen, keine Beziehungen
+Stufe 2 · json-graphql-server    implizites Schema, GraphQL out of the box
+              ↓                   → Grenze: selbstreferentielle Traversierung geht nicht
+Stufe 3 · Strawberry + FastAPI   explizites Schema in Python, volle Kontrolle
+                                  → Contact → relatedTo → Contact funktioniert
+                                  → REST und GraphQL parallel
+```
 
-| Collection | Einträge | Beschreibung |
-|---|---|---|
-| `contacts` | 50 | Alle Charaktere mit `relatedTo` als eingebettetem ID-Array |
-| `groups` | 19 | Rebel Alliance, Jedi, Jabba's Hof, ... |
-| `contactGroups` | 92 | n:m Junction: Kontakt <-> Gruppe |
-
-> **Bekannte Grenze (Demo-Punkt):** `relatedTo` ist als Integer-Array direkt im Kontakt eingebettet. `json-graphql-server` kann selbstreferentielle Traversierung (`Contact -> Contact`) nicht auflösen - d. h. aus einer ID kann kein verschachteltes Contact-Objekt abgefragt werden. Diese Grenze ist bewusst Teil der Demo: Sie zeigt, wo ein Prototyping-Tool endet und eine echte Datenbank beginnt.
-
----
-
-## Tech-Stack
-
-| Komponente | Tool | Warum |
-|---|---|---|
-| Datenbasis (lesbar) | `contacts.yaml` | Kein Setup, sofort verständlich |
-| Datenbasis (technisch) | `contacts.json` | Generiert, für json-graphql-server |
-| Konvertierung | `yaml_to_json.py` | Python, keine Abhängigkeiten außer PyYAML |
-| API + GraphQL | `json-graphql-server` | Auto-generiertes Schema + GraphiQL eingebaut |
-| Editor | VS Code | Schema live zeigen |
-| Browser | beliebig | GraphiQL auf `localhost:3000` |
-
-**Kein Docker. Kein Build. Kein Internet notwendig.**
+Jede Stufe zeigt, was die vorherige nicht kann.  
+Das Datenbankproblem entsteht von selbst – ohne Buzzwords.
 
 ---
 
@@ -71,8 +57,8 @@ Ein einziges, vertrautes Szenario als roter Faden:
 dhbw-db-demo/
 │
 ├── data/
-│   ├── contacts.yaml        <- menschenlesbare Quelle (hier editieren)
-│   └── contacts.json        <- generiert, nie manuell editieren
+│   ├── contacts.yaml        ← menschenlesbare Quelle (hier editieren)
+│   └── contacts.json        ← generiert, nie manuell editieren
 │
 ├── queries/
 │   ├── 01_alle_kontakte.graphql
@@ -80,7 +66,9 @@ dhbw-db-demo/
 │   ├── 03_suche.graphql
 │   └── 04_grenzen.graphql
 │
-├── yaml_to_json.py          ← Konvertierungsskript
+├── main.py                  ← FastAPI + Strawberry Server (Stufe 3)
+├── requirements.txt         ← Python-Abhängigkeiten
+├── yaml_to_json.py          ← Konvertierung YAML → JSON
 └── README.md
 ```
 
@@ -89,38 +77,63 @@ dhbw-db-demo/
 ## Voraussetzungen
 
 ```bash
-node --version   # v18+
-python3 --version
-pip install pyyaml
+node --version    # v18+ (für Stufe 2)
+python3 --version # 3.10+ (für Stufe 3)
 ```
 
 ---
 
 ## Setup
 
+### Einmalig
+
 ```bash
 git clone https://github.com/<username>/dhbw-db-demo.git
 cd dhbw-db-demo
 
+# Python-Abhängigkeiten installieren
+pip install -r requirements.txt
+
 # JSON aus YAML generieren
 python3 yaml_to_json.py
-
-# Server starten
-npx json-graphql-server data/contacts.json
-
-# -> GraphiQL: http://localhost:3000
 ```
 
-Nach Änderungen an `contacts.yaml`:
+Nach Änderungen an `contacts.yaml` immer:
 ```bash
-python3 yaml_to_json.py && npx json-graphql-server data/contacts.json
+python3 yaml_to_json.py
 ```
 
 ---
 
-## Demo-Abfragen
+## Stufe 2 – json-graphql-server
+
+```bash
+npx json-graphql-server data/contacts.json
+# → GraphiQL: http://localhost:3000
+```
+
+**Implizites Schema** – wird automatisch aus der JSON-Struktur abgeleitet.  
+Kein Code, kein Setup, sofort abfragbar.
+
+---
+
+## Stufe 3 – Strawberry + FastAPI
+
+```bash
+python3 main.py
+# → GraphQL + GraphiQL:  http://localhost:8000/graphql
+# → REST + Swagger Docs: http://localhost:8000/docs
+```
+
+**Explizites Schema** – in Python definiert, volle Kontrolle.
+
+---
+
+## Abfragen im Vergleich
 
 ### Alle Kontakte
+
+**Stufe 2 · json-graphql-server**
 ```graphql
 {
   allContacts {
@@ -132,81 +145,137 @@ python3 yaml_to_json.py && npx json-graphql-server data/contacts.json
 }
 ```
 
-### Einen Kontakt abrufen
+**Stufe 3 · Strawberry**
 ```graphql
 {
-  Contact(id: "6") {
+  allContacts {
+    id
     name
-    relationship
-    organization
     metAt
-    metWhen
-    knownPreferences
-    relatedTo
+    organization
   }
 }
 ```
 
-### Alle Kontakte einer Gruppe
+### Gruppe mit allen Mitgliedern
+
+**Stufe 2**
 ```graphql
 {
   allGroups(filter: { name: "Rebel Alliance" }) {
     id
     name
     contactGroups {
-      contact {
-        name
-        organization
-      }
+      contact { name organization }
     }
   }
 }
 ```
 
-### Suche (case-insensitiv, Substring)
+**Stufe 3**
 ```graphql
 {
-  allContacts(filter: { q: "kriminell" }) {
+  contactsInGroup(groupName: "Rebel Alliance") {
     name
     organization
   }
 }
 ```
 
-### Alle Gruppen eines Kontakts
-```graphql
-{
-  allContactGroups(filter: { contact_id: 9 }) {
-    group {
-      name
-    }
-  }
-}
-```
+### Selbstreferentielle Traversierung – der Lehrmoment
 
----
-
-## Die Grenze - Demo-Punkt
-
-Diese Abfrage **funktioniert nicht**:
+**Stufe 2 · funktioniert nicht:**
 ```graphql
 {
   Contact(id: "6") {
+    name
+    relatedTo       # liefert nur rohe IDs – kein Objekt dahinter
+  }
+}
+```
+
+**Stufe 3 · funktioniert:**
+```graphql
+{
+  contact(id: 6) {
+    name
     relatedTo {
-      name        # <- geht nicht: relatedTo ist ein Integer-Array, kein Objekt
+      relation
+      contact {
+        name
+        organization
+        groups { name }
+      }
     }
   }
 }
 ```
 
-`relatedTo` liefert nur `[8, 7, 15, 11]` - IDs, keine Namen.
+> _„Das ist der Unterschied zwischen Daten ablegen und einem Informationssystem bauen:  
+> Explizites Schema, echte Resolver, traversierbare Beziehungen."_
 
-> _"Um aus einer ID einen Namen zu machen, brauchen wir eine echte Datenbank mit Fremdschlüsseln, Joins und einem sauberen Schema. Genau das ist der Unterschied zwischen einem Prototyping-Tool und einem Informationssystem."_
+### Suche und Filter
 
-**Nächster Schritt:** PostgreSQL + Hasura -> verschachtelte GraphQL-Abfragen mit echten Joins out of the box.
+**Stufe 3**
+```graphql
+{
+  allContacts(nameContains: "Solo") {
+    name
+    organization
+    relatedTo {
+      relation
+      contact { name }
+    }
+  }
+}
+
+{
+  allContacts(organization: "Rebel") {
+    name
+    metAt
+  }
+}
+```
+
+### REST parallel (nur Stufe 3)
+
+```bash
+# Alle Kontakte
+curl http://localhost:8000/contacts
+
+# Einzelner Kontakt
+curl http://localhost:8000/contacts/6
+
+# Suche per Query-Parameter
+curl "http://localhost:8000/contacts?name=Solo"
+
+# Alle Gruppen
+curl http://localhost:8000/groups
+```
+
+> _„Gleiche Daten, zwei Zugriffsmodelle – REST und GraphQL aus einer Codebasis."_
+
+---
+
+## Bekannte Grenze (Demo-Punkt Stufe 2)
+
+`relatedTo` liefert in Stufe 2 nur rohe Objekte `[{"id": 8}, {"id": 7}]` –  
+keine traversierbaren Contact-Objekte.
+
+Das ist kein Bug, sondern die **Grenze des Tools** – und der Übergang zu Stufe 3.
+
+---
+
+## Hinweise zur Live-Demo
+
+- Beide Server können **gleichzeitig** laufen (Port 3000 und 8000).
+- Der Wechsel im Browser von 3000 → 8000 ist der Live-Lehrmoment.
+- Alle Abfragen liegen als `.graphql`-Dateien in `queries/` – Copy/Paste, kein Tippen live.
+- `contacts.yaml` **nicht** live editieren (einrückungsempfindlich).
+- Demo läuft vollständig **offline**, kein Internet nötig.
 
 ---
 
 ## Lizenz
 
-MIT - frei nutzbar für Lehr- und Bildungszwecke.
+MIT – frei nutzbar für Lehr- und Bildungszwecke.
