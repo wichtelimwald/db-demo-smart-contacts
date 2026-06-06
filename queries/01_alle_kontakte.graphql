@@ -1,0 +1,65 @@
+# ─────────────────────────────────────────────────────────────
+# 01_alle_kontakte.graphql
+# Leitfrage: „Wen kenne ich – und wo habe ich sie kennengelernt?"
+# Stufe 2 (localhost:3000) und Stufe 3 (localhost:8000/graphql)
+# ─────────────────────────────────────────────────────────────
+
+
+# ── Stufe 2 · json-graphql-server ────────────────────────────
+# Alle Kontakte – einfachste Abfrage
+{
+  allContacts {
+    id
+    name
+    metAt
+    organization
+  }
+}
+
+
+# ── Stufe 2 · Einzelner Kontakt per ID ───────────────────────
+{
+  Contact(id: "6") {
+    name
+    species
+    organization
+    relationship
+    metAt
+    metWhen
+    knownPreferences
+    relatedTo
+  }
+}
+
+
+# ── Stufe 3 · Strawberry ──────────────────────────────────────
+# Alle Kontakte
+{
+  allContacts {
+    id
+    name
+    metAt
+    organization
+    relationship
+  }
+}
+
+
+# ── Stufe 3 · Einzelner Kontakt per ID ───────────────────────
+{
+  contact(id: 6) {
+    name
+    species
+    organization
+    relationship
+    metAt
+    metWhen
+    knownPreferences
+  }
+}
+
+
+# ── Didaktischer Punkt ────────────────────────────────────────
+# Stufe 2: Schema entstand automatisch aus der JSON-Struktur.
+# Stufe 3: Schema ist explizit in Python definiert (main.py).
+# Ergebnis ist gleich – die Kontrolle ist eine andere.

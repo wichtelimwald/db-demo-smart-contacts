@@ -1,5 +1,5 @@
 # Innovative Datenbank- und Informationssysteme
-### Live-Demo · Probevorlesung DHBW Karlsruhe
+### Live-Demo · Vorlesung DHBW Karlsruhe
 
 > **Leitthese:**  
 > Daten zu speichern ist einfach. Daten dauerhaft korrekt, verständlich, integrierbar, sicher und nutzbar zu halten – das ist der eigentliche Engpass moderner Informationssysteme.
@@ -8,9 +8,9 @@
 
 ## Kontext
 
-Live-Demo zur 30-minütigen Probevorlesung  
+Live-Demo zur 30-minütigen Vorlesung  
 **„Innovative Datenbank- und Informations-Systeme – Herausforderungen und Potentiale"**  
-Berufungsverfahren Professur Informatik · DHBW Karlsruhe
+DHBW Karlsruhe
 
 Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
 
@@ -66,9 +66,12 @@ dhbw-db-demo/
 │   ├── 03_suche.graphql
 │   └── 04_grenzen.graphql
 │
+├── Dockerfile               ← Image für FastAPI + Strawberry
+├── docker-compose.yml       ← startet Stufe 2 und Stufe 3 gemeinsam
 ├── main.py                  ← FastAPI + Strawberry Server (Stufe 3)
 ├── requirements.txt         ← Python-Abhängigkeiten
 ├── yaml_to_json.py          ← Konvertierung YAML → JSON
+├── .gitignore
 └── README.md
 ```
 
@@ -76,6 +79,13 @@ dhbw-db-demo/
 
 ## Voraussetzungen
 
+**Option A (empfohlen): Docker**
+```bash
+docker --version        # Docker Desktop oder Docker Engine
+docker compose version
+```
+
+**Option B: Lokal**
 ```bash
 node --version    # v18+ (für Stufe 2)
 python3 --version # 3.10+ (für Stufe 3)
@@ -85,67 +95,76 @@ python3 --version # 3.10+ (für Stufe 3)
 
 ## Setup
 
-### Einmalig
-
 ```bash
-git clone https://github.com/<username>/dhbw-db-demo.git
-cd dhbw-db-demo
-
-# Python-Abhängigkeiten installieren
-pip install -r requirements.txt
-
-# JSON aus YAML generieren
-python3 yaml_to_json.py
-```
-
-Nach Änderungen an `contacts.yaml` immer:
-```bash
-python3 yaml_to_json.py
+git clone https://github.com/wichtelimwald/db-demo-smart-contacts
+cd db-demo-smart-contacts
 ```
 
 ---
 
-## Stufe 2 – json-graphql-server
+## Option A – Docker (empfohlen)
+
+Ein Befehl startet beide Server:
 
 ```bash
+docker-compose up
+```
+
+| Server | URL |
+|---|---|
+| Stufe 2 · GraphiQL | http://localhost:3000 |
+| Stufe 3 · GraphQL + GraphiQL | http://localhost:8000/graphql |
+| Stufe 3 · REST + Swagger | http://localhost:8000/docs |
+
+Nach Änderungen an `contacts.yaml`:
+```bash
+docker-compose restart fastapi
+```
+
+Stoppen:
+```bash
+docker-compose down
+```
+
+---
+
+## Option B – Lokal
+
+```bash
+# Python-Abhängigkeiten
+python3 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**Stufe 2** – json-graphql-server:
+```bash
+python3 yaml_to_json.py
 npx json-graphql-server data/contacts.json
 # → GraphiQL: http://localhost:3000
 ```
 
-**Implizites Schema** – wird automatisch aus der JSON-Struktur abgeleitet.  
-Kein Code, kein Setup, sofort abfragbar.
-
----
-
-## Stufe 3 – Strawberry + FastAPI
-
+**Stufe 3** – Strawberry + FastAPI (neues Terminal):
 ```bash
 python3 main.py
 # → GraphQL + GraphiQL:  http://localhost:8000/graphql
 # → REST + Swagger Docs: http://localhost:8000/docs
 ```
 
-**Explizites Schema** – in Python definiert, volle Kontrolle.
+Nach Änderungen an `contacts.yaml`:
+```bash
+python3 yaml_to_json.py
+```
+
+**Implizites Schema** (Stufe 2) – automatisch aus der JSON-Struktur.  
+**Explizites Schema** (Stufe 3) – in Python definiert, volle Kontrolle.
 
 ---
 
-## Abfragen im Vergleich
+## GraphQL
 
 ### Alle Kontakte
 
-**Stufe 2 · json-graphql-server**
-```graphql
-{
-  allContacts {
-    id
-    name
-    metAt
-    organization
-  }
-}
-```
-
-**Stufe 3 · Strawberry**
 ```graphql
 {
   allContacts {
@@ -182,9 +201,9 @@ python3 main.py
 }
 ```
 
-### Selbstreferentielle Traversierung – der Lehrmoment
+### Selbstreferentielle Traversierung
 
-**Stufe 2 · funktioniert nicht:**
+**Stufe 2**
 ```graphql
 {
   Contact(id: "6") {
@@ -194,7 +213,7 @@ python3 main.py
 }
 ```
 
-**Stufe 3 · funktioniert:**
+**Stufe 3**
 ```graphql
 {
   contact(id: 6) {
@@ -214,7 +233,7 @@ python3 main.py
 > _„Das ist der Unterschied zwischen Daten ablegen und einem Informationssystem bauen:  
 > Explizites Schema, echte Resolver, traversierbare Beziehungen."_
 
-### Suche und Filter
+### Suche und Filter (nur Stufe 3)
 
 **Stufe 3**
 ```graphql
@@ -257,21 +276,10 @@ curl http://localhost:8000/groups
 
 ---
 
-## Bekannte Grenze (Demo-Punkt Stufe 2)
-
-`relatedTo` liefert in Stufe 2 nur rohe Objekte `[{"id": 8}, {"id": 7}]` –  
-keine traversierbaren Contact-Objekte.
-
-Das ist kein Bug, sondern die **Grenze des Tools** – und der Übergang zu Stufe 3.
-
----
-
-## Hinweise zur Live-Demo
+## Hinweise
 
 - Beide Server können **gleichzeitig** laufen (Port 3000 und 8000).
-- Der Wechsel im Browser von 3000 → 8000 ist der Live-Lehrmoment.
-- Alle Abfragen liegen als `.graphql`-Dateien in `queries/` – Copy/Paste, kein Tippen live.
-- `contacts.yaml` **nicht** live editieren (einrückungsempfindlich).
+- Alle Abfragen liegen als `.graphql`-Dateien in `queries/`
 - Demo läuft vollständig **offline**, kein Internet nötig.
 
 ---

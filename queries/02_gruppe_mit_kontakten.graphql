@@ -1,0 +1,85 @@
+# ─────────────────────────────────────────────────────────────
+# 02_gruppe_mit_kontakten.graphql
+# Leitfrage: „Wer gehört zu welcher Gruppe?"
+# Zeigt: Beziehungen, n:m-Junction, der N+1-Unterschied
+# ─────────────────────────────────────────────────────────────
+
+
+# ── Stufe 2 · Alle Gruppen ────────────────────────────────────
+{
+  allGroups {
+    id
+    name
+  }
+}
+
+
+# ── Stufe 2 · Gruppe mit Mitgliedern (ein Join) ───────────────
+{
+  allGroups(filter: { name: "Rebel Alliance" }) {
+    id
+    name
+    contactGroups {
+      contact {
+        name
+        organization
+      }
+    }
+  }
+}
+
+
+# ── Stufe 2 · Alle Gruppen eines Kontakts ────────────────────
+{
+  allContactGroups(filter: { contact_id: 9 }) {
+    group {
+      name
+    }
+  }
+}
+
+
+# ── Stufe 3 · Alle Mitglieder einer Gruppe ───────────────────
+{
+  contactsInGroup(groupName: "Rebel Alliance") {
+    name
+    organization
+    metAt
+  }
+}
+
+
+# ── Stufe 3 · Gruppe traversieren mit Kontaktdetails ─────────
+{
+  allGroups {
+    name
+    contacts {
+      name
+      organization
+      metAt
+    }
+  }
+}
+
+
+# ── Stufe 3 · Gruppen eines Kontakts ─────────────────────────
+{
+  contact(id: 9) {
+    name
+    groups {
+      name
+    }
+  }
+}
+
+
+# ── Didaktischer Punkt ────────────────────────────────────────
+# In SQL wäre das ein JOIN über drei Tabellen:
+#
+#   SELECT c.name FROM contacts c
+#   JOIN contact_groups cg ON cg.contact_id = c.id
+#   JOIN groups g ON g.id = cg.group_id
+#   WHERE g.name = 'Rebel Alliance';
+#
+# GraphQL gibt dasselbe als verschachteltes JSON zurück –
+# ohne dass der Client die Tabellenstruktur kennen muss.

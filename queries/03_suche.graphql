@@ -1,0 +1,100 @@
+# ─────────────────────────────────────────────────────────────
+# 03_suche.graphql
+# Leitfrage: „Wie finde ich, was ich suche?"
+# Zeigt: Filteroptionen, Suche, Grenzen von String vs. Typ
+# ─────────────────────────────────────────────────────────────
+
+
+# ── Stufe 2 · Exakter Filter ─────────────────────────────────
+{
+  allContacts(filter: { species: "Mensch" }) {
+    name
+    organization
+  }
+}
+
+
+# ── Stufe 2 · Volltextsuche über alle Felder (q-Filter) ──────
+# case-insensitiv, Substring, alle String-Felder
+{
+  allContacts(filter: { q: "kriminell" }) {
+    name
+    organization
+  }
+}
+
+{
+  allContacts(filter: { q: "jedi" }) {
+    name
+    relationship
+    organization
+  }
+}
+
+{
+  allContacts(filter: { q: "tatooine" }) {
+    name
+    metAt
+  }
+}
+
+
+# ── Stufe 2 · Suche nach Kennenlernzeitpunkt ─────────────────
+# Funktioniert – aber nur als exakter String-Match
+{
+  allContacts(filter: { metWhen: "0 BBY" }) {
+    name
+    metAt
+  }
+}
+
+# Funktioniert NICHT – "3 ABY" ist in "0 BBY – 4 ABY" enthalten,
+# aber json-graphql-server kennt keine Zeitspannen:
+{
+  allContacts(filter: { metWhen: "3 ABY" }) {
+    name
+    metAt
+  }
+}
+
+
+# ── Stufe 3 · Filter nach Name (Substring) ───────────────────
+{
+  allContacts(nameContains: "Solo") {
+    name
+    organization
+  }
+}
+
+
+# ── Stufe 3 · Filter nach Organisation ───────────────────────
+{
+  allContacts(organization: "Rebel") {
+    name
+    metAt
+    groups { name }
+  }
+}
+
+
+# ── Stufe 3 · Filter nach Spezies ────────────────────────────
+{
+  allContacts(species: "Ewok") {
+    name
+    metAt
+    relationship
+  }
+}
+
+
+# ── Didaktischer Punkt ────────────────────────────────────────
+# „0 BBY" ist ein String – das System weiß nicht, dass
+# „0 BBY" vor „3 ABY" liegt oder dass „0 BBY – 4 ABY"
+# den Zeitpunkt „3 ABY" einschließt.
+#
+# Datentyp DATE statt STRING würde erlauben:
+#   metWhen >= '2022-01-01'
+#   ORDER BY metWhen
+#   Zeitabstand berechnen
+#
+# → Semantik im Datenmodell schlägt Freitext.

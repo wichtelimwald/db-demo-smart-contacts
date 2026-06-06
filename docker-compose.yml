@@ -1,0 +1,24 @@
+services:
+
+  # ── Stufe 2: json-graphql-server ──────────────────────────────
+  # Implizites Schema, automatisch aus contacts.json generiert
+  # GraphiQL: http://localhost:3000
+  json-graphql:
+    image: node:20-alpine
+    working_dir: /app
+    volumes:
+      - ./data:/app/data
+    command: npx -y json-graphql-server data/contacts.json
+    ports:
+      - "3000:3000"
+
+  # ── Stufe 3: FastAPI + Strawberry ─────────────────────────────
+  # Explizites Schema, selbstreferentielle Traversierung, REST
+  # GraphQL + GraphiQL: http://localhost:8000/graphql
+  # REST + Swagger:     http://localhost:8000/docs
+  fastapi:
+    build: .
+    volumes:
+      - ./data:/app/data   # contacts.yaml live editierbar
+    ports:
+      - "8000:8000"
