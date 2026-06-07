@@ -1,8 +1,12 @@
 services:
 
   fastapi:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    working_dir: /workspace
     # Ganzes Projekt mounten (nicht nur data/)
     volumes:
-      - .:/workspace:cached
-    # Container am Leben halten – Server wird manuell oder per Task gestartet
-    command: sleep infinity
+      - ..:/workspace:cached
+    # Kein Compose-Port-Publishing, damit VS Code Forwarding+Labeling konsistent bleibt
+    command: sh -c "python3 yaml_to_json.py && python3 main.py"

@@ -1,0 +1,14 @@
+{
+    "remote.autoForwardPorts": false,
+    "remote.restoreForwardedPorts": false,
+    "remote.portsAttributes": {
+        "3000": {
+            "label": "Stufe 2 · JSON GraphQL Server",
+            "protocol": "http"
+        },
+        "8000": {
+            "label": "Stufe 3 · GraphQL + REST",
+            "protocol": "http"
+        }
+    }
+}

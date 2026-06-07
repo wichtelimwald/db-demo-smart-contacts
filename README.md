@@ -111,7 +111,7 @@ code .
 # → VS Code: „Reopen in Container" klicken
 ```
 
-Beide Server starten danach per `Cmd+Shift+B` → **Demo: Alle Server starten**.
+Danach beide Server starten per `Cmd+Shift+B` → **Demo: Alle Server starten**.
 
 | Server | URL |
 |---|---|
@@ -159,7 +159,7 @@ pip install -r requirements.txt
 **Stufe 2** – json-graphql-server:
 ```bash
 python3 yaml_to_json.py
-npx json-graphql-server data/contacts.json
+npx json-graphql-server data/contacts.json --host 0.0.0.0
 # → GraphiQL: http://localhost:3000
 ```
 

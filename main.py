@@ -25,6 +25,7 @@ from typing import Optional
 
 import strawberry
 from fastapi import FastAPI
+from fastapi.responses import RedirectResponse
 from strawberry.fastapi import GraphQLRouter
 import uvicorn
 
@@ -190,6 +191,11 @@ app = FastAPI(
 # GraphQL-Endpunkt
 graphql_router = GraphQLRouter(schema, graphql_ide="graphiql")
 app.include_router(graphql_router, prefix="/graphql")
+
+
+@app.get("/", include_in_schema=False)
+def root_redirect():
+    return RedirectResponse(url="/graphql")
 
 
 # REST-Endpunkte (zeigt: gleiche Daten, anderes Zugriffsmodell)

@@ -5,7 +5,9 @@
       "label": "YAML → JSON konvertieren",
       "type": "shell",
       "command": "python3 yaml_to_json.py",
-      "options": { "cwd": "${workspaceFolder}" },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
       "group": "build",
       "presentation": {
         "reveal": "always",
@@ -16,7 +18,9 @@
       "label": "Stufe 3: FastAPI starten",
       "type": "shell",
       "command": "python3 main.py",
-      "options": { "cwd": "${workspaceFolder}" },
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
       "group": "test",
       "isBackground": true,
       "presentation": {
@@ -25,7 +29,9 @@
         "group": "server"
       },
       "problemMatcher": {
-        "pattern": { "regexp": "." },
+        "pattern": {
+          "regexp": "."
+        },
         "background": {
           "activeOnStart": true,
           "beginsPattern": "Started server",
@@ -34,9 +40,35 @@
       }
     },
     {
+      "label": "Stufe 2: json-graphql starten",
+      "type": "shell",
+      "command": "npx -y json-graphql-server data/contacts.json --host 0.0.0.0",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "group": "test",
+      "isBackground": true,
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "group": "server"
+      },
+      "problemMatcher": {
+        "pattern": {
+          "regexp": "."
+        },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": ".*",
+          "endsPattern": "(GraphiQL|JSON Graphql|localhost:3000|running)"
+        }
+      }
+    },
+    {
       "label": "Demo: Alle Server starten",
       "dependsOn": [
         "YAML → JSON konvertieren",
+        "Stufe 2: json-graphql starten",
         "Stufe 3: FastAPI starten"
       ],
       "dependsOrder": "sequence",
