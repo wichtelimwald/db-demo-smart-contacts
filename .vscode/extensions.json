@@ -5,8 +5,6 @@
     "ms-python.vscode-pylance",
     "graphql.vscode-graphql-syntax",
     "redhat.vscode-yaml",
-    "ms-azuretools.vscode-docker",
-    "GitHub.copilot",
-    "GitHub.copilot-chat"
+    "ms-azuretools.vscode-docker"
   ]
 }
