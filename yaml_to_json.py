@@ -49,21 +49,6 @@ FIELD_MAP = {
 SKIP_FIELDS = {"groups", "related_to", "known_preferences"}
 
 
-def extract_related_ids(related_to: list) -> list[int]:
-    """Extrahiert IDs aus related_to – unterstützt {id: X} und direkt X."""
-    ids = []
-    for rel in related_to or []:
-        if isinstance(rel, dict):
-            to_id = rel.get("id")
-        elif isinstance(rel, int):
-            to_id = rel
-        else:
-            to_id = None
-        if to_id is not None:
-            ids.append({"contact_id": to_id})
-    return ids
-
-
 def convert_contact(contact: dict) -> dict:
     """
     Konvertiert einen rohen YAML-Kontakt in ein JSON-freundliches Dict.
@@ -188,12 +173,15 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
             ]
             print(f"   [{g['id']:>2}] {g['name']:<30} ({len(members)} Kontakte)")
 
-        print("\n── contactRelations Stichprobe (erste 10) ───────────")
+        print("\n── relatedTo Stichprobe (erste 5 Kontakte mit Beziehungen) ─")
         contact_by_id = {c["id"]: c["name"] for c in contacts}
-        for r in contact_relations[:10]:
-            frm = contact_by_id.get(r["from_id"], "?")
-            to  = contact_by_id.get(r["contact_id"], "?")
-            print(f"   {frm:<25} → {to}")
+        shown = 0
+        for c in contacts:
+            if c.get("relatedTo") and shown < 5:
+                rels = [f"{r.get('relation', '?')} → {contact_by_id.get(r['id'], '?')}"
+                        for r in c["relatedTo"] if isinstance(r, dict)]
+                print(f"   {c['name']:<25} {', '.join(rels)}")
+                shown += 1
 
     print(f"\nStart mit: json-graphql-server {output_path}")
 
