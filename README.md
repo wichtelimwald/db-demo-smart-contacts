@@ -16,6 +16,26 @@ Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
 
 ---
 
+## Was diese Demo zeigt – und was sie bewusst nicht zeigt
+
+**Was sie zeigt:**
+- Wie sich ein Informationssystem schrittweise aus einfachen Daten entwickelt
+- Die Rolle von Datenmodell, Schema und Zugriff
+- Den Unterschied zwischen automatischem und explizitem Schema
+- Traversierbare Beziehungen als Ergebnis semantischer Modellierung
+
+**Was sie bewusst nicht zeigt:**
+- Eine produktive Datenbankimplementierung
+- Die Persistenzschicht ist vereinfacht (JSON-Datei statt DBMS)
+- In echten Systemen läge darunter PostgreSQL, MongoDB, ein Graph Store
+  oder eine Cloud-Datenbank – je nach Anforderung
+
+**Warum dieser Ansatz:**
+Erst durch Datenmodell, Schema und Zugriff wird aus gespeicherten Daten
+ein Informationssystem. Das ist der didaktische Kern dieser Demo.
+
+---
+
 ## Demo-Konzept: Die progressive Kontakt-Datenbank
 
 Ein einziges, vertrautes Szenario als roter Faden:
@@ -47,7 +67,7 @@ Stufe 3 · Strawberry + FastAPI   explizites Schema in Python, volle Kontrolle
 ```
 
 Jede Stufe zeigt, was die vorherige nicht kann.  
-Das Datenbankproblem entsteht von selbst – ohne Buzzwords.
+Das Problem entsteht von selbst – ohne Buzzwords.
 
 ---
 
@@ -62,9 +82,10 @@ dhbw-db-demo/
 │
 ├── queries/
 │   ├── 01_alle_kontakte.graphql
-│   ├── 02_gruppe_mit_kontakten.graphql
-│   ├── 03_suche.graphql
-│   └── 04_grenzen.graphql
+│   ├── 02_tatooine_suche.graphql
+│   ├── 03_han_rohe_ids.graphql
+│   ├── 04_han_traversierung.graphql
+│   └── 05_rebel_alliance_gruppe.graphql
 │
 ├── Dockerfile               ← Image für FastAPI + Strawberry
 ├── docker-compose.yml       ← startet Stufe 2 und Stufe 3 gemeinsam
@@ -159,7 +180,8 @@ pip install -r requirements.txt
 **Stufe 2** – json-graphql-server:
 ```bash
 python3 yaml_to_json.py
-npx json-graphql-server data/contacts.json --host 0.0.0.0
+npm install
+npm run stage2
 # → GraphiQL: http://localhost:3000
 ```
 
@@ -220,14 +242,14 @@ python3 yaml_to_json.py
 }
 ```
 
-### Selbstreferentielle Traversierung
+### Referenzauflösung und Traversierung
 
-**Stufe 2**
+**Stufe 2** – Das System liefert nur rohe Referenz-IDs.
 ```graphql
 {
   Contact(id: "6") {
     name
-    relatedTo       # liefert nur rohe IDs – kein Objekt dahinter
+    relatedTo       # nur rohe ID-Referenzen – keine Traversierung möglich
   }
 }
 ```
@@ -250,7 +272,7 @@ python3 yaml_to_json.py
 ```
 
 > _„Das ist der Unterschied zwischen Daten ablegen und einem Informationssystem bauen:  
-> Explizites Schema, echte Resolver, traversierbare Beziehungen."_
+> Explizites Schema, explizite Resolver, traversierbare Beziehungen."_
 
 ### Suche und Filter (nur Stufe 3)
 
@@ -292,6 +314,29 @@ curl http://localhost:8000/groups
 ```
 
 > _„Gleiche Daten, zwei Zugriffsmodelle – REST und GraphQL aus einer Codebasis."_
+
+---
+
+## Demo-Ablauf (Presenter Guide)
+
+1. `contacts.yaml` öffnen – menschenlesbare Daten zeigen,
+   kein Schema, keine Abfragesprache
+2. `yaml_to_json.py` kurz zeigen – Mini-ETL-Pipeline
+   (Extract → Transform → Load)
+3. Stufe 2 starten: `docker compose up stage2`
+   → `json-graphql-server` auf Port 3000
+4. `queries/02_tatooine_suche.graphql` in GraphiQL ausführen
+   → Suche funktioniert automatisch
+5. `queries/03_han_rohe_ids.graphql` ausführen
+   → `relatedTo` liefert nur rohe IDs, keine Namen
+   → Grenze des automatischen Schemas sichtbar machen
+6. Stufe 3 starten: `docker compose up stage3`
+   → FastAPI + Strawberry auf Port 8000
+7. `queries/04_han_traversierung.graphql` in GraphiQL ausführen
+   → `relatedTo` traversiert zu vollständigen Kontaktobjekten
+   → Semantik durch explizites Schema
+8. Swagger-UI (`/docs`) kurz zeigen
+   → REST und GraphQL parallel verfügbar
 
 ---
 

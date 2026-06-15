@@ -42,7 +42,7 @@
     {
       "label": "Stufe 2: json-graphql starten",
       "type": "shell",
-      "command": "npx -y json-graphql-server data/contacts.json --host 0.0.0.0",
+      "command": "npm run stage2",
       "options": {
         "cwd": "${workspaceFolder}"
       },

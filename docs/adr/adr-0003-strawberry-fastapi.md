@@ -15,13 +15,13 @@
 - Selbstreferenz (`Contact → relatedTo → Contact`) funktioniert out of the box.
 
 ## Alternativen
-- **Hasura + PostgreSQL** – abgelehnt: zu schwerer Setup für Live-Demo, echte DB überlagert GraphQL-Lehrpunkt.
+- **Hasura + PostgreSQL** – abgelehnt: zu schwerer Setup für Live-Demo, produktives DBMS überlagert GraphQL-Lehrpunkt.
 - **Ariadne** – abgelehnt: Schema als SDL-String, weniger Python-nativ als Strawberry.
 - **Graphene** – abgelehnt: ältere API, weniger idiomatisch für moderne Python-Typen.
 
 ## Konsequenzen
 - `_make_contact()` als Factory-Funktion notwendig (Strawberry-Einschränkung bei Selbstreferenz).
-- Datenzugriff direkt aus `contacts.json` – keine echte DB, bewusste Vereinfachung.
+- Datenzugriff direkt aus `contacts.json` – kein produktives DBMS, bewusste Vereinfachung.
 - REST-Endpunkte (`/contacts`, `/groups`) zeigen: gleiche Daten, anderes Zugriffsmodell.
 
 ## Didaktische Auswirkung

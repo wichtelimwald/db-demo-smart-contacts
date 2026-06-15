@@ -1,0 +1,13 @@
+# Stufe 2: json-graphql-server (Port 3000)
+# Zeigt: Gruppe "Rebel Alliance" mit allen Mitgliedern – Join über Junction-Tabelle
+query RebelAllianceGruppe {
+  allGroups(filter: { name: "Rebel Alliance" }) {
+    name
+    contactGroups {
+      contact {
+        name
+        organization
+      }
+    }
+  }
+}

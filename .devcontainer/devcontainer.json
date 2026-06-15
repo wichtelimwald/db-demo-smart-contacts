@@ -16,7 +16,7 @@
     8000
   ],
   // Contacts-JSON beim Container-Start generieren (Quelle: data/contacts.yaml)
-  "postCreateCommand": "python3 /workspace/yaml_to_json.py",
+  "postCreateCommand": "cd /workspace && npm install && python3 /workspace/yaml_to_json.py",
   "customizations": {
     "vscode": {
       "extensions": [

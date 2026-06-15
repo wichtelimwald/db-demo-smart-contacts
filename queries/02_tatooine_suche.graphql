@@ -1,0 +1,8 @@
+# Stufe 2: json-graphql-server (Port 3000)
+# Zeigt: Volltextsuche über alle String-Felder – funktioniert automatisch
+query TatooineKontakte {
+  allContacts(filter: { q: "tatooine" }) {
+    name
+    metAt
+  }
+}

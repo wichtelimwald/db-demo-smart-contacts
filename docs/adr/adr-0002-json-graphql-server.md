@@ -6,7 +6,7 @@
 
 ## Entscheidung
 `json-graphql-server` (Node.js) als Stufe-2-Server auf Port 3000.  
-Gestartet via Docker: `npx -y json-graphql-server data/contacts.json`.
+Gestartet via Docker: `npm run stage2` (lokal gepinnte Version via `package.json`).
 
 ## Begründung
 - Kein eigener Code nötig – das ist der Demo-Punkt.

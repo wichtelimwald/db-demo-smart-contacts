@@ -1,0 +1,10 @@
+# Stufe 2: json-graphql-server (Port 3000)
+# Zeigt: relatedTo liefert nur rohe ID-Referenzen – noch keine Traversierung.
+# Das System liefert nur rohe Referenz-IDs. In echten Systemen entstehen
+# daraus häufig Folgeabfragen für jeden Eintrag – bis hin zum N+1-Problem.
+query HanRoheIds {
+  Contact(id: "6") {
+    name
+    relatedTo
+  }
+}

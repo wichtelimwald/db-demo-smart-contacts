@@ -6,6 +6,9 @@ RUN apt-get update \
 	&& apt-get install -y --no-install-recommends git nodejs npm \
 	&& rm -rf /var/lib/apt/lists/*
 
+COPY package.json .
+RUN npm install --omit=dev
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir --root-user-action=ignore --upgrade pip \
 	&& pip install --no-cache-dir --root-user-action=ignore -r requirements.txt
