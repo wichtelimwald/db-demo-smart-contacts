@@ -9,8 +9,7 @@ services:
     volumes:
       - ./data:/app/data
       - ./package.json:/app/package.json
-      - ./node_modules:/app/node_modules
-    command: npm run stage2
+    command: sh -c "npm install --omit=dev && npm run stage2"
     ports:
       - "3000:3000"
 

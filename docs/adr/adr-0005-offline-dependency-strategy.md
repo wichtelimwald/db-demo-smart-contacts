@@ -11,7 +11,7 @@ Der Stufe-2-Service verwendet `npm run stage2` statt `npx -y json-graphql-server
 
 ## Begründung
 - `npx` ohne gecachtes Paket erfordert Internetzugang – inakzeptabel für eine Live-Demo.
-- `package.json` mit gepinnter Version (`json-graphql-server: 2.6.2`) macht den Build reproduzierbar.
+- `package.json` mit gepinnter Version (`json-graphql-server: 3.3.1`) macht den Build reproduzierbar.
 - `node_modules` liegt nach dem ersten Build vollständig im Container – kein Netz mehr nötig.
 - Npm-Scripts sind ein Standard-Pattern; kein neues Konzept für den Demo-Stack.
 
