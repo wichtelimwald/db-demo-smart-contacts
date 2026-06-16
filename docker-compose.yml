@@ -1,15 +1,14 @@
 services:
 
   # ── Stufe 2: json-graphql-server ──────────────────────────────
-  # Implizites Schema, automatisch aus contacts.json generiert
+  # Demo-/Mocking-Werkzeug mit implizitem Schema aus contacts.json
   # GraphiQL: http://localhost:3000
-  json-graphql:
-    image: node:20-alpine
-    working_dir: /app
+  stage2:
+    build:
+      context: .
+      dockerfile: Dockerfile.stage2
     volumes:
       - ./data:/app/data
-      - ./package.json:/app/package.json
-    command: sh -c "npm install --omit=dev && npm run stage2"
     ports:
       - "3000:3000"
 
@@ -17,7 +16,7 @@ services:
   # Explizites Schema, selbstreferentielle Traversierung, REST
   # GraphQL + GraphiQL: http://localhost:8000/graphql
   # REST + Swagger:     http://localhost:8000/docs
-  fastapi:
+  stage3:
     build: .
     volumes:
       - ./data:/app/data   # contacts.yaml live editierbar

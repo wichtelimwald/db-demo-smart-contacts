@@ -2,7 +2,7 @@
 ### Live-Demo · Vorlesung DHBW Karlsruhe
 
 > **Leitthese:**  
-> Daten zu speichern ist einfach. Daten dauerhaft korrekt, verständlich, integrierbar, sicher und nutzbar zu halten – das ist der eigentliche Engpass moderner Informationssysteme.
+> Daten zu speichern ist vergleichsweise leicht. Daten dauerhaft korrekt, verständlich, integrierbar, sicher und nutzbar zu halten – das ist der eigentliche Engpass moderner Informationssysteme.
 
 ---
 
@@ -26,17 +26,18 @@ Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
 
 **Was sie bewusst nicht zeigt:**
 - Eine produktive Datenbankimplementierung
-- Die Persistenzschicht ist vereinfacht (JSON-Datei statt DBMS)
-- In echten Systemen läge darunter PostgreSQL, MongoDB, ein Graph Store
-  oder eine Cloud-Datenbank – je nach Anforderung
+- Eine produktive Persistenzarchitektur
+- Die Persistenz ist bewusst vereinfacht (`contacts.yaml` und `contacts.json` als didaktische Stand-ins)
+- In echten Systemen könnte darunter ein DBMS liegen, z. B. PostgreSQL,
+  MongoDB, ein Graph Store oder eine Cloud-Datenbank
 
 **Warum dieser Ansatz:**
-Erst durch Datenmodell, Schema und Zugriff wird aus gespeicherten Daten
-ein Informationssystem. Das ist der didaktische Kern dieser Demo.
+Erst durch Datenmodell, Schema, Zugriff, Semantik und Traversierung wird aus
+gespeicherten Daten ein Informationssystem. Das ist der didaktische Kern dieser Demo.
 
 ---
 
-## Demo-Konzept: Die progressive Kontakt-Datenbank
+## Demo-Konzept: Vom Kontakt-Datensatz zum Informationssystem
 
 Ein einziges, vertrautes Szenario als roter Faden:
 
@@ -59,11 +60,11 @@ Ein einziges, vertrautes Szenario als roter Faden:
 ```
 Stufe 1 · contacts.yaml          menschenlesbar, jeder versteht es
               ↓                   → Grenze: keine Abfragen, keine Beziehungen
-Stufe 2 · json-graphql-server    implizites Schema, GraphQL out of the box
+Stufe 2 · json-graphql-server    automatisch erzeugte Demo-API mit implizitem Schema
               ↓                   → Grenze: selbstreferentielle Traversierung geht nicht
 Stufe 3 · Strawberry + FastAPI   explizites Schema in Python, volle Kontrolle
                                   → Contact → relatedTo → Contact funktioniert
-                                  → REST und GraphQL parallel
+                                  → REST und GraphQL als zwei Zugriffsmuster
 ```
 
 Jede Stufe zeigt, was die vorherige nicht kann.  
@@ -88,6 +89,7 @@ dhbw-db-demo/
 │   └── 05_rebel_alliance_gruppe.graphql
 │
 ├── Dockerfile               ← Image für FastAPI + Strawberry
+├── Dockerfile.stage2        ← Image für Stage 2 (npm ci beim Build)
 ├── docker-compose.yml       ← startet Stufe 2 und Stufe 3 gemeinsam
 ├── main.py                  ← FastAPI + Strawberry Server (Stufe 3)
 ├── requirements.txt         ← Python-Abhängigkeiten
@@ -121,6 +123,15 @@ git clone https://github.com/wichtelimwald/db-demo-smart-contacts
 cd db-demo-smart-contacts
 ```
 
+## Offline-Hinweis
+
+Die Demo ist offline lauffähig, nachdem Dev Container bzw. Docker-Images und
+Dependencies einmal vorab gebaut/installiert wurden.
+
+- Stage 2 installiert Node-Abhängigkeiten beim Image-Build mit `npm ci`.
+- Beim Live-Start von Stage 2 erfolgt kein `npm install`.
+- `package-lock.json` dient als reproduzierbare Grundlage.
+
 ---
 
 ## Option A – Dev Container in VS Code (empfohlen)
@@ -147,7 +158,7 @@ Danach beide Server starten per `Cmd+Shift+B` → **Demo: Alle Server starten**.
 Ein Befehl startet beide Server:
 
 ```bash
-docker-compose up
+docker compose up
 ```
 
 | Server | URL |
@@ -158,12 +169,12 @@ docker-compose up
 
 Nach Änderungen an `contacts.yaml`:
 ```bash
-docker-compose restart fastapi
+docker compose restart stage3
 ```
 
 Stoppen:
 ```bash
-docker-compose down
+docker compose down
 ```
 
 ---
@@ -177,10 +188,10 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-**Stufe 2** – json-graphql-server:
+**Stufe 2** – json-graphql-server (Demo-/Mocking-Werkzeug):
 ```bash
 python3 yaml_to_json.py
-npm install
+npm ci
 npm run stage2
 # → GraphiQL: http://localhost:3000
 ```
@@ -199,6 +210,9 @@ python3 yaml_to_json.py
 
 **Implizites Schema** (Stufe 2) – automatisch aus der JSON-Struktur.  
 **Explizites Schema** (Stufe 3) – in Python definiert, volle Kontrolle.
+
+`json-graphql-server` ist hier bewusst ein Demo-Werkzeug: schnell nutzbar,
+automatisch abfragbar, aber mit fachlichen Grenzen bei Semantik und Traversierung.
 
 ---
 
@@ -253,6 +267,9 @@ python3 yaml_to_json.py
   }
 }
 ```
+
+In echten Systemen können aus solchen rohen Referenzen Folgeabfragen entstehen
+- bis hin zum N+1-Problem.
 
 **Stufe 3**
 ```graphql
@@ -319,24 +336,32 @@ curl http://localhost:8000/groups
 
 ## Demo-Ablauf (Presenter Guide)
 
-1. `contacts.yaml` öffnen – menschenlesbare Daten zeigen,
-   kein Schema, keine Abfragesprache
-2. `yaml_to_json.py` kurz zeigen – Mini-ETL-Pipeline
-   (Extract → Transform → Load)
-3. Stufe 2 starten: `docker compose up stage2`
-   → `json-graphql-server` auf Port 3000
-4. `queries/02_tatooine_suche.graphql` in GraphiQL ausführen
-   → Suche funktioniert automatisch
-5. `queries/03_han_rohe_ids.graphql` ausführen
-   → `relatedTo` liefert nur rohe IDs, keine Namen
-   → Grenze des automatischen Schemas sichtbar machen
-6. Stufe 3 starten: `docker compose up stage3`
-   → FastAPI + Strawberry auf Port 8000
-7. `queries/04_han_traversierung.graphql` in GraphiQL ausführen
-   → `relatedTo` traversiert zu vollständigen Kontaktobjekten
-   → Semantik durch explizites Schema
-8. Swagger-UI (`/docs`) kurz zeigen
-   → REST und GraphQL parallel verfügbar
+1. `contacts.yaml` öffnen.
+2. Datenstruktur zeigen (menschenlesbar, noch keine Abfragesprache).
+3. `yaml_to_json.py` als Mini-ETL erklären.
+4. Stage 2 starten oder zeigen (`docker compose up stage2`).
+5. Tatooine-Query aus `queries/02_tatooine_suche.graphql` ausführen.
+6. Rohe IDs bei Han Solo mit `queries/03_han_rohe_ids.graphql` zeigen.
+7. Stage 3 starten oder zeigen (`docker compose up stage3`).
+8. Traversierung bei Han Solo mit `queries/04_han_traversierung.graphql` zeigen.
+9. REST-/Swagger-Seite optional kurz zeigen (`/docs`).
+10. Grenzen der Demo benennen (didaktischer Fokus statt Produktivbetrieb).
+
+---
+
+## Wenn die Zeit knapp wird
+
+- Gruppen-Query (`queries/05_rebel_alliance_gruppe.graphql`) weglassen.
+- REST-/Swagger-Seite nur erwähnen, nicht öffnen.
+- Direkt von rohen IDs (Stufe 2) zur expliziten Traversierung (Stufe 3) wechseln.
+
+---
+
+## Fallback für Live-Demo
+
+- Screenshots oder ein kurzes Video der Kernschritte vorab vorbereiten.
+- Wichtigste Query-Ergebnisse lokal bereithalten.
+- Bei Ausfall kann die Demo verbal entlang der Query-Dateien erklärt werden.
 
 ---
 
@@ -344,7 +369,7 @@ curl http://localhost:8000/groups
 
 - Beide Server können **gleichzeitig** laufen (Port 3000 und 8000).
 - Alle Abfragen liegen als `.graphql`-Dateien in `queries/`
-- Demo läuft vollständig **offline**, kein Internet nötig.
+- Offline im Hörsaal: zuverlässig nach einmaligem Vorab-Build der Images/Dependencies.
 
 ---
 
