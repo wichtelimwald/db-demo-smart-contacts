@@ -1,0 +1,1 @@
+kannst du mir bitte einen contacts.yaml bauen mit 50 bekannten star wars charakteren aus sicht von luke? idealerweise recht detailliert - also mit Ort und Zeit des Kennenlernens, Beziehungen zu anderen Charakteren, ggf. auch vorlieben
