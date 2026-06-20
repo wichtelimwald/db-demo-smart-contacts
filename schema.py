@@ -11,6 +11,7 @@ from typing import Optional
 import strawberry
 
 import data_layer as dl
+import services as svc
 
 
 # ── Factory ───────────────────────────────────────────────────────────────────
@@ -40,7 +41,7 @@ class Group:
 
     @strawberry.field(description="Alle Kontakte in dieser Gruppe")
     def contacts(self) -> list[Contact]:
-        ids = [cg["contact_id"] for cg in dl.CONTACT_GROUPS if cg["group_id"] == self.id]
+        ids = svc.list_contact_ids_for_group(self.id)
         return [_make_contact(dl.CONTACTS_BY_ID[cid]) for cid in ids if cid in dl.CONTACTS_BY_ID]
 
 
@@ -82,7 +83,7 @@ class Contact:
 
     @strawberry.field(description="Gruppen, denen dieser Kontakt angehört")
     def groups(self) -> list[Group]:
-        group_ids = [cg["group_id"] for cg in dl.CONTACT_GROUPS if cg["contact_id"] == self.id]
+        group_ids = svc.list_group_ids_for_contact(self.id)
         return [Group(**dl.GROUPS_BY_ID[gid]) for gid in group_ids if gid in dl.GROUPS_BY_ID]
 
 
@@ -93,7 +94,7 @@ class Query:
 
     @strawberry.field(description="Einen Kontakt per ID abrufen")
     def contact(self, id: int) -> Optional[Contact]:
-        raw = dl.CONTACTS_BY_ID.get(id)
+        raw = svc.get_contact(id)
         return _make_contact(raw) if raw else None
 
     @strawberry.field(description="Alle Kontakte, optional gefiltert")
@@ -103,29 +104,21 @@ class Query:
         organization:  Optional[str] = None,
         species:       Optional[str] = None,
     ) -> list[Contact]:
-        results = list(dl.DATA["contacts"])
-        if name_contains:
-            results = [c for c in results if name_contains.lower() in c["name"].lower()]
-        if organization:
-            results = [c for c in results if organization.lower() in (c.get("organization") or "").lower()]
-        if species:
-            results = [c for c in results if species.lower() in (c.get("species") or "").lower()]
+        results = svc.list_contacts(
+            name_contains=name_contains,
+            organization=organization,
+            species=species,
+        )
         return [_make_contact(c) for c in results]
 
     @strawberry.field(description="Alle Gruppen")
     def all_groups(self) -> list[Group]:
-        return [Group(**g) for g in dl.DATA["groups"]]
+        return [Group(**g) for g in svc.list_groups()]
 
     @strawberry.field(description="Alle Kontakte einer Gruppe (per Name)")
     def contacts_in_group(self, group_name: str) -> list[Contact]:
-        group = next(
-            (g for g in dl.DATA["groups"] if g["name"].lower() == group_name.lower()),
-            None,
-        )
-        if not group:
-            return []
-        ids = [cg["contact_id"] for cg in dl.CONTACT_GROUPS if cg["group_id"] == group["id"]]
-        return [_make_contact(dl.CONTACTS_BY_ID[cid]) for cid in ids if cid in dl.CONTACTS_BY_ID]
+        results = svc.list_contacts_in_group(group_name)
+        return [_make_contact(c) for c in results]
 
 
 # ── Schema-Instanz ────────────────────────────────────────────────────────────

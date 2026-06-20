@@ -20,7 +20,7 @@ from fastapi import FastAPI, HTTPException
 from fastapi.responses import RedirectResponse
 from strawberry.fastapi import GraphQLRouter
 
-import data_layer as dl
+import services as svc
 from schema import schema
 
 
@@ -44,15 +44,12 @@ def root():
 
 @app.get("/contacts", tags=["REST"])
 def list_contacts(name: Optional[str] = None):
-    results = dl.DATA["contacts"]
-    if name:
-        results = [c for c in results if name.lower() in c["name"].lower()]
-    return results
+    return svc.list_contacts(name_contains=name)
 
 
 @app.get("/contacts/{contact_id}", tags=["REST"])
 def get_contact(contact_id: int):
-    raw = dl.CONTACTS_BY_ID.get(contact_id)
+    raw = svc.get_contact(contact_id)
     if not raw:
         raise HTTPException(status_code=404, detail="Kontakt nicht gefunden")
     return raw
@@ -60,7 +57,7 @@ def get_contact(contact_id: int):
 
 @app.get("/groups", tags=["REST"])
 def list_groups():
-    return dl.DATA["groups"]
+    return svc.list_groups()
 
 
 # ── Start ─────────────────────────────────────────────────────────────────────
