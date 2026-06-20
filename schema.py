@@ -10,25 +10,35 @@ from typing import Optional
 
 import strawberry
 
-import data_layer as dl
+from domain import Contact as DomainContact
+from domain import Group as DomainGroup
+from domain import RelatedContact as DomainRelatedContact
 import services as svc
 
 
-# ── Factory ───────────────────────────────────────────────────────────────────
+# ── Mapper Domain -> GraphQL ─────────────────────────────────────────────────
 
-def _make_contact(raw: dict) -> Contact:
+def _to_group(group: DomainGroup) -> Group:
+    return Group(id=group.id, name=group.name)
+
+
+def _to_related_contact(related_contact: DomainRelatedContact) -> RelatedContact:
+    return RelatedContact(id=related_contact.id, relation=related_contact.relation)
+
+
+def _to_contact(contact: DomainContact) -> Contact:
     return Contact(
-        id                = raw["id"],
-        name              = raw["name"],
-        alias             = raw.get("alias"),
-        species           = raw.get("species"),
-        organization      = raw.get("organization"),
-        relationship      = raw.get("relationship"),
-        met_at            = raw.get("metAt"),
-        met_when          = raw.get("metWhen"),
-        notes             = raw.get("notes"),
-        known_preferences = raw.get("knownPreferences") or [],
-        _related_raw      = raw.get("relatedTo") or [],
+        id=contact.id,
+        name=contact.name,
+        alias=contact.alias,
+        species=contact.species,
+        organization=contact.organization,
+        relationship=contact.relationship,
+        met_at=contact.met_at,
+        met_when=contact.met_when,
+        notes=contact.notes,
+        known_preferences=contact.known_preferences,
+        _domain=contact,
     )
 
 
@@ -41,8 +51,7 @@ class Group:
 
     @strawberry.field(description="Alle Kontakte in dieser Gruppe")
     def contacts(self) -> list[Contact]:
-        ids = svc.list_contact_ids_for_group(self.id)
-        return [_make_contact(dl.CONTACTS_BY_ID[cid]) for cid in ids if cid in dl.CONTACTS_BY_ID]
+        return [_to_contact(contact) for contact in svc.list_contacts_for_group(self.id)]
 
 
 @strawberry.type(description="Ein Kontakt mit Beziehungstyp (Teil von relatedTo)")
@@ -52,8 +61,8 @@ class RelatedContact:
 
     @strawberry.field(description="Der verknüpfte Kontakt – volle Traversierung")
     def contact(self) -> Optional[Contact]:
-        raw = dl.CONTACTS_BY_ID.get(self.id)
-        return _make_contact(raw) if raw else None
+        contact = svc.get_contact(self.id)
+        return _to_contact(contact) if contact else None
 
 
 @strawberry.type(description="Eine Person aus Lukes Kontaktliste")
@@ -69,22 +78,15 @@ class Contact:
     notes:             Optional[str]
     known_preferences: list[str]
 
-    _related_raw: strawberry.Private[list]
+    _domain: strawberry.Private[DomainContact]
 
     @strawberry.field(description="Beziehungen zu anderen Kontakten (traversierbar)")
     def related_to(self) -> list[RelatedContact]:
-        return [
-            RelatedContact(
-                id       = r["id"] if isinstance(r, dict) else r,
-                relation = r.get("relation") if isinstance(r, dict) else None,
-            )
-            for r in self._related_raw
-        ]
+        return [_to_related_contact(related_contact) for related_contact in self._domain.related_to]
 
     @strawberry.field(description="Gruppen, denen dieser Kontakt angehört")
     def groups(self) -> list[Group]:
-        group_ids = svc.list_group_ids_for_contact(self.id)
-        return [Group(**dl.GROUPS_BY_ID[gid]) for gid in group_ids if gid in dl.GROUPS_BY_ID]
+        return [_to_group(group) for group in svc.list_groups_for_contact(self.id)]
 
 
 # ── Query (Resolver) ──────────────────────────────────────────────────────────
@@ -94,8 +96,8 @@ class Query:
 
     @strawberry.field(description="Einen Kontakt per ID abrufen")
     def contact(self, id: int) -> Optional[Contact]:
-        raw = svc.get_contact(id)
-        return _make_contact(raw) if raw else None
+        contact = svc.get_contact(id)
+        return _to_contact(contact) if contact else None
 
     @strawberry.field(description="Alle Kontakte, optional gefiltert")
     def all_contacts(
@@ -104,21 +106,21 @@ class Query:
         organization:  Optional[str] = None,
         species:       Optional[str] = None,
     ) -> list[Contact]:
-        results = svc.list_contacts(
+        contacts = svc.list_contacts(
             name_contains=name_contains,
             organization=organization,
             species=species,
         )
-        return [_make_contact(c) for c in results]
+        return [_to_contact(contact) for contact in contacts]
 
     @strawberry.field(description="Alle Gruppen")
     def all_groups(self) -> list[Group]:
-        return [Group(**g) for g in svc.list_groups()]
+        return [_to_group(group) for group in svc.list_groups()]
 
     @strawberry.field(description="Alle Kontakte einer Gruppe (per Name)")
     def contacts_in_group(self, group_name: str) -> list[Contact]:
-        results = svc.list_contacts_in_group(group_name)
-        return [_make_contact(c) for c in results]
+        contacts = svc.list_contacts_in_group(group_name)
+        return [_to_contact(contact) for contact in contacts]
 
 
 # ── Schema-Instanz ────────────────────────────────────────────────────────────

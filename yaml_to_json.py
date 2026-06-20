@@ -21,6 +21,7 @@ Usage:
 import json
 import argparse
 import sys
+from collections import Counter
 from pathlib import Path
 
 try:
@@ -36,6 +37,11 @@ def clean_string(value) -> str | None:
     if value is None:
         return None
     return " ".join(str(value).split())
+
+
+def fail_with_validation_error(message: str) -> None:
+    """Beendet das Skript mit einer klaren deutschen Fehlermeldung."""
+    sys.exit(f"❌ Validierungsfehler: {message}")
 
 
 FIELD_MAP = {
@@ -132,6 +138,50 @@ def extract_related_ids(related_to: list) -> list:
     return ids
 
 
+def validate_contacts(raw_contacts: list[dict]) -> None:
+    """Prueft die wichtigsten Datenregeln vor der Konvertierung."""
+    missing_fields: list[str] = []
+
+    for index, contact in enumerate(raw_contacts, start=1):
+        contact_id = contact.get("id")
+        for field_name in ("id", "name"):
+            value = contact.get(field_name)
+            if value is None or (isinstance(value, str) and not value.strip()):
+                label = f"Kontakt an Position {index}"
+                if contact_id is not None:
+                    label = f"Kontakt mit ID {contact_id}"
+                missing_fields.append(f"{label}: Pflichtfeld '{field_name}' fehlt")
+
+    if missing_fields:
+        raise ValueError("; ".join(missing_fields))
+
+    contact_ids = [contact["id"] for contact in raw_contacts]
+    duplicate_ids = sorted(contact_id for contact_id, count in Counter(contact_ids).items() if count > 1)
+    if duplicate_ids:
+        duplicates = ", ".join(str(contact_id) for contact_id in duplicate_ids)
+        raise ValueError(f"Doppelte Kontakt-IDs gefunden: {duplicates}")
+
+    existing_ids = set(contact_ids)
+    invalid_references: list[str] = []
+    for contact in raw_contacts:
+        source_id = contact["id"]
+        for entry in contact.get("related_to") or []:
+            if isinstance(entry, dict):
+                target_id = entry.get("id")
+            elif isinstance(entry, int):
+                target_id = entry
+            else:
+                continue
+
+            if target_id is not None and target_id not in existing_ids:
+                invalid_references.append(
+                    f"Kontakt {source_id}: related_to verweist auf nicht existente ID {target_id}"
+                )
+
+    if invalid_references:
+        raise ValueError("; ".join(invalid_references))
+
+
 def main(input_path: Path, output_path: Path, verbose: bool = False):
 
     if not input_path.exists():
@@ -143,6 +193,11 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
     raw_contacts = data.get("contacts", [])
     if not raw_contacts:
         sys.exit("❌ Keine Kontakte in der YAML-Datei gefunden.")
+
+    try:
+        validate_contacts(raw_contacts)
+    except ValueError as error:
+        fail_with_validation_error(str(error))
 
     groups, name_to_id  = build_groups(raw_contacts)
     contacts            = [convert_contact(c) for c in raw_contacts]
