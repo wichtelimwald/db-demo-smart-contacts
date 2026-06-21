@@ -27,4 +27,4 @@ Der Stufe-2-Service verwendet `npm run stage2` statt `npx -y json-graphql-server
 - Dev-Container: `postCreateCommand` führt `npm install` vor `yaml_to_json.py` aus.
 
 ## Didaktische Auswirkung
-Neutral: Studierende sehen nur den laufenden Server. Die Paketierungsstrategie ist Infrastruktur, kein Lehrpunkt.
+Neutral: Sichtbar ist nur der laufende Server. Die Paketierungsstrategie ist Infrastruktur, kein Lehrpunkt.

@@ -25,7 +25,7 @@ Nutze diesen Workflow vor jeder nicht-trivialen Änderung.
 ## R – Review
 - Stelle genau eine Rückfrage, falls etwas unklar ist.
 - Erkunde Codebase zuerst – nur fragen, was nicht aus dem Code hervorgeht.
-- Prüfe: Bleibt die Änderung für Studierende im 2. Semester verständlich?
+- Prüfe: Bleibt die Änderung verständlich?
 
 ## I – Implementiere
 - Mache die kleinste sichere Änderung.

@@ -3,8 +3,8 @@
 query RebelAllianceGruppe {
   allGroups(filter: { name: "Rebel Alliance" }) {
     name
-    contactGroups {
-      contact {
+    ContactGroups {
+      Contact {
         name
         organization
       }

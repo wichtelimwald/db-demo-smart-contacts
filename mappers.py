@@ -6,16 +6,25 @@ Wandelt rohe JSON-Dictionaries in einfache Domainobjekte um.
 
 from __future__ import annotations
 
-from domain import Contact, Group, RelatedContact
+from domain import Contact, Group
 
 
-def map_related_contact(raw: dict | int) -> RelatedContact:
+def map_related_contact_id(raw: dict | int) -> int | None:
     if isinstance(raw, dict):
-        return RelatedContact(id=raw["id"], relation=raw.get("relation"))
-    return RelatedContact(id=raw)
+        return raw.get("id")
+    if isinstance(raw, int):
+        return raw
+    return None
 
 
 def map_contact(raw: dict) -> Contact:
+    related_to = [
+        contact_id
+        for entry in (raw.get("relatedTo") or [])
+        for contact_id in [map_related_contact_id(entry)]
+        if contact_id is not None
+    ]
+
     return Contact(
         id=raw["id"],
         name=raw["name"],
@@ -27,7 +36,7 @@ def map_contact(raw: dict) -> Contact:
         met_when=raw.get("metWhen"),
         notes=raw.get("notes"),
         known_preferences=raw.get("knownPreferences") or [],
-        related_to=[map_related_contact(entry) for entry in raw.get("relatedTo") or []],
+        related_to=related_to,
     )
 
 

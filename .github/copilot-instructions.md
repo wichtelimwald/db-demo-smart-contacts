@@ -1,14 +1,13 @@
 # db-demo-smart-contacts
 
-Lehrdemo – DHBW Karlsruhe.  
-Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
+Lehrdemo – DHBW Karlsruhe.
 
 ## Stack
 Python 3.12 · Node 20 · Docker Compose  
 `contacts.yaml` → `yaml_to_json.py` → `contacts.json` → Stage 2 (Port 3000) + Stage 3 (Port 8000)
 
 ## Didaktische Leitlinie
-Jede Änderung muss für Studierende im 2. Semester nachvollziehbar bleiben.  
+Jede Änderung muss nachvollziehbar bleiben.
 Komplexität, die keinen Lehrpunkt trägt, wird abgelehnt.
 
 ## Kontext laden

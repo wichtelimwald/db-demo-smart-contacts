@@ -15,14 +15,8 @@
         "kein Kontakt zu Rebellion oder Jedi"
       ],
       "relatedTo": [
-        {
-          "id": 2,
-          "relation": "Ehepaar"
-        },
-        {
-          "id": 9,
-          "relation": "Familie"
-        }
+        2,
+        9
       ]
     },
     {
@@ -40,10 +34,7 @@
         "wollte, dass Luke mehr Freiheit bekommt als Owen zugestand"
       ],
       "relatedTo": [
-        {
-          "id": 1,
-          "relation": "Ehepaar"
-        }
+        1
       ]
     },
     {
@@ -62,18 +53,9 @@
         "Wahrheit – wenn auch manchmal aus „einer bestimmten Perspektive\""
       ],
       "relatedTo": [
-        {
-          "id": 9,
-          "relation": "Jedi-Meister"
-        },
-        {
-          "id": 10,
-          "relation": "Jedi-Kollegen"
-        },
-        {
-          "id": 1,
-          "relation": "Vertrauter"
-        }
+        9,
+        10,
+        1
       ]
     },
     {
@@ -91,14 +73,8 @@
         "scheinbar eigenwillig, aber immer loyal"
       ],
       "relatedTo": [
-        {
-          "id": 5,
-          "relation": "Droid-Duo"
-        },
-        {
-          "id": 7,
-          "relation": "Vertrauter"
-        }
+        5,
+        7
       ]
     },
     {
@@ -117,10 +93,7 @@
         "über 6 Millionen Kommunikationsformen beherrschen"
       ],
       "relatedTo": [
-        {
-          "id": 4,
-          "relation": "Droid-Duo"
-        }
+        4
       ]
     },
     {
@@ -139,22 +112,10 @@
         "hasst schlechte Quoten und Wahrscheinlichkeitsrechnungen"
       ],
       "relatedTo": [
-        {
-          "id": 8,
-          "relation": "Partner"
-        },
-        {
-          "id": 7,
-          "relation": "Liebesinteresse"
-        },
-        {
-          "id": 15,
-          "relation": "Schuldner"
-        },
-        {
-          "id": 11,
-          "relation": "Freund"
-        }
+        8,
+        7,
+        15,
+        11
       ]
     },
     {
@@ -173,18 +134,9 @@
         "diplomatisches Geschick – aber auch zu Waffen greifend"
       ],
       "relatedTo": [
-        {
-          "id": 6,
-          "relation": "Liebesinteresse"
-        },
-        {
-          "id": 9,
-          "relation": "Familie"
-        },
-        {
-          "id": 4,
-          "relation": "Vertrauter"
-        }
+        6,
+        9,
+        4
       ]
     },
     {
@@ -203,10 +155,7 @@
         "Wookiee-Stolz"
       ],
       "relatedTo": [
-        {
-          "id": 6,
-          "relation": "Partner"
-        }
+        6
       ]
     },
     {
@@ -225,18 +174,9 @@
         "duldet keine Inkompetenz"
       ],
       "relatedTo": [
-        {
-          "id": 16,
-          "relation": "Sith-Meister"
-        },
-        {
-          "id": 3,
-          "relation": "Jedi-Meister"
-        },
-        {
-          "id": 7,
-          "relation": "Familie"
-        }
+        16,
+        3,
+        7
       ]
     },
     {
@@ -254,10 +194,7 @@
         "direkte Sprache mit unkonventioneller Satzstellung"
       ],
       "relatedTo": [
-        {
-          "id": 3,
-          "relation": "Jedi-Kollegen"
-        }
+        3
       ]
     },
     {
@@ -275,18 +212,9 @@
         "guter Wein und gute Gesellschaft"
       ],
       "relatedTo": [
-        {
-          "id": 6,
-          "relation": "Freund"
-        },
-        {
-          "id": 23,
-          "relation": "Vertrauter"
-        },
-        {
-          "id": 35,
-          "relation": "Co-Pilot"
-        }
+        6,
+        23,
+        35
       ]
     },
     {
@@ -304,14 +232,8 @@
         "überleben (was er tatsächlich schafft – beide Schlachten)"
       ],
       "relatedTo": [
-        {
-          "id": 13,
-          "relation": "Kamerad"
-        },
-        {
-          "id": 24,
-          "relation": "Kamerad"
-        }
+        13,
+        24
       ]
     },
     {
@@ -329,10 +251,7 @@
         "ehrliche Kameradschaft"
       ],
       "relatedTo": [
-        {
-          "id": 12,
-          "relation": "Kamerad"
-        }
+        12
       ]
     },
     {
@@ -350,14 +269,8 @@
         "mandalorianische Rüstung und Jetpack"
       ],
       "relatedTo": [
-        {
-          "id": 15,
-          "relation": "Auftraggeber"
-        },
-        {
-          "id": 9,
-          "relation": "Auftraggeber"
-        }
+        15,
+        9
       ]
     },
     {
@@ -375,18 +288,9 @@
         "Unterhaltung durch sein Hoforchester und Tänzerinnen"
       ],
       "relatedTo": [
-        {
-          "id": 14,
-          "relation": "Kopfgeldjäger"
-        },
-        {
-          "id": 30,
-          "relation": "Herr-Diener"
-        },
-        {
-          "id": 6,
-          "relation": "Schuldner"
-        }
+        14,
+        30,
+        6
       ]
     },
     {
@@ -405,10 +309,7 @@
         "Kraft-Blitz als bevorzugte Waffe"
       ],
       "relatedTo": [
-        {
-          "id": 9,
-          "relation": "Sith-Meister"
-        }
+        9
       ]
     },
     {
@@ -509,10 +410,7 @@
         "Loyalität gegenüber Lando"
       ],
       "relatedTo": [
-        {
-          "id": 11,
-          "relation": "Vertrauter"
-        }
+        11
       ]
     },
     {
@@ -528,10 +426,7 @@
         "Tow-Kabel-Manöver (schoss AT-AT erfolgreich ab)"
       ],
       "relatedTo": [
-        {
-          "id": 25,
-          "relation": "Kamerad"
-        }
+        25
       ]
     },
     {
@@ -547,10 +442,7 @@
         "zuverlässig – wenn auch mit pessimistischem Grundton"
       ],
       "relatedTo": [
-        {
-          "id": 24,
-          "relation": "Kamerad"
-        }
+        24
       ]
     },
     {
@@ -583,14 +475,8 @@
         "Fremden gegenüber zunächst misstrauisch, dann loyal"
       ],
       "relatedTo": [
-        {
-          "id": 7,
-          "relation": "Bekannt"
-        },
-        {
-          "id": 28,
-          "relation": "Bekannt"
-        }
+        7,
+        28
       ]
     },
     {
@@ -634,10 +520,7 @@
         "misstrauisch gegenüber allen Besuchern"
       ],
       "relatedTo": [
-        {
-          "id": 15,
-          "relation": "Herr-Diener"
-        }
+        15
       ]
     },
     {
@@ -711,10 +594,7 @@
         "präzises Fliegen"
       ],
       "relatedTo": [
-        {
-          "id": 11,
-          "relation": "Co-Pilot"
-        }
+        11
       ]
     },
     {
@@ -870,10 +750,7 @@
         "analytische Vorgehensweise"
       ],
       "relatedTo": [
-        {
-          "id": 47,
-          "relation": "Partner"
-        }
+        47
       ]
     },
     {
@@ -886,10 +763,7 @@
       "relationship": "Feind-Netzwerk",
       "knownPreferences": [],
       "relatedTo": [
-        {
-          "id": 46,
-          "relation": "Partner"
-        }
+        46
       ]
     },
     {

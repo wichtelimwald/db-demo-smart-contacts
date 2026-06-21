@@ -36,7 +36,7 @@ Nächste Nummer: höchste bestehende Nummer + 1 (aus `docs/adr/` auslesen).
 - [Was wird schwieriger oder muss beachtet werden?]
 
 ## Didaktische Auswirkung
-[Bleibt die Demo für Studierende im 2. Semester verständlich?]
+[Bleibt die Demo verständlich?]
 ```
 
 ## Nach dem Erstellen

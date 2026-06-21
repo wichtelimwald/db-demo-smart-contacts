@@ -25,5 +25,5 @@
 - Nach YAML-Änderung: `docker-compose restart fastapi` (nicht `up` – vermeidet Image-Rebuild).
 
 ## Didaktische Auswirkung
-Neutral: Docker ist für die Demo transparent – Studierende sehen nur die laufenden Server.  
+Neutral: Docker ist für die Demo transparent – sichtbar sind nur die laufenden Server.  
 Positiv als Nebenpunkt: „Ein Befehl startet eine ganze Infrastruktur" ist selbst ein moderner Software-Engineering-Punkt.

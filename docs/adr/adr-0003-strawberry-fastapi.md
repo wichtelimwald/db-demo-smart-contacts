@@ -20,8 +20,9 @@
 - **Graphene** – abgelehnt: ältere API, weniger idiomatisch für moderne Python-Typen.
 
 ## Konsequenzen
-- `_make_contact()` als Factory-Funktion notwendig (Strawberry-Einschränkung bei Selbstreferenz).
-- Datenzugriff direkt aus `contacts.json` – kein produktives DBMS, bewusste Vereinfachung.
+- `_to_contact()` als zentraler Mapper Domain → GraphQL-Typ bleibt notwendig (`strawberry.Private` für interne Felder).
+- Für die Vorlesung ist `relatedTo` im GraphQL-Schema didaktisch reduziert: direkte Traversierung `Contact -> relatedTo -> Contact` (Fokus: „wen man kennt").
+- Schichtung: `data_layer` → `mappers` → `domain` → `services` → `schema` → `main` (siehe ADR-0006).
 - REST-Endpunkte (`/contacts`, `/groups`) zeigen: gleiche Daten, anderes Zugriffsmodell.
 
 ## Didaktische Auswirkung

@@ -12,8 +12,6 @@ Live-Demo zur 30-minütigen Vorlesung
 **„Innovative Datenbank- und Informations-Systeme – Herausforderungen und Potentiale"**  
 DHBW Karlsruhe
 
-Zielgruppe: Studierende im 2. Semester ohne Datenbankvorkenntnisse.
-
 ---
 
 ## Was diese Demo zeigt – und was sie bewusst nicht zeigt
@@ -64,8 +62,14 @@ Stufe 2 · json-graphql-server    automatisch erzeugte Demo-API mit implizitem S
               ↓                   → Grenze: selbstreferentielle Traversierung geht nicht
 Stufe 3 · Strawberry + FastAPI   explizites Schema in Python, volle Kontrolle
                                   → Contact → relatedTo → Contact funktioniert
+                                  → Fokus in der Vorlesung: "wen man kennt"
                                   → REST und GraphQL als zwei Zugriffsmuster
 ```
+
+Hinweis zur didaktischen Reduktion über alle Stufen:
+- In `contacts.yaml` kann `related_to` optional einen `relation`-Text enthalten.
+- Für die Vorlesung wird in Stage 2 und Stage 3 nur die Ziel-ID verwendet ("wen man kennt").
+- Dadurch bleibt das Modell konsistent und leichter erklärbar.
 
 Jede Stufe zeigt, was die vorherige nicht kann.  
 Das Problem entsteht von selbst – ohne Buzzwords.
@@ -81,6 +85,9 @@ dhbw-db-demo/
 │   ├── contacts.yaml        ← menschenlesbare Quelle (hier editieren)
 │   └── contacts.json        ← generiert, nie manuell editieren
 │
+├── docs/
+│   └── adr/                 ← Architekturentscheidungen (ADR-0001 … ADR-0006)
+│
 ├── queries/
 │   ├── 01_alle_kontakte.graphql
 │   ├── 02_tatooine_suche.graphql
@@ -88,10 +95,21 @@ dhbw-db-demo/
 │   ├── 04_han_traversierung.graphql
 │   └── 05_rebel_alliance_gruppe.graphql
 │
-├── Dockerfile               ← Image für FastAPI + Strawberry
+├── tests/
+│   ├── test_services.py     ← Unit-Tests Serviceschicht
+│   └── test_yaml_to_json.py ← Unit-Tests Konvertierung
+│
+│   Stufe 3 – Python-Module (Schichtenarchitektur, siehe ADR-0006):
+├── data_layer.py            ← lädt contacts.json, stellt indizierte Dicts bereit
+├── domain.py                ← API-freie Domänenobjekte (dataclasses)
+├── mappers.py               ← Mapping raw JSON → Domänenobjekte
+├── services.py              ← Abfrage- und Filterlogik
+├── schema.py                ← Strawberry-Typen, Resolver, Schema-Instanz
+├── main.py                  ← FastAPI-App, GraphQL-Router, REST-Endpunkte
+│
+├── Dockerfile               ← Image für FastAPI + Strawberry (Stufe 3)
 ├── Dockerfile.stage2        ← Image für Stage 2 (npm ci beim Build)
 ├── docker-compose.yml       ← startet Stufe 2 und Stufe 3 gemeinsam
-├── main.py                  ← FastAPI + Strawberry Server (Stufe 3)
 ├── requirements.txt         ← Python-Abhängigkeiten
 ├── yaml_to_json.py          ← Konvertierung YAML → JSON
 ├── .gitignore
@@ -208,6 +226,11 @@ Nach Änderungen an `contacts.yaml`:
 python3 yaml_to_json.py
 ```
 
+Gespeicherte Demo-Queries validieren:
+```bash
+python3 validate_queries.py
+```
+
 **Implizites Schema** (Stufe 2) – automatisch aus der JSON-Struktur.  
 **Explizites Schema** (Stufe 3) – in Python definiert, volle Kontrolle.
 
@@ -239,8 +262,8 @@ automatisch abfragbar, aber mit fachlichen Grenzen bei Semantik und Traversierun
   allGroups(filter: { name: "Rebel Alliance" }) {
     id
     name
-    contactGroups {
-      contact { name organization }
+    ContactGroups {
+      Contact { name organization }
     }
   }
 }
@@ -277,12 +300,9 @@ In echten Systemen können aus solchen rohen Referenzen Folgeabfragen entstehen
   contact(id: 6) {
     name
     relatedTo {
-      relation
-      contact {
-        name
-        organization
-        groups { name }
-      }
+      name
+      organization
+      groups { name }
     }
   }
 }
@@ -300,8 +320,7 @@ In echten Systemen können aus solchen rohen Referenzen Folgeabfragen entstehen
     name
     organization
     relatedTo {
-      relation
-      contact { name }
+      name
     }
   }
 }

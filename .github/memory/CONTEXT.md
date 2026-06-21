@@ -6,7 +6,7 @@
 ## Zweck
 Lehrdemo – DHBW Karlsruhe.  
 Thema: „Innovative Datenbank- und Informationssysteme – Herausforderungen und Potentiale"  
-Zielgruppe: Studierende im 2. Semester, keine Datenbankvorkenntnisse.
+Ohne Datenbankvorkenntnisse verständlich.
 
 **Leitthese:** Daten speichern ist einfach. Daten korrekt, verständlich, integrierbar, sicher und nutzbar zu halten – das ist der eigentliche Engpass.
 
@@ -45,7 +45,7 @@ Stufe 2 (Port 3000)   Stufe 3 (Port 8000)
 | `contacts` | Hauptkollektion – 50 Star-Wars-Charaktere aus Lukes Perspektive |
 | `groups` | Kategorien (Rebel Alliance, Jedi, …) – separate Kollektion |
 | `contactGroups` | n:m Junction: Kontakt ↔ Gruppe (`contact_id`, `group_id`) |
-| `relatedTo` | Eingebettetes Array `[{id, relation}]` im Kontakt – IDs, keine Traversierung in Stufe 2 |
+| `relatedTo` | Eingebettetes Array `[id]` im Kontakt – IDs, keine Traversierung in Stufe 2 |
 | `metAt` | Ort des Kennenlernens (String) |
 | `metWhen` | Zeitpunkt als String (z. B. `"0 BBY"`) – bewusst kein Datumstyp → Lehrdemo-Punkt |
 | `organization` | Zugehörige Organisation / Fraktion |
@@ -72,7 +72,7 @@ Stufe 2 (Port 3000)   Stufe 3 (Port 8000)
 ---
 
 ## Didaktische Constraints
-- Keine Änderung ohne Prüfung: „Bleibt das für Studierende im 2. Semester verständlich?"
+- Keine Änderung ohne Prüfung: „Bleibt das verständlich?"
 - Komplexität ist nur erlaubt wenn sie einen sichtbaren Lehrpunkt trägt.
 - `queries/*.graphql` sind Lehrmaterialien – Kommentare gehören dazu.
 - Jede „Grenze" eines Tools ist ein expliziter Demo-Moment, keine Schwäche.- Die Demo zeigt bewusst keine produktive Datenbankimplementierung.

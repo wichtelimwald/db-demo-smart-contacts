@@ -12,12 +12,6 @@ from typing import Optional
 
 
 @dataclass(frozen=True)
-class RelatedContact:
-    id: int
-    relation: Optional[str] = None
-
-
-@dataclass(frozen=True)
 class Group:
     id: int
     name: str
@@ -35,7 +29,7 @@ class Contact:
     met_when: Optional[str] = None
     notes: Optional[str] = None
     known_preferences: list[str] = field(default_factory=list)
-    related_to: list[RelatedContact] = field(default_factory=list)
+    related_to: list[int] = field(default_factory=list)
 
     @property
     def organization_text(self) -> str:

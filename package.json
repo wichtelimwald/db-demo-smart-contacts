@@ -3,7 +3,8 @@
     "version": "1.0.0",
     "private": true,
     "scripts": {
-        "stage2": "json-graphql-server data/contacts.json --port 3000 --host 0.0.0.0"
+        "stage2": "json-graphql-server data/contacts.json --port 3000 --host 0.0.0.0",
+        "validate-queries": "python3 validate_queries.py"
     },
     "dependencies": {
         "json-graphql-server": "3.3.1"

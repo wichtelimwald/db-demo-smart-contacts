@@ -9,7 +9,7 @@
 `contacts.json` wird immer über `yaml_to_json.py` generiert und nie direkt bearbeitet.
 
 ## Begründung
-- YAML ist ohne Erklärung für Erstsemester lesbar.
+- YAML ist ohne Erklärung direkt lesbar.
 - Die Konvertierung `YAML → JSON` ist selbst ein Lehrpunkt: Menschen lesen YAML, Systeme sprechen JSON.
 - Konsistenz: eine Quelle, keine Synchronisationsprobleme.
 

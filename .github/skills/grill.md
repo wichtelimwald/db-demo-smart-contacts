@@ -15,7 +15,7 @@ Inspiriert von mattpocock/skills grill-with-docs.
 ## Prüfdimensionen
 - **Terminologie**: Nutzt der Plan bestehende Begriffe aus CONTEXT.md korrekt?
 - **Konsistenz**: Widerspricht der Plan einem bestehenden ADR?
-- **Didaktik**: Bleibt die Änderung für Studierende im 2. Semester nachvollziehbar?
+- **Didaktik**: Bleibt die Änderung nachvollziehbar?
 - **Minimalität**: Gibt es eine einfachere Lösung mit gleichem Lehreffekt?
 - **Risiko**: Was kann schiefgehen – insbesondere bei der Live-Demo?
 

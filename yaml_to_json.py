@@ -8,7 +8,7 @@ Erzeugte Collections:
   contacts          Haupttabelle
   groups            Eindeutige Gruppen / Kategorien
   contactGroups     Kontakt ↔ Gruppe (n:m Junction, contact_id + group_id)
-  Hinweis: relatedTo bleibt als Integer-ID-Array eingebettet.
+    Hinweis: relatedTo bleibt als Integer-ID-Array eingebettet.
   json-graphql-server kann selbstreferentielle Traversierung nicht auflösen.
   → Demo-Punkt: Grenze des Tools, Übergang zu echter DB.
 
@@ -60,7 +60,7 @@ def convert_contact(contact: dict) -> dict:
     Konvertiert einen rohen YAML-Kontakt in ein JSON-freundliches Dict.
     - Felder in SKIP_FIELDS werden ausgelassen (separat behandelt)
     - known_preferences → knownPreferences als String-Array
-    - related_to        → relatedTo als [{contact_id: X}]-Array (eingebettet)
+    - related_to        → relatedTo als [id]-Array (eingebettet)
     - Mehrzeilige Strings werden normalisiert
     """
     result = {}
@@ -81,7 +81,7 @@ def convert_contact(contact: dict) -> dict:
     result["knownPreferences"] = [clean_string(p) for p in prefs]
 
 
-    # related_to → eingebettetes [{id, relation}]-Array
+    # related_to → eingebettetes [id]-Array
     result["relatedTo"] = extract_related_ids(contact.get("related_to") or [])
 
     return result
@@ -120,21 +120,17 @@ def build_contact_groups(raw_contacts: list, name_to_id: dict) -> list:
 
 
 def extract_related_ids(related_to: list) -> list:
-    """Extrahiert Ziel-IDs + Relationsname aus related_to."""
+    """Extrahiert nur Ziel-IDs aus related_to und ignoriert optionale relation-Texte."""
     ids = []
     for rel in related_to or []:
         if isinstance(rel, dict):
             to_id = rel.get("id")
-            relation = rel.get("relation")
         elif isinstance(rel, int):
-            to_id, relation = rel, None
+            to_id = rel
         else:
             continue
         if to_id is not None:
-            entry = {"id": to_id}
-            if relation:
-                entry["relation"] = relation
-            ids.append(entry)
+            ids.append(to_id)
     return ids
 
 
@@ -233,8 +229,7 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
         shown = 0
         for c in contacts:
             if c.get("relatedTo") and shown < 5:
-                rels = [f"{r.get('relation', '?')} → {contact_by_id.get(r['id'], '?')}"
-                        for r in c["relatedTo"] if isinstance(r, dict)]
+                rels = [contact_by_id.get(r, "?") for r in c["relatedTo"] if isinstance(r, int)]
                 print(f"   {c['name']:<25} {', '.join(rels)}")
                 shown += 1
 

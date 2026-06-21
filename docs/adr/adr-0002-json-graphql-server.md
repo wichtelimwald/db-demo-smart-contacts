@@ -15,7 +15,7 @@ Gestartet via Docker: `npm run stage2` (lokal gepinnte Version via `package.json
 - Bekannte Grenze (selbstreferentielle Traversierung) ist bewusst Teil der Demo.
 
 ## Alternativen
-- **Hasura + PostgreSQL** – abgelehnt: zu viel Setup (Docker, Postgres, Schema tracken), überwältigt Erstsemester.
+- **Hasura + PostgreSQL** – abgelehnt: zu viel Setup (Docker, Postgres, Schema tracken), überfrachtet die Demo.
 - **Apollo Server** – abgelehnt: erfordert Resolver-Code → verwischt den Lehrpunkt „kein Code nötig".
 - **PostgREST** – abgelehnt: kein GraphQL, anderes Konzept.
 
