@@ -8,7 +8,7 @@
       "metAt": "Lars-Moisture-Farm, Tatooine",
       "metWhen": "Geburt (19 BBY) – aufgewachsen",
       "relationship": "Ziehvater (Halbbruder von Anakin Skywalker)",
-      "notes": "Hat Luke bewusst von seiner Herkunft ferngehalten. Starb beim imperialen Angriff auf die Farm (0 BBY).",
+      "notes": "- Hat mich bewusst von meiner Herkunft ferngehalten - Starb beim imperialen Angriff auf unsere Farm (0 BBY).",
       "knownPreferences": [
         "Ruhe und Anonymität, nie auffallen",
         "harte Arbeit auf der Farm",
@@ -27,11 +27,11 @@
       "metAt": "Lars-Moisture-Farm, Tatooine",
       "metWhen": "Geburt (19 BBY) – aufgewachsen",
       "relationship": "Ziehtante",
-      "notes": "Verständnisvoller als Owen gegenüber Lukes Ambitionen. Starb beim imperialen Angriff auf die Farm (0 BBY).",
+      "notes": "- Sie verstand meine Ambitionen besser als Onkel Owen - Starb beim imperialen Angriff auf die Farm (0 BBY).",
       "knownPreferences": [
         "Wärme und Fürsorge",
         "gutes Essen zubereiten",
-        "wollte, dass Luke mehr Freiheit bekommt als Owen zugestand"
+        "wollte, dass ich mehr Freiheit bekomme, als mein Onkel mir zugestand"
       ],
       "relatedTo": [
         1
@@ -46,7 +46,7 @@
       "metAt": "Jundland Wastes / Obi-Wans Hütte, Tatooine",
       "metWhen": "0 BBY (kurz vor der Yavin-Schlacht)",
       "relationship": "Erster Jedi-Mentor",
-      "notes": "Starb im Lichtschwert-Duell mit Vader auf dem ersten Death Star. Erscheint Luke seitdem als Kraft-Geist. Verschwieg Luke seine Vaterschaft – was Luke ihm später vorwarf.",
+      "notes": "- Starb im Lichtschwert-Duell mit Vader auf dem ersten Death Star - Erscheint mir seitdem als Kraft-Geist - Dass Vader mein Vater ist, erfuhr ich erst später auf Bespin.",
       "knownPreferences": [
         "Geduld und genaues Beobachten",
         "einfaches Leben / kein Überfluss",
@@ -66,7 +66,7 @@
       "metAt": "Lars-Moisture-Farm, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "Treuer Copilot und Begleiter",
-      "notes": "Trägt Leias Hilfsbotschaft und die Death-Star-Pläne. Unverzichtbarer Begleiter in jedem X-Wing. Hat mehr Geheimnisse als er preisgibt.",
+      "notes": "- Trägt Leias Hilfsbotschaft und die Death-Star-Pläne - Unverzichtbarer Begleiter in jedem X-Wing - Hat mehr Geheimnisse als er preisgibt.",
       "knownPreferences": [
         "Abenteuer und aktives Handeln",
         "beschützt Freunde eigenmächtig",
@@ -86,7 +86,7 @@
       "metAt": "Lars-Moisture-Farm, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "Droid-Begleiter – nützlich, manchmal nervig",
-      "notes": "Übersetzt Ewokisch auf Endor – entscheidend für die Allianz. Erbaut ursprünglich von Anakin Skywalker (Hintergrund-Lore).",
+      "notes": "- Übersetzt Ewokisch auf Endor – entscheidend für die Allianz - Erbaut ursprünglich von Anakin Skywalker (das erfuhr ich erst später).",
       "knownPreferences": [
         "Höflichkeit und Protokoll",
         "vermeidet gefährliche Situationen (spricht es aber laut aus)",
@@ -104,7 +104,7 @@
       "metAt": "Mos Eisley Cantina, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "Bester Freund / Bruder im Geiste",
-      "notes": "Kehrt spontan zur Yavin-Schlacht zurück und rettet Luke. Wird auf Bespin in Karbonit eingefroren (3 ABY). Von Luke und Leia aus Jabbas Palast befreit (4 ABY).",
+      "notes": "- Kehrt spontan zur Yavin-Schlacht zurück und rettet mich - Wird auf Bespin in Karbonit eingefroren (3 ABY) - Von Leia und mir aus Jabbas Palast befreit (4 ABY).",
       "knownPreferences": [
         "Freiheit und Unabhängigkeit",
         "die Millennium Falcon über alles",
@@ -127,7 +127,7 @@
       "metAt": "Death Star, Orbit Alderaan",
       "metWhen": "0 BBY",
       "relationship": "Zwillingsschwester (enthüllt Endor, 4 ABY) / enge Vertraute",
-      "notes": "Luke erkennt die Geschwister-Verbindung auf Endor durch die Macht. Hat selbst Macht-Sensitivität – nutzt sie intuitiv.",
+      "notes": "- Ich erkannte die Geschwister-Verbindung auf Endor durch die Macht - Habe selbst Macht-Sensitivität – nutze sie intuitiv.",
       "knownPreferences": [
         "Gerechtigkeit und Freiheit der Galaxis",
         "direkte, klare Kommunikation",
@@ -148,7 +148,7 @@
       "metAt": "Mos Eisley Cantina, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "Verlässlicher Verbündeter",
-      "notes": "Über 200 Jahre alt. Kommuniziert in Shyriiwook. Außerordentliche Stärke – reißt Arme aus Schultergelenken (laut Han eine bekannte Gewohnheit von Wookiees).",
+      "notes": "- Über 200 Jahre alt - Kommuniziert in Shyriiwook - Außerordentliche Stärke – reißt Arme aus Schultergelenken (laut Han eine bekannte Gewohnheit von Wookiees).",
       "knownPreferences": [
         "Loyalität (vor allem gegenüber Han – Life Debt)",
         "Dejarik (holografisches Schachspiel) – verliert nicht gern",
@@ -167,10 +167,10 @@
       "metAt": "Death Star (0 BBY, indirekt / Kampf) → Cloud City, Bespin (3 ABY, Falle) → Death Star II, Endor-Orbit (4 ABY, Finale)",
       "metWhen": "0 BBY – 4 ABY",
       "relationship": "Vater (enthüllt Bespin, 3 ABY)",
-      "notes": "Enthüllt Vaterschaft auf Bespin: „Ich bin dein Vater.\" Rettet Luke schließlich durch Töten des Imperators. Stirbt als Anakin Skywalker – zurück zur hellen Seite.",
+      "notes": "- Enthüllt Vaterschaft auf Bespin: „Ich bin dein Vater.\" Rettet mich schließlich durch Töten des Imperators - Stirbt als Anakin Skywalker – zurück zur hellen Seite.",
       "knownPreferences": [
         "Kontrolle und militärische Ordnung",
-        "sieht Potenzial in Luke – will ihn auf die dunkle Seite",
+        "sieht Potenzial in mir – will mich auf die dunkle Seite",
         "duldet keine Inkompetenz"
       ],
       "relatedTo": [
@@ -187,7 +187,7 @@
       "metAt": "Dagobah",
       "metWhen": "3 ABY",
       "relationship": "Zweiter Jedi-Meister / wichtigster Lehrmeister",
-      "notes": "900 Jahre alt. Bildet Luke zunächst widerwillig aus. Stirbt friedlich auf Dagobah (4 ABY). Erscheint danach als Kraft-Geist.",
+      "notes": "- 900 Jahre alt - Bildet mich zunächst widerwillig aus - Stirbt friedlich auf Dagobah (4 ABY) - Erscheint danach als Kraft-Geist.",
       "knownPreferences": [
         "Geduld und Demut als erste Lektionen",
         "Rootleaf-Eintopf (einfaches, selbst gekochtes Essen)",
@@ -205,7 +205,7 @@
       "metAt": "Cloud City, Bespin",
       "metWhen": "3 ABY",
       "relationship": "Verbündeter – zunächst als Verräter wahrgenommen",
-      "notes": "Stand unter imperialem Druck und lieferte Han aus. Bereut es und hilft anschließend bei der Befreiung. Führt den Angriff auf den zweiten Death Star (4 ABY).",
+      "notes": "- Stand unter imperialem Druck und lieferte Han aus - Bereut es und hilft anschließend bei der Befreiung - Führt den Angriff auf den zweiten Death Star (4 ABY).",
       "knownPreferences": [
         "Stil und Eleganz in jedem Kontext",
         "Glücksspiel (verlor die Millennium Falcon beim Sabacc)",
@@ -225,7 +225,7 @@
       "metAt": "Yavin IV, Rebellenbasis",
       "metWhen": "0 BBY",
       "relationship": "Kampfgefährte – verlässlichster Pilot",
-      "notes": "Einer der wenigen Überlebenden beider Großschlachten (Yavin 0 BBY und Endor 4 ABY).",
+      "notes": "- Einer der wenigen Überlebenden beider Großschlachten (Yavin 0 BBY und Endor 4 ABY).",
       "knownPreferences": [
         "präzises Fliegen statt Heldenmut",
         "Kameradschaft unter Piloten",
@@ -244,7 +244,7 @@
       "metAt": "Anchorhead / Lars-Farm-Umgebung, Tatooine (Kindheit) → Yavin IV (letztes Wiedersehen, 0 BBY)",
       "metWhen": "Kindheit (aufgewachsen zusammen) / 0 BBY (Wiedersehen und Tod)",
       "relationship": "Bester Freund aus der Kindheit",
-      "notes": "Gefallen bei der Yavin-Angriffsrunde (0 BBY). Sein Tod traf Luke tief – sie hatten sich gerade erst wiedergefunden.",
+      "notes": "- Gefallen bei der Yavin-Angriffsrunde (0 BBY) - Sein Tod traf mich tief – sie hatten sich gerade erst wiedergefunden.",
       "knownPreferences": [
         "Freiheit (desertierte von der Imperialen Akademie)",
         "Fliegen und Abenteuer",
@@ -262,7 +262,7 @@
       "metAt": "Jabba's Palast, Tatooine / Sail Barge, Carkoon-Wüste",
       "metWhen": "4 ABY (direkte Konfrontation)",
       "relationship": "Feind / gefährlicher Kopfgeldjäger",
-      "notes": "Lieferte Han eingefroren in Karbonit an Jabba aus. Fiel in den Sarlacc-Pit bei der Sail-Barge-Konfrontation (4 ABY).",
+      "notes": "- Lieferte Han eingefroren in Karbonit an Jabba aus - Fiel in den Sarlacc-Pit bei der Sail-Barge-Konfrontation (4 ABY).",
       "knownPreferences": [
         "Professionalität und Schweigen",
         "minimale Kommunikation – handelt lieber",
@@ -281,7 +281,7 @@
       "metAt": "Jabba's Palast, Tatooine",
       "metWhen": "4 ABY (direkte Konfrontation bei Hans Befreiung)",
       "relationship": "Feind / Wächter des eingefrorenen Han Solo",
-      "notes": "Starb durch Leia (Würgekette) während der Befreiungsaktion auf der Sail Barge.",
+      "notes": "- Starb durch Leia (Würgekette) während der Befreiungsaktion auf der Sail Barge.",
       "knownPreferences": [
         "Macht, Geld, öffentliche Demütigungen",
         "exotische Speisen (Gorg, Klatooinische Frösche)",
@@ -301,8 +301,8 @@
       "organization": "Galaktisches Imperium / Sith",
       "metAt": "Death Star II, Endor-Orbit",
       "metWhen": "4 ABY",
-      "relationship": "Erzfeind – will Luke auf die dunkle Seite zwingen",
-      "notes": "Stirbt durch Vader/Anakin, der Luke rettet. Sein Fall bedeutet das Ende des Galaktischen Imperiums.",
+      "relationship": "Erzfeind – will mich auf die dunkle Seite zwingen",
+      "notes": "- Stirbt durch Vader/Anakin, der mich rettet - Sein Fall bedeutet das Ende des Galaktischen Imperiums.",
       "knownPreferences": [
         "absolute Macht durch Manipulation",
         "nutzt Wut und Schmerz als Werkzeuge",
@@ -320,7 +320,7 @@
       "metAt": "Rebellenflotte, Endor-Briefing",
       "metWhen": "4 ABY",
       "relationship": "Respektierter Flottenkommandant",
-      "notes": "Führt die Rebellionsflotte bei der Endor-Seeschlacht. Erkannte die imperiale Falle – zu spät, um sie zu umgehen.",
+      "notes": "- Führt die Rebellionsflotte bei der Endor-Seeschlacht - Erkannte die imperiale Falle – zu spät, um sie zu umgehen.",
       "knownPreferences": [
         "taktische Präzision und Vorsicht",
         "Mon-Calamari-Kultur und Meeresumgebung"
@@ -335,7 +335,7 @@
       "metAt": "Rebellenbasis (Yavin / später Endor-Briefing)",
       "metWhen": "0 BBY / 4 ABY",
       "relationship": "Politische Anführerin der Rebellion",
-      "notes": "Briefte die Rebellion zum Angriff auf den zweiten Death Star. Politisches Rückgrat der Allianz.",
+      "notes": "- Briefte die Rebellion zum Angriff auf den zweiten Death Star - Politisches Rückgrat der Allianz.",
       "knownPreferences": [
         "diplomatische Lösungen vor militärischen",
         "minimale Verluste, maximale politische Wirkung"
@@ -350,7 +350,7 @@
       "metAt": "Yavin IV, Rebellenbasis",
       "metWhen": "0 BBY",
       "relationship": "Strategischer Befehlshaber der Yavin-Operation",
-      "notes": "Entwickelte den Angriffsplan auf den ersten Death Star – präziser Torpedoschuss in den Thermal Exhaust Port.",
+      "notes": "- Entwickelte den Angriffsplan auf den ersten Death Star – präziser Torpedoschuss in den Thermal Exhaust Port.",
       "knownPreferences": [],
       "relatedTo": []
     },
@@ -362,10 +362,10 @@
       "metAt": "Echo Base, Hoth",
       "metWhen": "3 ABY",
       "relationship": "Gunner / Rücksitzpilot im AT-AT-Gefecht",
-      "notes": "Getötet durch AT-AT-Treffer auf Hoth, bevor er schießen konnte. Luke musste danach allein weiterkämpfen und das Schiff verlassen.",
+      "notes": "- Getötet durch AT-AT-Treffer auf Hoth, bevor er schießen konnte - Ich musste danach allein weiterkämpfen und das Schiff verlassen.",
       "knownPreferences": [
         "enthusiastisch und mutig",
-        "bewunderte Luke und wollte mehr lernen"
+        "bewunderte mich und wollte mehr lernen"
       ],
       "relatedTo": []
     },
@@ -376,8 +376,8 @@
       "organization": "Rebel Alliance / Rogue Squadron",
       "metAt": "Echo Base, Hoth",
       "metWhen": "3 ABY",
-      "relationship": "Retterpilot – fand Luke und Han im Schnee",
-      "notes": "Geortet Luke und Han nach ihrer Nacht im Schnee. Gefallen kurz darauf im Hoth-Rückzugsgefecht.",
+      "relationship": "Retterpilot – fand Han und mich im Schnee",
+      "notes": "- Ortete Han und mich nach unserer Nacht im Schnee - Gefallen kurz darauf im Hoth-Rückzugsgefecht.",
       "knownPreferences": [],
       "relatedTo": []
     },
@@ -389,7 +389,7 @@
       "metAt": "Echo Base, Hoth",
       "metWhen": "3 ABY",
       "relationship": "Kommandant der Echo Base",
-      "notes": "Befahl rechtzeitig die Evakuierung von Hoth – rettete damit viele Rebel-Leben.",
+      "notes": "- Befahl rechtzeitig die Evakuierung von Hoth – rettete damit viele Rebel-Leben.",
       "knownPreferences": [
         "Vorsicht und Risikoabwägung",
         "schützt seine Leute"
@@ -404,7 +404,7 @@
       "metAt": "Cloud City, Bespin",
       "metWhen": "3 ABY",
       "relationship": "Neutral / Landos stiller Assistent",
-      "notes": "Koordinierte die Cloud-City-Sicherheit, half Lando die imperiale Übernahme rückgängig zu machen.",
+      "notes": "- Koordinierte die Cloud-City-Sicherheit, half Lando die imperiale Übernahme rückgängig zu machen.",
       "knownPreferences": [
         "direkte Kommunikation über sein Computerinterface",
         "Loyalität gegenüber Lando"
@@ -454,7 +454,7 @@
       "metAt": "Echo Base, Hoth",
       "metWhen": "3 ABY",
       "relationship": "Arzt – behandelte Wampa-Verletzungen und Prothesenhand",
-      "notes": "Behandelte Luke nach der Wampa-Attacke (Hoth) und passte die Neuroprothesenhand nach Bespin an.",
+      "notes": "- Behandelte mich nach der Wampa-Attacke (Hoth) und passte die Neuroprothesenhand nach Bespin an.",
       "knownPreferences": [
         "präzise medizinische Sprache",
         "Patientenwohl als oberste Priorität"
@@ -469,7 +469,7 @@
       "metAt": "Wald des Endor-Monds",
       "metWhen": "4 ABY",
       "relationship": "Verbündeter – über Leia zuerst kontaktiert",
-      "notes": "Erster Ewok-Kontakt der Gruppe. Schlüsselfigur für die Allianz mit dem Ewok-Stamm.",
+      "notes": "- Erster Ewok-Kontakt der Gruppe - Schlüsselfigur für die Allianz mit dem Ewok-Stamm.",
       "knownPreferences": [
         "neugierig und mutig für seine Größe",
         "Fremden gegenüber zunächst misstrauisch, dann loyal"
@@ -487,7 +487,7 @@
       "metAt": "Bright Tree Village, Endor-Mond",
       "metWhen": "4 ABY",
       "relationship": "Stammesoberhaupt der verbündeten Ewoks",
-      "notes": "Beschloss nach C-3POs Erzählungen, der Rebellion zu helfen. Mobilisierte den gesamten Stamm für den Bodenkrieg.",
+      "notes": "- Beschloss nach C-3POs Erzählungen, der Rebellion zu helfen - Mobilisierte den gesamten Stamm für den Bodenkrieg.",
       "knownPreferences": [],
       "relatedTo": []
     },
@@ -499,10 +499,10 @@
       "metAt": "Bright Tree Village, Endor-Mond",
       "metWhen": "4 ABY",
       "relationship": "Ewok-Schamane – zunächst feindlich",
-      "notes": "Schamane des Stammes. Wurde durch C-3POs „göttliche\" Vorführung überzeugt.",
+      "notes": "- Schamane des Stammes - Wurde durch C-3POs „göttliche\" Vorführung überzeugt.",
       "knownPreferences": [
         "Rituale und Stammestradition",
-        "anfangs wollte er Luke und die Gruppe als Festessen"
+        "anfangs wollte er mich und die Gruppe als Festessen"
       ],
       "relatedTo": []
     },
@@ -514,7 +514,7 @@
       "metAt": "Jabba's Palast, Tatooine",
       "metWhen": "4 ABY",
       "relationship": "Türsteher und Majordomo Jabbas – feindlich",
-      "notes": "Luke verwendete einen Gedankentrick auf ihn – erste klare Jedi-Fähigkeiten-Demonstration in Episode VI.",
+      "notes": "- Ich setzte bei ihm einen Gedankentrick ein - Für mich ein wichtiger Moment: Da merkte ich, wie sicher ich die Macht inzwischen nutze.",
       "knownPreferences": [
         "Jabbas Gunst erhalten um jeden Preis",
         "misstrauisch gegenüber allen Besuchern"
@@ -531,7 +531,7 @@
       "metAt": "Jabba's Palast, Tatooine",
       "metWhen": "4 ABY",
       "relationship": "irrelevante Nervensäge in Jabbas Hof",
-      "notes": "Wurde von R2-D2 auf der Sail Barge besiegt.",
+      "notes": "- Wurde von R2-D2 auf der Sail Barge besiegt.",
       "knownPreferences": [
         "lachen, spotten, quälen (z. B. C-3POs Auge)",
         "Jabbas Unterhaltung sicherstellen"
@@ -546,8 +546,8 @@
       "organization": "Jabba's Palast",
       "metAt": "Jabba's Palast / Rancor-Grube, Tatooine",
       "metWhen": "4 ABY",
-      "relationship": "Bewacher des Rancors (von Luke besiegt)",
-      "notes": "Der Rancor wurde von Luke durch ein herabfallendes Falltor getötet. Malakili war untröstlich – eine der menschlichsten Szenen des Films.",
+      "relationship": "Bewacher des Rancors (von mir besiegt)",
+      "notes": "- Der Rancor wurde von mir durch ein herabfallendes Falltor getötet - Malakili war untröstlich - Das blieb mir im Kopf.",
       "knownPreferences": [
         "seinen Rancor wie ein Haustier / echte Zuneigung",
         "weinte offen nach dem Tod des Tiers"
@@ -605,7 +605,7 @@
       "metAt": "Mos Eisley Cantina, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "kurze Beobachtung (Scharmützel mit Han)",
-      "notes": "Wurde von Han Solo in der Cantina erschossen. Luke war Augenzeuge.",
+      "notes": "- Wurde von Han Solo in der Cantina erschossen - Ich war Augenzeuge.",
       "knownPreferences": [
         "Kopfgelder pünktlich eintreiben",
         "überschätzt sich gelegentlich"
@@ -621,7 +621,7 @@
       "metAt": "Mos Eisley Cantina, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "kurze Bedrohung in der Cantina",
-      "notes": "Bedrohte Luke zusammen mit Dr. Evazan. Arm von Obi-Wan Kenobis Lichtschwert abgetrennt.",
+      "notes": "- Bedrohte mich zusammen mit Dr. Evazan - Arm von Obi-Wan Kenobis Lichtschwert abgetrennt.",
       "knownPreferences": [],
       "relatedTo": []
     },
@@ -633,7 +633,7 @@
       "metAt": "Mos Eisley Cantina, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "kurze Bedrohung in der Cantina",
-      "notes": "Bedrohte Luke gemeinsam mit Ponda Baba. Beide von Obi-Wan außer Gefecht gesetzt.",
+      "notes": "- Bedrohte mich gemeinsam mit Ponda Baba - Beide von Obi-Wan außer Gefecht gesetzt.",
       "knownPreferences": [
         "Einschüchterung als erste Gesprächsstrategie"
       ],
@@ -646,8 +646,8 @@
       "organization": "Mos Eisley Cantina (Barkeeper)",
       "metAt": "Mos Eisley Cantina, Tatooine",
       "metWhen": "0 BBY",
-      "relationship": "gleichgültig / kein Interesse an Luke",
-      "notes": "Verweigerte R2-D2 und C-3PO den Zutritt: „Wir bedienen hier keine Droiden.\"",
+      "relationship": "gleichgültig / kein Interesse an mir",
+      "notes": "- Verweigerte R2-D2 und C-3PO den Zutritt: „Wir bedienen hier keine Droiden.\"",
       "knownPreferences": [
         "hasst Droiden kategorisch",
         "Ruhe und Ordnung in seiner Bar"
@@ -663,7 +663,7 @@
       "metAt": "Mos Eisley Cantina, Tatooine",
       "metWhen": "0 BBY",
       "relationship": "beiläufige Cantina-Bekanntschaft",
-      "notes": "War in Wirklichkeit Rebellions-Informant. Luke wusste das nicht – ein gutes Beispiel für „Kontext, den man nicht im Adressbuch hat\".",
+      "notes": "- Später erfuhr ich, dass er als Informant für die Rebellion tätig war.",
       "knownPreferences": [
         "Botanik und ökologisches Gleichgewicht",
         "Ithorianische Philosophie der Naturverbundenheit"
@@ -678,7 +678,7 @@
       "metAt": "Rebellenflotte, Endor-Briefing",
       "metWhen": "4 ABY",
       "relationship": "Taktischer Planer der Endor-Bodenoperation",
-      "notes": "Plante den Bodeneinsatz zur Zerstörung des Bunker-Schildgenerators.",
+      "notes": "- Plante den Bodeneinsatz zur Zerstörung des Bunker-Schildgenerators.",
       "knownPreferences": [
         "Spezialoperationen und Guerillataktik"
       ],
@@ -693,7 +693,7 @@
       "metAt": "Yavin IV, Rebellenbasis",
       "metWhen": "0 BBY",
       "relationship": "Staffelkamerad",
-      "notes": "Gefallen in der Yavin-Angriffsrunde – ignorierte eine Systemwarnung und flog weiter.",
+      "notes": "- Gefallen in der Yavin-Angriffsrunde – ignorierte eine Systemwarnung und flog weiter.",
       "knownPreferences": [],
       "relatedTo": []
     },
@@ -703,9 +703,9 @@
       "species": "Mensch (teilweise cybernetisch)",
       "organization": "Kopfgeldjäger",
       "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk / indirekte Bedrohung",
-      "notes": "Wurde von Vader zur Han-Suche engagiert. Luke war bei diesem Briefing nicht anwesend – kennt ihn nur aus Berichten. DEMO-HINWEIS: Zeigt, dass ein Kontakt-System nicht nur direkte Bekanntschaften enthält.",
+      "notes": "- Wurde von Vader zur Han-Suche engagiert - Ich war bei diesem Briefing nicht anwesend – kenne ihn nur aus Berichten.",
       "knownPreferences": [
         "zäh, verbittert, kein Interesse an Stil"
       ],
@@ -717,9 +717,9 @@
       "species": "Trandoshaner",
       "organization": "Kopfgeldjäger",
       "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk / indirekte Bedrohung",
-      "notes": "Wie Dengar: nie direkt getroffen. Nur aus Berichten bekannt.",
+      "notes": "- Wie Dengar: nie direkt getroffen - Nur aus Berichten bekannt.",
       "knownPreferences": [
         "hasst Wookiees (Spezies-Antagonismus)",
         "brutale Direktheit"
@@ -732,9 +732,9 @@
       "species": "IG-Serie Assassinen-Droid",
       "organization": "Kopfgeldjäger",
       "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk",
-      "notes": "Gefährlichster der engagierten Droiden-Kopfgeldjäger. Luke kennt ihn nur aus Geheimdienstberichten.",
+      "notes": "- Gefährlichster der engagierten Droiden-Kopfgeldjäger - Ich kenne ihn nur aus Geheimdienstberichten.",
       "knownPreferences": [],
       "relatedTo": []
     },
@@ -744,7 +744,7 @@
       "species": "Protokoll-Droid (zu Kopfgeldjäger umgebaut)",
       "organization": "Kopfgeldjäger",
       "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk",
       "knownPreferences": [
         "analytische Vorgehensweise"
@@ -759,7 +759,7 @@
       "species": "Gand",
       "organization": "Kopfgeldjäger",
       "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne Lukes Anwesenheit)",
+      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk",
       "knownPreferences": [],
       "relatedTo": [
@@ -774,7 +774,7 @@
       "metAt": "kein direkter Kontakt",
       "metWhen": "3–4 ABY (Kommandant der Verfolgungsflotte)",
       "relationship": "Feind-Netzwerk / militärische Bedrohung",
-      "notes": "Kommandierte Vaders Superintendantur-Flotte bei Hoth und Endor. Kein direkter Kontakt zu Luke – präsente institutionelle Bedrohung. Starb beim Endor-Raumkampf (Kamikaze-A-Wing).",
+      "notes": "- Kommandierte Vaders Superintendantur-Flotte bei Hoth und Endor - Kein direkter Kontakt zu mir – präsente institutionelle Bedrohung - Starb beim Endor-Raumkampf (Kamikaze-A-Wing).",
       "knownPreferences": [
         "Pflichterfüllung – auch unter Todesangst (Vader)"
       ],
@@ -789,7 +789,7 @@
       "metAt": "Echo Base, Hoth",
       "metWhen": "3 ABY",
       "relationship": "Medizinische Erstversorgung nach Wampa-Attacke",
-      "notes": "Assistierte 2-1B bei Lukes Behandlung in der Bacta-Tank-Vorbereitung.",
+      "notes": "- Assistierte 2-1B bei meiner Behandlung in der Bacta-Tank-Vorbereitung.",
       "knownPreferences": [
         "unterstützende Rolle / arbeitet 2-1B zu"
       ],
@@ -803,7 +803,7 @@
       "metAt": "Endor-Mond, imperialer Bunker-Bereich",
       "metWhen": "4 ABY",
       "relationship": "verbündeter Ewok / Ablenkungsmanöver",
-      "notes": "Stahl spontan ein imperiales Speeder Bike – lenkte die Wachen ab und ermöglichte der Gruppe den Zugang zum Bunker. Kleiner Held des Endor-Bodenfeldzugs.",
+      "notes": "- Stahl spontan ein imperiales Speeder Bike – lenkte die Wachen ab und ermöglichte der Gruppe den Zugang zum Bunker - Kleiner Held des Endor-Bodenfeldzugs.",
       "knownPreferences": [
         "draufgängerisch und impulsiv",
         "technisch neugierig (Speeder Bike sofort fasziniert)"
