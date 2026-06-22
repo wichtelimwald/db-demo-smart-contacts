@@ -6,8 +6,7 @@
   // Hauptservice für Entwicklung (Python)
   "service": "fastapi",
   "workspaceFolder": "/workspace",
-  // Keine zusaetzlichen Compose-Services automatisch starten
-  // Stufe 2 wird konsistent per VS-Code-Task gestartet.
+  // Keine zusaetzlichen Services - alles startet im fastapi-Container-Command
   "runServices": [],
   "shutdownAction": "stopCompose",
   // Ports automatisch weiterleiten + Labels im VS Code Ports-Tab
@@ -15,8 +14,8 @@
     3000,
     8000
   ],
-  // Contacts-JSON beim Container-Start generieren (Quelle: data/contacts.yaml)
-  "postCreateCommand": "cd /workspace && npm install && python3 /workspace/yaml_to_json.py",
+  // npm install - Stage 2/3 starten sich selbst im Container-Command
+  "postCreateCommand": "cd /workspace && npm install",
   "customizations": {
     "vscode": {
       "extensions": [

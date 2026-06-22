@@ -5,8 +5,7 @@ services:
       context: ..
       dockerfile: Dockerfile
     working_dir: /workspace
-    # Ganzes Projekt mounten (nicht nur data/)
     volumes:
       - ..:/workspace:cached
-    # Kein Compose-Port-Publishing, damit VS Code Forwarding+Labeling konsistent bleibt
-    command: sh -c "python3 yaml_to_json.py && python3 main.py"
+    # Stage 2 und Stage 3 parallel starten
+    command: bash -c "npm run stage2 &>/tmp/stage2.log & sleep 2 && python3 yaml_to_json.py && python3 main.py"
