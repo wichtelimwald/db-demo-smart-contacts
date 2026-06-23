@@ -49,9 +49,9 @@ class YamlToJsonTests(unittest.TestCase):
         )
 
         self.assertEqual(2, len(result["contacts"]))
-        self.assertEqual([2], result["contacts"][0]["relatedTo"])
+        self.assertEqual([2], result["contacts"][0]["related_to"])
         self.assertEqual(
-            {"id": 2, "name": "Luke Skywalker", "knownPreferences": [], "relatedTo": []},
+          {"id": 2, "name": "Luke Skywalker", "known_preferences": [], "related_to": []},
             result["contacts"][1],
         )
         self.assertEqual(

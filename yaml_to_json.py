@@ -8,7 +8,7 @@ Erzeugte Collections:
   contacts          Haupttabelle
   groups            Eindeutige Gruppen / Kategorien
   contactGroups     Kontakt ↔ Gruppe (n:m Junction, contact_id + group_id)
-    Hinweis: relatedTo bleibt als Integer-ID-Array eingebettet.
+        Hinweis: related_to bleibt als Integer-ID-Array eingebettet.
   json-graphql-server kann selbstreferentielle Traversierung nicht auflösen.
   → Demo-Punkt: Grenze des Tools, Übergang zu echter DB.
 
@@ -45,8 +45,8 @@ def fail_with_validation_error(message: str) -> None:
 
 
 FIELD_MAP = {
-    "met_at":       "metAt",
-    "met_when":     "metWhen",
+    "met_at": "met_at",
+    "met_when": "met_when",
     "relationship": "relationship",
     "organization": "organization",
 }
@@ -59,8 +59,8 @@ def convert_contact(contact: dict) -> dict:
     """
     Konvertiert einen rohen YAML-Kontakt in ein JSON-freundliches Dict.
     - Felder in SKIP_FIELDS werden ausgelassen (separat behandelt)
-    - known_preferences → knownPreferences als String-Array
-    - related_to        → relatedTo als [id]-Array (eingebettet)
+    - known_preferences bleibt snake_case als String-Array
+    - related_to bleibt snake_case als [id]-Array (eingebettet)
     - Mehrzeilige Strings werden normalisiert
     """
     result = {}
@@ -78,11 +78,11 @@ def convert_contact(contact: dict) -> dict:
 
     # known_preferences als sauberes String-Array
     prefs = contact.get("known_preferences") or []
-    result["knownPreferences"] = [clean_string(p) for p in prefs]
+    result["known_preferences"] = [clean_string(p) for p in prefs]
 
 
     # related_to → eingebettetes [id]-Array
-    result["relatedTo"] = extract_related_ids(contact.get("related_to") or [])
+    result["related_to"] = extract_related_ids(contact.get("related_to") or [])
 
     return result
 
@@ -224,12 +224,12 @@ def main(input_path: Path, output_path: Path, verbose: bool = False):
             ]
             print(f"   [{g['id']:>2}] {g['name']:<30} ({len(members)} Kontakte)")
 
-        print("\n── relatedTo Stichprobe (erste 5 Kontakte mit Beziehungen) ─")
+        print("\n── related_to Stichprobe (erste 5 Kontakte mit Beziehungen) ─")
         contact_by_id = {c["id"]: c["name"] for c in contacts}
         shown = 0
         for c in contacts:
-            if c.get("relatedTo") and shown < 5:
-                rels = [contact_by_id.get(r, "?") for r in c["relatedTo"] if isinstance(r, int)]
+            if c.get("related_to") and shown < 5:
+                rels = [contact_by_id.get(r, "?") for r in c["related_to"] if isinstance(r, int)]
                 print(f"   {c['name']:<25} {', '.join(rels)}")
                 shown += 1
 

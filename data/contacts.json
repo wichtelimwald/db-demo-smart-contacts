@@ -5,16 +5,16 @@
       "name": "Owen Lars",
       "species": "Mensch",
       "organization": "Zivilist / Vaporfarmer",
-      "metAt": "Lars-Moisture-Farm, Tatooine",
-      "metWhen": "Geburt (19 BBY) – aufgewachsen",
+      "met_at": "Lars-Moisture-Farm, Tatooine",
+      "met_when": "Geburt (19 BBY) – aufgewachsen",
       "relationship": "Ziehvater (Halbbruder von Anakin Skywalker)",
       "notes": "- Hat mich bewusst von meiner Herkunft ferngehalten - Starb beim imperialen Angriff auf unsere Farm (0 BBY).",
-      "knownPreferences": [
+      "known_preferences": [
         "Ruhe und Anonymität, nie auffallen",
         "harte Arbeit auf der Farm",
         "kein Kontakt zu Rebellion oder Jedi"
       ],
-      "relatedTo": [
+      "related_to": [
         2,
         9
       ]
@@ -24,16 +24,16 @@
       "name": "Beru Whitesun Lars",
       "species": "Mensch",
       "organization": "Zivilist / Vaporfarmer",
-      "metAt": "Lars-Moisture-Farm, Tatooine",
-      "metWhen": "Geburt (19 BBY) – aufgewachsen",
+      "met_at": "Lars-Moisture-Farm, Tatooine",
+      "met_when": "Geburt (19 BBY) – aufgewachsen",
       "relationship": "Ziehtante",
       "notes": "- Sie verstand meine Ambitionen besser als Onkel Owen - Starb beim imperialen Angriff auf die Farm (0 BBY).",
-      "knownPreferences": [
+      "known_preferences": [
         "Wärme und Fürsorge",
         "gutes Essen zubereiten",
         "wollte, dass ich mehr Freiheit bekomme, als mein Onkel mir zugestand"
       ],
-      "relatedTo": [
+      "related_to": [
         1
       ]
     },
@@ -43,16 +43,16 @@
       "alias": "Ben Kenobi",
       "species": "Mensch",
       "organization": "Jedi Order (im Exil) / später Eins-mit-der-Macht",
-      "metAt": "Jundland Wastes / Obi-Wans Hütte, Tatooine",
-      "metWhen": "0 BBY (kurz vor der Yavin-Schlacht)",
+      "met_at": "Jundland Wastes / Obi-Wans Hütte, Tatooine",
+      "met_when": "0 BBY (kurz vor der Yavin-Schlacht)",
       "relationship": "Erster Jedi-Mentor",
       "notes": "- Starb im Lichtschwert-Duell mit Vader auf dem ersten Death Star - Erscheint mir seitdem als Kraft-Geist - Dass Vader mein Vater ist, erfuhr ich erst später auf Bespin.",
-      "knownPreferences": [
+      "known_preferences": [
         "Geduld und genaues Beobachten",
         "einfaches Leben / kein Überfluss",
         "Wahrheit – wenn auch manchmal aus „einer bestimmten Perspektive\""
       ],
-      "relatedTo": [
+      "related_to": [
         9,
         10,
         1
@@ -63,16 +63,16 @@
       "name": "R2-D2",
       "species": "Astromech-Droid (R2-Serie)",
       "organization": "Rebel Alliance",
-      "metAt": "Lars-Moisture-Farm, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Lars-Moisture-Farm, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "Treuer Copilot und Begleiter",
       "notes": "- Trägt Leias Hilfsbotschaft und die Death-Star-Pläne - Unverzichtbarer Begleiter in jedem X-Wing - Hat mehr Geheimnisse als er preisgibt.",
-      "knownPreferences": [
+      "known_preferences": [
         "Abenteuer und aktives Handeln",
         "beschützt Freunde eigenmächtig",
         "scheinbar eigenwillig, aber immer loyal"
       ],
-      "relatedTo": [
+      "related_to": [
         5,
         7
       ]
@@ -83,16 +83,16 @@
       "alias": "Threepio",
       "species": "Humanoider Protokoll-Droid",
       "organization": "Rebel Alliance",
-      "metAt": "Lars-Moisture-Farm, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Lars-Moisture-Farm, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "Droid-Begleiter – nützlich, manchmal nervig",
       "notes": "- Übersetzt Ewokisch auf Endor – entscheidend für die Allianz - Erbaut ursprünglich von Anakin Skywalker (das erfuhr ich erst später).",
-      "knownPreferences": [
+      "known_preferences": [
         "Höflichkeit und Protokoll",
         "vermeidet gefährliche Situationen (spricht es aber laut aus)",
         "über 6 Millionen Kommunikationsformen beherrschen"
       ],
-      "relatedTo": [
+      "related_to": [
         4
       ]
     },
@@ -101,17 +101,17 @@
       "name": "Han Solo",
       "species": "Mensch",
       "organization": "Schmuggler / Rebel Alliance (widerwillig, dann überzeugt)",
-      "metAt": "Mos Eisley Cantina, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Mos Eisley Cantina, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "Bester Freund / Bruder im Geiste",
       "notes": "- Kehrt spontan zur Yavin-Schlacht zurück und rettet mich - Wird auf Bespin in Karbonit eingefroren (3 ABY) - Von Leia und mir aus Jabbas Palast befreit (4 ABY).",
-      "knownPreferences": [
+      "known_preferences": [
         "Freiheit und Unabhängigkeit",
         "die Millennium Falcon über alles",
         "Sabacc spielen",
         "hasst schlechte Quoten und Wahrscheinlichkeitsrechnungen"
       ],
-      "relatedTo": [
+      "related_to": [
         8,
         7,
         15,
@@ -124,16 +124,16 @@
       "alias": "Prinzessin Leia",
       "species": "Mensch",
       "organization": "Alderaan (zerstört) / Rebel Alliance / Galaktischer Senat",
-      "metAt": "Death Star, Orbit Alderaan",
-      "metWhen": "0 BBY",
+      "met_at": "Death Star, Orbit Alderaan",
+      "met_when": "0 BBY",
       "relationship": "Zwillingsschwester (enthüllt Endor, 4 ABY) / enge Vertraute",
       "notes": "- Ich erkannte die Geschwister-Verbindung auf Endor durch die Macht - Habe selbst Macht-Sensitivität – nutze sie intuitiv.",
-      "knownPreferences": [
+      "known_preferences": [
         "Gerechtigkeit und Freiheit der Galaxis",
         "direkte, klare Kommunikation",
         "diplomatisches Geschick – aber auch zu Waffen greifend"
       ],
-      "relatedTo": [
+      "related_to": [
         6,
         9,
         4
@@ -145,16 +145,16 @@
       "alias": "Chewie",
       "species": "Wookiee",
       "organization": "Rebel Alliance / Co-Pilot Millennium Falcon",
-      "metAt": "Mos Eisley Cantina, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Mos Eisley Cantina, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "Verlässlicher Verbündeter",
       "notes": "- Über 200 Jahre alt - Kommuniziert in Shyriiwook - Außerordentliche Stärke – reißt Arme aus Schultergelenken (laut Han eine bekannte Gewohnheit von Wookiees).",
-      "knownPreferences": [
+      "known_preferences": [
         "Loyalität (vor allem gegenüber Han – Life Debt)",
         "Dejarik (holografisches Schachspiel) – verliert nicht gern",
         "Wookiee-Stolz"
       ],
-      "relatedTo": [
+      "related_to": [
         6
       ]
     },
@@ -164,16 +164,16 @@
       "alias": "Anakin Skywalker",
       "species": "Mensch (teilweise cybernetisch)",
       "organization": "Galaktisches Imperium / Sith / später: erlöst",
-      "metAt": "Death Star (0 BBY, indirekt / Kampf) → Cloud City, Bespin (3 ABY, Falle) → Death Star II, Endor-Orbit (4 ABY, Finale)",
-      "metWhen": "0 BBY – 4 ABY",
+      "met_at": "Death Star (0 BBY, indirekt / Kampf) → Cloud City, Bespin (3 ABY, Falle) → Death Star II, Endor-Orbit (4 ABY, Finale)",
+      "met_when": "0 BBY – 4 ABY",
       "relationship": "Vater (enthüllt Bespin, 3 ABY)",
       "notes": "- Enthüllt Vaterschaft auf Bespin: „Ich bin dein Vater.\" Rettet mich schließlich durch Töten des Imperators - Stirbt als Anakin Skywalker – zurück zur hellen Seite.",
-      "knownPreferences": [
+      "known_preferences": [
         "Kontrolle und militärische Ordnung",
         "sieht Potenzial in mir – will mich auf die dunkle Seite",
         "duldet keine Inkompetenz"
       ],
-      "relatedTo": [
+      "related_to": [
         16,
         3,
         7
@@ -184,16 +184,16 @@
       "name": "Yoda",
       "species": "Unbekannte Art",
       "organization": "Jedi Order (im Exil auf Dagobah)",
-      "metAt": "Dagobah",
-      "metWhen": "3 ABY",
+      "met_at": "Dagobah",
+      "met_when": "3 ABY",
       "relationship": "Zweiter Jedi-Meister / wichtigster Lehrmeister",
       "notes": "- 900 Jahre alt - Bildet mich zunächst widerwillig aus - Stirbt friedlich auf Dagobah (4 ABY) - Erscheint danach als Kraft-Geist.",
-      "knownPreferences": [
+      "known_preferences": [
         "Geduld und Demut als erste Lektionen",
         "Rootleaf-Eintopf (einfaches, selbst gekochtes Essen)",
         "direkte Sprache mit unkonventioneller Satzstellung"
       ],
-      "relatedTo": [
+      "related_to": [
         3
       ]
     },
@@ -202,16 +202,16 @@
       "name": "Lando Calrissian",
       "species": "Mensch",
       "organization": "Administrator Cloud City, Bespin / Rebel Alliance (ab Endor)",
-      "metAt": "Cloud City, Bespin",
-      "metWhen": "3 ABY",
+      "met_at": "Cloud City, Bespin",
+      "met_when": "3 ABY",
       "relationship": "Verbündeter – zunächst als Verräter wahrgenommen",
       "notes": "- Stand unter imperialem Druck und lieferte Han aus - Bereut es und hilft anschließend bei der Befreiung - Führt den Angriff auf den zweiten Death Star (4 ABY).",
-      "knownPreferences": [
+      "known_preferences": [
         "Stil und Eleganz in jedem Kontext",
         "Glücksspiel (verlor die Millennium Falcon beim Sabacc)",
         "guter Wein und gute Gesellschaft"
       ],
-      "relatedTo": [
+      "related_to": [
         6,
         23,
         35
@@ -222,16 +222,16 @@
       "name": "Wedge Antilles",
       "species": "Mensch",
       "organization": "Rebel Alliance / Red Squadron / Rogue Squadron",
-      "metAt": "Yavin IV, Rebellenbasis",
-      "metWhen": "0 BBY",
+      "met_at": "Yavin IV, Rebellenbasis",
+      "met_when": "0 BBY",
       "relationship": "Kampfgefährte – verlässlichster Pilot",
       "notes": "- Einer der wenigen Überlebenden beider Großschlachten (Yavin 0 BBY und Endor 4 ABY).",
-      "knownPreferences": [
+      "known_preferences": [
         "präzises Fliegen statt Heldenmut",
         "Kameradschaft unter Piloten",
         "überleben (was er tatsächlich schafft – beide Schlachten)"
       ],
-      "relatedTo": [
+      "related_to": [
         13,
         24
       ]
@@ -241,16 +241,16 @@
       "name": "Biggs Darklighter",
       "species": "Mensch",
       "organization": "Rebel Alliance / Red Squadron",
-      "metAt": "Anchorhead / Lars-Farm-Umgebung, Tatooine (Kindheit) → Yavin IV (letztes Wiedersehen, 0 BBY)",
-      "metWhen": "Kindheit (aufgewachsen zusammen) / 0 BBY (Wiedersehen und Tod)",
+      "met_at": "Anchorhead / Lars-Farm-Umgebung, Tatooine (Kindheit) → Yavin IV (letztes Wiedersehen, 0 BBY)",
+      "met_when": "Kindheit (aufgewachsen zusammen) / 0 BBY (Wiedersehen und Tod)",
       "relationship": "Bester Freund aus der Kindheit",
       "notes": "- Gefallen bei der Yavin-Angriffsrunde (0 BBY) - Sein Tod traf mich tief – sie hatten sich gerade erst wiedergefunden.",
-      "knownPreferences": [
+      "known_preferences": [
         "Freiheit (desertierte von der Imperialen Akademie)",
         "Fliegen und Abenteuer",
         "ehrliche Kameradschaft"
       ],
-      "relatedTo": [
+      "related_to": [
         12
       ]
     },
@@ -259,16 +259,16 @@
       "name": "Boba Fett",
       "species": "Mensch (Klon-Abstammung von Jango Fett)",
       "organization": "Kopfgeldjäger (freiberuflich / Imperium / Jabba)",
-      "metAt": "Jabba's Palast, Tatooine / Sail Barge, Carkoon-Wüste",
-      "metWhen": "4 ABY (direkte Konfrontation)",
+      "met_at": "Jabba's Palast, Tatooine / Sail Barge, Carkoon-Wüste",
+      "met_when": "4 ABY (direkte Konfrontation)",
       "relationship": "Feind / gefährlicher Kopfgeldjäger",
       "notes": "- Lieferte Han eingefroren in Karbonit an Jabba aus - Fiel in den Sarlacc-Pit bei der Sail-Barge-Konfrontation (4 ABY).",
-      "knownPreferences": [
+      "known_preferences": [
         "Professionalität und Schweigen",
         "minimale Kommunikation – handelt lieber",
         "mandalorianische Rüstung und Jetpack"
       ],
-      "relatedTo": [
+      "related_to": [
         15,
         9
       ]
@@ -278,16 +278,16 @@
       "name": "Jabba the Hutt",
       "species": "Hutt",
       "organization": "Hutt-Kriminelles Syndikat / Tatooine-Unterwelt",
-      "metAt": "Jabba's Palast, Tatooine",
-      "metWhen": "4 ABY (direkte Konfrontation bei Hans Befreiung)",
+      "met_at": "Jabba's Palast, Tatooine",
+      "met_when": "4 ABY (direkte Konfrontation bei Hans Befreiung)",
       "relationship": "Feind / Wächter des eingefrorenen Han Solo",
       "notes": "- Starb durch Leia (Würgekette) während der Befreiungsaktion auf der Sail Barge.",
-      "knownPreferences": [
+      "known_preferences": [
         "Macht, Geld, öffentliche Demütigungen",
         "exotische Speisen (Gorg, Klatooinische Frösche)",
         "Unterhaltung durch sein Hoforchester und Tänzerinnen"
       ],
-      "relatedTo": [
+      "related_to": [
         14,
         30,
         6
@@ -299,16 +299,16 @@
       "alias": "Darth Sidious",
       "species": "Mensch",
       "organization": "Galaktisches Imperium / Sith",
-      "metAt": "Death Star II, Endor-Orbit",
-      "metWhen": "4 ABY",
+      "met_at": "Death Star II, Endor-Orbit",
+      "met_when": "4 ABY",
       "relationship": "Erzfeind – will mich auf die dunkle Seite zwingen",
       "notes": "- Stirbt durch Vader/Anakin, der mich rettet - Sein Fall bedeutet das Ende des Galaktischen Imperiums.",
-      "knownPreferences": [
+      "known_preferences": [
         "absolute Macht durch Manipulation",
         "nutzt Wut und Schmerz als Werkzeuge",
         "Kraft-Blitz als bevorzugte Waffe"
       ],
-      "relatedTo": [
+      "related_to": [
         9
       ]
     },
@@ -317,99 +317,99 @@
       "name": "Admiral Gial Ackbar",
       "species": "Mon Calamari",
       "organization": "Rebel Alliance / Mon-Calamari-Flotte",
-      "metAt": "Rebellenflotte, Endor-Briefing",
-      "metWhen": "4 ABY",
+      "met_at": "Rebellenflotte, Endor-Briefing",
+      "met_when": "4 ABY",
       "relationship": "Respektierter Flottenkommandant",
       "notes": "- Führt die Rebellionsflotte bei der Endor-Seeschlacht - Erkannte die imperiale Falle – zu spät, um sie zu umgehen.",
-      "knownPreferences": [
+      "known_preferences": [
         "taktische Präzision und Vorsicht",
         "Mon-Calamari-Kultur und Meeresumgebung"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 18,
       "name": "Mon Mothma",
       "species": "Mensch",
       "organization": "Rebel Alliance (politische Führung)",
-      "metAt": "Rebellenbasis (Yavin / später Endor-Briefing)",
-      "metWhen": "0 BBY / 4 ABY",
+      "met_at": "Rebellenbasis (Yavin / später Endor-Briefing)",
+      "met_when": "0 BBY / 4 ABY",
       "relationship": "Politische Anführerin der Rebellion",
       "notes": "- Briefte die Rebellion zum Angriff auf den zweiten Death Star - Politisches Rückgrat der Allianz.",
-      "knownPreferences": [
+      "known_preferences": [
         "diplomatische Lösungen vor militärischen",
         "minimale Verluste, maximale politische Wirkung"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 19,
       "name": "General Jan Dodonna",
       "species": "Mensch",
       "organization": "Rebel Alliance",
-      "metAt": "Yavin IV, Rebellenbasis",
-      "metWhen": "0 BBY",
+      "met_at": "Yavin IV, Rebellenbasis",
+      "met_when": "0 BBY",
       "relationship": "Strategischer Befehlshaber der Yavin-Operation",
       "notes": "- Entwickelte den Angriffsplan auf den ersten Death Star – präziser Torpedoschuss in den Thermal Exhaust Port.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "known_preferences": [],
+      "related_to": []
     },
     {
       "id": 20,
       "name": "Dak Ralter",
       "species": "Mensch",
       "organization": "Rebel Alliance / Echo Base",
-      "metAt": "Echo Base, Hoth",
-      "metWhen": "3 ABY",
+      "met_at": "Echo Base, Hoth",
+      "met_when": "3 ABY",
       "relationship": "Gunner / Rücksitzpilot im AT-AT-Gefecht",
       "notes": "- Getötet durch AT-AT-Treffer auf Hoth, bevor er schießen konnte - Ich musste danach allein weiterkämpfen und das Schiff verlassen.",
-      "knownPreferences": [
+      "known_preferences": [
         "enthusiastisch und mutig",
         "bewunderte mich und wollte mehr lernen"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 21,
       "name": "Zev Senesca",
       "species": "Mensch",
       "organization": "Rebel Alliance / Rogue Squadron",
-      "metAt": "Echo Base, Hoth",
-      "metWhen": "3 ABY",
+      "met_at": "Echo Base, Hoth",
+      "met_when": "3 ABY",
       "relationship": "Retterpilot – fand Han und mich im Schnee",
       "notes": "- Ortete Han und mich nach unserer Nacht im Schnee - Gefallen kurz darauf im Hoth-Rückzugsgefecht.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "known_preferences": [],
+      "related_to": []
     },
     {
       "id": 22,
       "name": "General Carlist Rieekan",
       "species": "Mensch",
       "organization": "Rebel Alliance",
-      "metAt": "Echo Base, Hoth",
-      "metWhen": "3 ABY",
+      "met_at": "Echo Base, Hoth",
+      "met_when": "3 ABY",
       "relationship": "Kommandant der Echo Base",
       "notes": "- Befahl rechtzeitig die Evakuierung von Hoth – rettete damit viele Rebel-Leben.",
-      "knownPreferences": [
+      "known_preferences": [
         "Vorsicht und Risikoabwägung",
         "schützt seine Leute"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 23,
       "name": "Lobot",
       "species": "Mensch (mit Cyborg-Kopfinterface)",
       "organization": "Cloud City, Bespin",
-      "metAt": "Cloud City, Bespin",
-      "metWhen": "3 ABY",
+      "met_at": "Cloud City, Bespin",
+      "met_when": "3 ABY",
       "relationship": "Neutral / Landos stiller Assistent",
       "notes": "- Koordinierte die Cloud-City-Sicherheit, half Lando die imperiale Übernahme rückgängig zu machen.",
-      "knownPreferences": [
+      "known_preferences": [
         "direkte Kommunikation über sein Computerinterface",
         "Loyalität gegenüber Lando"
       ],
-      "relatedTo": [
+      "related_to": [
         11
       ]
     },
@@ -418,14 +418,14 @@
       "name": "Wes Janson",
       "species": "Mensch",
       "organization": "Rebel Alliance / Rogue Squadron",
-      "metAt": "Echo Base, Hoth",
-      "metWhen": "3 ABY",
+      "met_at": "Echo Base, Hoth",
+      "met_when": "3 ABY",
       "relationship": "Staffelkamerad",
-      "knownPreferences": [
+      "known_preferences": [
         "Humor und lockerer Umgang auch in Gefahrensituationen",
         "Tow-Kabel-Manöver (schoss AT-AT erfolgreich ab)"
       ],
-      "relatedTo": [
+      "related_to": [
         25
       ]
     },
@@ -435,13 +435,13 @@
       "alias": "Hobbie",
       "species": "Mensch",
       "organization": "Rebel Alliance / Rogue Squadron",
-      "metAt": "Echo Base, Hoth",
-      "metWhen": "3 ABY",
+      "met_at": "Echo Base, Hoth",
+      "met_when": "3 ABY",
       "relationship": "Staffelkamerad",
-      "knownPreferences": [
+      "known_preferences": [
         "zuverlässig – wenn auch mit pessimistischem Grundton"
       ],
-      "relatedTo": [
+      "related_to": [
         24
       ]
     },
@@ -451,30 +451,30 @@
       "alias": "Too-Onebee",
       "species": "Medizin-Droid (2-1B-Serie)",
       "organization": "Rebel Alliance",
-      "metAt": "Echo Base, Hoth",
-      "metWhen": "3 ABY",
+      "met_at": "Echo Base, Hoth",
+      "met_when": "3 ABY",
       "relationship": "Arzt – behandelte Wampa-Verletzungen und Prothesenhand",
       "notes": "- Behandelte mich nach der Wampa-Attacke (Hoth) und passte die Neuroprothesenhand nach Bespin an.",
-      "knownPreferences": [
+      "known_preferences": [
         "präzise medizinische Sprache",
         "Patientenwohl als oberste Priorität"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 27,
       "name": "Wicket W. Warrick",
       "species": "Ewok",
       "organization": "Bright Tree Village, Endor-Mond",
-      "metAt": "Wald des Endor-Monds",
-      "metWhen": "4 ABY",
+      "met_at": "Wald des Endor-Monds",
+      "met_when": "4 ABY",
       "relationship": "Verbündeter – über Leia zuerst kontaktiert",
       "notes": "- Erster Ewok-Kontakt der Gruppe - Schlüsselfigur für die Allianz mit dem Ewok-Stamm.",
-      "knownPreferences": [
+      "known_preferences": [
         "neugierig und mutig für seine Größe",
         "Fremden gegenüber zunächst misstrauisch, dann loyal"
       ],
-      "relatedTo": [
+      "related_to": [
         7,
         28
       ]
@@ -484,42 +484,42 @@
       "name": "Chief Chirpa",
       "species": "Ewok",
       "organization": "Bright Tree Village, Endor-Mond",
-      "metAt": "Bright Tree Village, Endor-Mond",
-      "metWhen": "4 ABY",
+      "met_at": "Bright Tree Village, Endor-Mond",
+      "met_when": "4 ABY",
       "relationship": "Stammesoberhaupt der verbündeten Ewoks",
       "notes": "- Beschloss nach C-3POs Erzählungen, der Rebellion zu helfen - Mobilisierte den gesamten Stamm für den Bodenkrieg.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "known_preferences": [],
+      "related_to": []
     },
     {
       "id": 29,
       "name": "Logray",
       "species": "Ewok",
       "organization": "Bright Tree Village, Endor-Mond",
-      "metAt": "Bright Tree Village, Endor-Mond",
-      "metWhen": "4 ABY",
+      "met_at": "Bright Tree Village, Endor-Mond",
+      "met_when": "4 ABY",
       "relationship": "Ewok-Schamane – zunächst feindlich",
       "notes": "- Schamane des Stammes - Wurde durch C-3POs „göttliche\" Vorführung überzeugt.",
-      "knownPreferences": [
+      "known_preferences": [
         "Rituale und Stammestradition",
         "anfangs wollte er mich und die Gruppe als Festessen"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 30,
       "name": "Bib Fortuna",
       "species": "Twi'lek",
       "organization": "Jabba's Palast / Tatooine-Unterwelt",
-      "metAt": "Jabba's Palast, Tatooine",
-      "metWhen": "4 ABY",
+      "met_at": "Jabba's Palast, Tatooine",
+      "met_when": "4 ABY",
       "relationship": "Türsteher und Majordomo Jabbas – feindlich",
       "notes": "- Ich setzte bei ihm einen Gedankentrick ein - Für mich ein wichtiger Moment: Da merkte ich, wie sicher ich die Macht inzwischen nutze.",
-      "knownPreferences": [
+      "known_preferences": [
         "Jabbas Gunst erhalten um jeden Preis",
         "misstrauisch gegenüber allen Besuchern"
       ],
-      "relatedTo": [
+      "related_to": [
         15
       ]
     },
@@ -528,15 +528,15 @@
       "name": "Salacious B. Crumb",
       "species": "Kowakianischer Affenlizard",
       "organization": "Jabba's Palast",
-      "metAt": "Jabba's Palast, Tatooine",
-      "metWhen": "4 ABY",
+      "met_at": "Jabba's Palast, Tatooine",
+      "met_when": "4 ABY",
       "relationship": "irrelevante Nervensäge in Jabbas Hof",
       "notes": "- Wurde von R2-D2 auf der Sail Barge besiegt.",
-      "knownPreferences": [
+      "known_preferences": [
         "lachen, spotten, quälen (z. B. C-3POs Auge)",
         "Jabbas Unterhaltung sicherstellen"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 32,
@@ -544,56 +544,56 @@
       "alias": "Der Rancor-Wächter",
       "species": "Mensch",
       "organization": "Jabba's Palast",
-      "metAt": "Jabba's Palast / Rancor-Grube, Tatooine",
-      "metWhen": "4 ABY",
+      "met_at": "Jabba's Palast / Rancor-Grube, Tatooine",
+      "met_when": "4 ABY",
       "relationship": "Bewacher des Rancors (von mir besiegt)",
       "notes": "- Der Rancor wurde von mir durch ein herabfallendes Falltor getötet - Malakili war untröstlich - Das blieb mir im Kopf.",
-      "knownPreferences": [
+      "known_preferences": [
         "seinen Rancor wie ein Haustier / echte Zuneigung",
         "weinte offen nach dem Tod des Tiers"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 33,
       "name": "Max Rebo",
       "species": "Ortolan",
       "organization": "Max Rebo Band / Jabba's Palast",
-      "metAt": "Jabba's Palast, Tatooine",
-      "metWhen": "4 ABY",
+      "met_at": "Jabba's Palast, Tatooine",
+      "met_when": "4 ABY",
       "relationship": "Hofmusiker in Jabbas Palast",
-      "knownPreferences": [
+      "known_preferences": [
         "Essen (arbeitete für Jabba nur gegen freie Verpflegung – kein Geld)",
         "Musik / Red Ball Organ (Keyboard-Synthesizer)"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 34,
       "name": "Sy Snootles",
       "species": "Pa'lowick",
       "organization": "Max Rebo Band / Jabba's Palast",
-      "metAt": "Jabba's Palast, Tatooine",
-      "metWhen": "4 ABY",
+      "met_at": "Jabba's Palast, Tatooine",
+      "met_when": "4 ABY",
       "relationship": "Sängerin in Jabbas Hof",
-      "knownPreferences": [
+      "known_preferences": [
         "Rampenlicht und Aufmerksamkeit"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 35,
       "name": "Nien Nunb",
       "species": "Sullustan",
       "organization": "Rebel Alliance",
-      "metAt": "Rebellenflotte, Endor-Orbit",
-      "metWhen": "4 ABY",
+      "met_at": "Rebellenflotte, Endor-Orbit",
+      "met_when": "4 ABY",
       "relationship": "Verbündeter / Co-Pilot Landos bei Endor",
-      "knownPreferences": [
+      "known_preferences": [
         "freundlicher Charakter, lacht häufig",
         "präzises Fliegen"
       ],
-      "relatedTo": [
+      "related_to": [
         11
       ]
     },
@@ -602,15 +602,15 @@
       "name": "Greedo",
       "species": "Rodian",
       "organization": "Kopfgeldjäger (für Jabba)",
-      "metAt": "Mos Eisley Cantina, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Mos Eisley Cantina, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "kurze Beobachtung (Scharmützel mit Han)",
       "notes": "- Wurde von Han Solo in der Cantina erschossen - Ich war Augenzeuge.",
-      "knownPreferences": [
+      "known_preferences": [
         "Kopfgelder pünktlich eintreiben",
         "überschätzt sich gelegentlich"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 37,
@@ -618,41 +618,41 @@
       "alias": "Walrus Man",
       "species": "Aqualish",
       "organization": "Kriminell",
-      "metAt": "Mos Eisley Cantina, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Mos Eisley Cantina, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "kurze Bedrohung in der Cantina",
       "notes": "- Bedrohte mich zusammen mit Dr. Evazan - Arm von Obi-Wan Kenobis Lichtschwert abgetrennt.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "known_preferences": [],
+      "related_to": []
     },
     {
       "id": 38,
       "name": "Dr. Cornelius Evazan",
       "species": "Mensch",
       "organization": "Kriminell (Todesstrafe in 12 Systemen)",
-      "metAt": "Mos Eisley Cantina, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Mos Eisley Cantina, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "kurze Bedrohung in der Cantina",
       "notes": "- Bedrohte mich gemeinsam mit Ponda Baba - Beide von Obi-Wan außer Gefecht gesetzt.",
-      "knownPreferences": [
+      "known_preferences": [
         "Einschüchterung als erste Gesprächsstrategie"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 39,
       "name": "Wuher",
       "species": "Mensch",
       "organization": "Mos Eisley Cantina (Barkeeper)",
-      "metAt": "Mos Eisley Cantina, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Mos Eisley Cantina, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "gleichgültig / kein Interesse an mir",
       "notes": "- Verweigerte R2-D2 und C-3PO den Zutritt: „Wir bedienen hier keine Droiden.\"",
-      "knownPreferences": [
+      "known_preferences": [
         "hasst Droiden kategorisch",
         "Ruhe und Ordnung in seiner Bar"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 40,
@@ -660,29 +660,29 @@
       "alias": "Hammerhead",
       "species": "Ithorianisch",
       "organization": "Rebellions-Sympathisant (nicht öffentlich)",
-      "metAt": "Mos Eisley Cantina, Tatooine",
-      "metWhen": "0 BBY",
+      "met_at": "Mos Eisley Cantina, Tatooine",
+      "met_when": "0 BBY",
       "relationship": "beiläufige Cantina-Bekanntschaft",
       "notes": "- Später erfuhr ich, dass er als Informant für die Rebellion tätig war.",
-      "knownPreferences": [
+      "known_preferences": [
         "Botanik und ökologisches Gleichgewicht",
         "Ithorianische Philosophie der Naturverbundenheit"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 41,
       "name": "General Crix Madine",
       "species": "Mensch",
       "organization": "Rebel Alliance (ehemaliger Imperialer Offizier)",
-      "metAt": "Rebellenflotte, Endor-Briefing",
-      "metWhen": "4 ABY",
+      "met_at": "Rebellenflotte, Endor-Briefing",
+      "met_when": "4 ABY",
       "relationship": "Taktischer Planer der Endor-Bodenoperation",
       "notes": "- Plante den Bodeneinsatz zur Zerstörung des Bunker-Schildgenerators.",
-      "knownPreferences": [
+      "known_preferences": [
         "Spezialoperationen und Guerillataktik"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 42,
@@ -690,66 +690,66 @@
       "alias": "Red Six",
       "species": "Mensch",
       "organization": "Rebel Alliance / Red Squadron",
-      "metAt": "Yavin IV, Rebellenbasis",
-      "metWhen": "0 BBY",
+      "met_at": "Yavin IV, Rebellenbasis",
+      "met_when": "0 BBY",
       "relationship": "Staffelkamerad",
       "notes": "- Gefallen in der Yavin-Angriffsrunde – ignorierte eine Systemwarnung und flog weiter.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "known_preferences": [],
+      "related_to": []
     },
     {
       "id": 43,
       "name": "Dengar",
       "species": "Mensch (teilweise cybernetisch)",
       "organization": "Kopfgeldjäger",
-      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
+      "met_at": "nie persönlich getroffen (aus Berichten bekannt)",
+      "met_when": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk / indirekte Bedrohung",
       "notes": "- Wurde von Vader zur Han-Suche engagiert - Ich war bei diesem Briefing nicht anwesend – kenne ihn nur aus Berichten.",
-      "knownPreferences": [
+      "known_preferences": [
         "zäh, verbittert, kein Interesse an Stil"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 44,
       "name": "Bossk",
       "species": "Trandoshaner",
       "organization": "Kopfgeldjäger",
-      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
+      "met_at": "nie persönlich getroffen (aus Berichten bekannt)",
+      "met_when": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk / indirekte Bedrohung",
       "notes": "- Wie Dengar: nie direkt getroffen - Nur aus Berichten bekannt.",
-      "knownPreferences": [
+      "known_preferences": [
         "hasst Wookiees (Spezies-Antagonismus)",
         "brutale Direktheit"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 45,
       "name": "IG-88",
       "species": "IG-Serie Assassinen-Droid",
       "organization": "Kopfgeldjäger",
-      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
+      "met_at": "nie persönlich getroffen (aus Berichten bekannt)",
+      "met_when": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk",
       "notes": "- Gefährlichster der engagierten Droiden-Kopfgeldjäger - Ich kenne ihn nur aus Geheimdienstberichten.",
-      "knownPreferences": [],
-      "relatedTo": []
+      "known_preferences": [],
+      "related_to": []
     },
     {
       "id": 46,
       "name": "4-LOM",
       "species": "Protokoll-Droid (zu Kopfgeldjäger umgebaut)",
       "organization": "Kopfgeldjäger",
-      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
+      "met_at": "nie persönlich getroffen (aus Berichten bekannt)",
+      "met_when": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk",
-      "knownPreferences": [
+      "known_preferences": [
         "analytische Vorgehensweise"
       ],
-      "relatedTo": [
+      "related_to": [
         47
       ]
     },
@@ -758,11 +758,11 @@
       "name": "Zuckuss",
       "species": "Gand",
       "organization": "Kopfgeldjäger",
-      "metAt": "nie persönlich getroffen (aus Berichten bekannt)",
-      "metWhen": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
+      "met_at": "nie persönlich getroffen (aus Berichten bekannt)",
+      "met_when": "3 ABY (Vader-Briefing, ohne meine Anwesenheit)",
       "relationship": "Feind-Netzwerk",
-      "knownPreferences": [],
-      "relatedTo": [
+      "known_preferences": [],
+      "related_to": [
         46
       ]
     },
@@ -771,14 +771,14 @@
       "name": "Admiral Firmus Piett",
       "species": "Mensch",
       "organization": "Galaktisches Imperium / Vaders Flotte",
-      "metAt": "kein direkter Kontakt",
-      "metWhen": "3–4 ABY (Kommandant der Verfolgungsflotte)",
+      "met_at": "kein direkter Kontakt",
+      "met_when": "3–4 ABY (Kommandant der Verfolgungsflotte)",
       "relationship": "Feind-Netzwerk / militärische Bedrohung",
       "notes": "- Kommandierte Vaders Superintendantur-Flotte bei Hoth und Endor - Kein direkter Kontakt zu mir – präsente institutionelle Bedrohung - Starb beim Endor-Raumkampf (Kamikaze-A-Wing).",
-      "knownPreferences": [
+      "known_preferences": [
         "Pflichterfüllung – auch unter Todesangst (Vader)"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 49,
@@ -786,29 +786,29 @@
       "alias": "Effex-Seven",
       "species": "Medizin-Assistent-Droid",
       "organization": "Rebel Alliance",
-      "metAt": "Echo Base, Hoth",
-      "metWhen": "3 ABY",
+      "met_at": "Echo Base, Hoth",
+      "met_when": "3 ABY",
       "relationship": "Medizinische Erstversorgung nach Wampa-Attacke",
       "notes": "- Assistierte 2-1B bei meiner Behandlung in der Bacta-Tank-Vorbereitung.",
-      "knownPreferences": [
+      "known_preferences": [
         "unterstützende Rolle / arbeitet 2-1B zu"
       ],
-      "relatedTo": []
+      "related_to": []
     },
     {
       "id": 50,
       "name": "Paploo",
       "species": "Ewok",
       "organization": "Bright Tree Village, Endor-Mond",
-      "metAt": "Endor-Mond, imperialer Bunker-Bereich",
-      "metWhen": "4 ABY",
+      "met_at": "Endor-Mond, imperialer Bunker-Bereich",
+      "met_when": "4 ABY",
       "relationship": "verbündeter Ewok / Ablenkungsmanöver",
       "notes": "- Stahl spontan ein imperiales Speeder Bike – lenkte die Wachen ab und ermöglichte der Gruppe den Zugang zum Bunker - Kleiner Held des Endor-Bodenfeldzugs.",
-      "knownPreferences": [
+      "known_preferences": [
         "draufgängerisch und impulsiv",
         "technisch neugierig (Speeder Bike sofort fasziniert)"
       ],
-      "relatedTo": []
+      "related_to": []
     }
   ],
   "groups": [

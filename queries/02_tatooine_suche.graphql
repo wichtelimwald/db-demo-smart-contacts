@@ -3,6 +3,6 @@
 query TatooineKontakte {
   allContacts(filter: { q: "tatooine" }) {
     name
-    metAt
+    met_at
   }
 }

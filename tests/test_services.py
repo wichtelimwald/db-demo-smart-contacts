@@ -26,6 +26,16 @@ class ServicesTests(unittest.TestCase):
         self.assertIn("Leia Organa", {contact.name for contact in organization_matches})
         self.assertIn("R2-D2", {contact.name for contact in species_matches})
 
+    def test_list_contacts_supports_q_filter(self):
+        matches = services.list_contacts(q="tatooine")
+
+        self.assertIn("Owen Lars", {contact.name for contact in matches})
+
+    def test_list_contacts_supports_id_filter(self):
+        matches = services.list_contacts(contact_id=6)
+
+        self.assertEqual(["Han Solo"], [contact.name for contact in matches])
+
 
 if __name__ == "__main__":
     unittest.main()

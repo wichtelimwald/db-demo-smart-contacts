@@ -5,6 +5,6 @@
 query HanRoheIds {
   Contact(id: "6") {
     name
-    relatedTo
+    related_to
   }
 }

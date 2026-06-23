@@ -20,7 +20,7 @@ def map_related_contact_id(raw: dict | int) -> int | None:
 def map_contact(raw: dict) -> Contact:
     related_to = [
         contact_id
-        for entry in (raw.get("relatedTo") or [])
+        for entry in (raw.get("related_to") or [])
         for contact_id in [map_related_contact_id(entry)]
         if contact_id is not None
     ]
@@ -32,10 +32,10 @@ def map_contact(raw: dict) -> Contact:
         species=raw.get("species"),
         organization=raw.get("organization"),
         relationship=raw.get("relationship"),
-        met_at=raw.get("metAt"),
-        met_when=raw.get("metWhen"),
+        met_at=raw.get("met_at"),
+        met_when=raw.get("met_when"),
         notes=raw.get("notes"),
-        known_preferences=raw.get("knownPreferences") or [],
+        known_preferences=raw.get("known_preferences") or [],
         related_to=related_to,
     )
 

@@ -9,9 +9,27 @@ from __future__ import annotations
 from typing import Optional
 
 import strawberry
+from strawberry import ID
+from strawberry.schema.config import StrawberryConfig
 
 from domain import Contact as DomainContact
 import services as svc
+
+
+def _id_to_int(value: ID | int | str) -> int | None:
+    try:
+        return int(str(value))
+    except (TypeError, ValueError):
+        return None
+
+
+@strawberry.input(description="Filter-Objekt fuer Kontakt-Suche")
+class ContactFilterInput:
+    id: Optional[ID] = None
+    q: Optional[str] = None
+    name: Optional[str] = None
+    organization: Optional[str] = None
+    species: Optional[str] = None
 
 
 # ── Typen ─────────────────────────────────────────────────────────────────────
@@ -78,30 +96,52 @@ def _to_contacts(contacts: list[DomainContact]) -> list[Contact]:
 @strawberry.type
 class Query:
 
-    @strawberry.field(description="Einen Kontakt per ID abrufen")
-    def contact(self, id: int) -> Optional[Contact]:
-        contact = svc.get_contact(id)
+    @strawberry.field(name="Contact", description="Einen Kontakt per ID abrufen")
+    def contact(self, id: ID) -> Optional[Contact]:
+        contact_id = _id_to_int(id)
+        if contact_id is None:
+            return None
+        contact = svc.get_contact(contact_id)
         return _to_contact(contact) if contact else None
 
-    @strawberry.field(description="Alle Kontakte, optional gefiltert")
+    @strawberry.field(name="allContacts", description="Alle Kontakte, optional gefiltert")
     def all_contacts(
         self,
+        filter: Optional[ContactFilterInput] = None,
         name_contains: Optional[str] = None,
         organization: Optional[str] = None,
         species: Optional[str] = None,
     ) -> list[Contact]:
+        contact_id: Optional[int] = None
+        q: Optional[str] = None
+
+        if filter:
+            if filter.id is not None:
+                contact_id = _id_to_int(filter.id)
+                if contact_id is None:
+                    return []
+            q = filter.q
+            if name_contains is None:
+                name_contains = filter.name
+            if organization is None:
+                organization = filter.organization
+            if species is None:
+                species = filter.species
+
         contacts = svc.list_contacts(
+            contact_id=contact_id,
+            q=q,
             name_contains=name_contains,
             organization=organization,
             species=species,
         )
         return _to_contacts(contacts)
 
-    @strawberry.field(description="Alle Gruppen")
+    @strawberry.field(name="allGroups", description="Alle Gruppen")
     def all_groups(self) -> list[Group]:
         return [Group(id=group.id, name=group.name) for group in svc.list_groups()]
 
-    @strawberry.field(description="Alle Kontakte einer Gruppe (per Name)")
+    @strawberry.field(name="contactsInGroup", description="Alle Kontakte einer Gruppe (per Name)")
     def contacts_in_group(self, group_name: str) -> list[Contact]:
         contacts = svc.list_contacts_in_group(group_name)
         return _to_contacts(contacts)
@@ -111,4 +151,5 @@ class Query:
 
 schema = strawberry.Schema(
     query=Query,
+    config=StrawberryConfig(auto_camel_case=False),
 )

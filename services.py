@@ -25,11 +25,35 @@ def get_contact(contact_id: int) -> Optional[Contact]:
 
 
 def list_contacts(
+    contact_id: Optional[int] = None,
+    q: Optional[str] = None,
     name_contains: Optional[str] = None,
     organization: Optional[str] = None,
     species: Optional[str] = None,
 ) -> list[Contact]:
     results = list(CONTACTS)
+    if contact_id is not None:
+        results = [contact for contact in results if contact.id == contact_id]
+    if q:
+        needle = q.lower()
+        results = [
+            contact
+            for contact in results
+            if any(
+                needle in value
+                for value in [
+                    contact.name.lower(),
+                    (contact.alias or "").lower(),
+                    contact.species_text.lower(),
+                    contact.organization_text.lower(),
+                    (contact.relationship or "").lower(),
+                    (contact.met_at or "").lower(),
+                    (contact.met_when or "").lower(),
+                    (contact.notes or "").lower(),
+                    " ".join(contact.known_preferences).lower(),
+                ]
+            )
+        ]
     if name_contains:
         needle = name_contains.lower()
         results = [contact for contact in results if needle in contact.name.lower()]

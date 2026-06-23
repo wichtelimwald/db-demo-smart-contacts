@@ -61,7 +61,7 @@ Stufe 1 · contacts.yaml          menschenlesbar, jeder versteht es
 Stufe 2 · json-graphql-server    automatisch erzeugte Demo-API mit implizitem Schema
               ↓                   → Grenze: selbstreferentielle Traversierung geht nicht
 Stufe 3 · Strawberry + FastAPI   explizites Schema in Python, volle Kontrolle
-                                  → Contact → relatedTo → Contact funktioniert
+                                  → Contact → related_to → Contact funktioniert
                                   → Fokus in der Vorlesung: "wen man kennt"
                                   → REST und GraphQL als zwei Zugriffsmuster
 ```
@@ -241,6 +241,11 @@ automatisch abfragbar, aber mit fachlichen Grenzen bei Semantik und Traversierun
 
 ## GraphQL
 
+Hinweis zur Benennung:
+- Die fachlichen Feldnamen sind in Stage 2 und Stage 3 durchgehend `snake_case` (`met_at`, `related_to`, `known_preferences`).
+- Die Root-Queries sind in Stage 2 technisch bedingt `Contact`, `allContacts`, `allGroups`.
+- Stage 3 verwendet dieselben Root-Namen, um die Bedienung zwischen beiden Stufen konsistent zu halten.
+
 ### Alle Kontakte
 
 ```graphql
@@ -248,7 +253,7 @@ automatisch abfragbar, aber mit fachlichen Grenzen bei Semantik und Traversierun
   allContacts {
     id
     name
-    metAt
+    met_at
     organization
   }
 }
@@ -272,7 +277,7 @@ automatisch abfragbar, aber mit fachlichen Grenzen bei Semantik und Traversierun
 **Stufe 3**
 ```graphql
 {
-  contactsInGroup(groupName: "Rebel Alliance") {
+  contactsInGroup(group_name: "Rebel Alliance") {
     name
     organization
   }
@@ -286,7 +291,7 @@ automatisch abfragbar, aber mit fachlichen Grenzen bei Semantik und Traversierun
 {
   Contact(id: "6") {
     name
-    relatedTo       # nur rohe ID-Referenzen – keine Traversierung möglich
+    related_to       # nur rohe ID-Referenzen – keine Traversierung möglich
   }
 }
 ```
@@ -297,9 +302,9 @@ In echten Systemen können aus solchen rohen Referenzen Folgeabfragen entstehen
 **Stufe 3**
 ```graphql
 {
-  contact(id: 6) {
+  Contact(id: 6) {
     name
-    relatedTo {
+    related_to {
       name
       organization
       groups { name }
@@ -316,10 +321,10 @@ In echten Systemen können aus solchen rohen Referenzen Folgeabfragen entstehen
 **Stufe 3**
 ```graphql
 {
-  allContacts(nameContains: "Solo") {
+  allContacts(name_contains: "Solo") {
     name
     organization
-    relatedTo {
+    related_to {
       name
     }
   }
@@ -328,7 +333,14 @@ In echten Systemen können aus solchen rohen Referenzen Folgeabfragen entstehen
 {
   allContacts(organization: "Rebel") {
     name
-    metAt
+    met_at
+  }
+}
+
+{
+  allContacts(filter: { q: "tatooine" }) {
+    name
+    met_at
   }
 }
 ```

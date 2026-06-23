@@ -17,22 +17,32 @@ from typing import Optional
 
 import uvicorn
 from fastapi import FastAPI, HTTPException
-from fastapi.responses import RedirectResponse
+from fastapi.responses import HTMLResponse, RedirectResponse
 from strawberry.fastapi import GraphQLRouter
 
 import services as svc
 from schema import schema
 
 
+class DemoGraphQLRouter(GraphQLRouter):
+    async def render_graphql_ide(self, request):
+        response = await super().render_graphql_ide(request)
+        response.body = response.body.replace(
+            b"<title>Strawberry GraphiQL</title>",
+            b"<title>Stage 3 GraphQL</title>",
+        )
+        return HTMLResponse(content=response.body.decode("utf-8"), status_code=response.status_code)
+
+
 # ── App ───────────────────────────────────────────────────────────────────────
 
 app = FastAPI(
-    title="Star Wars Contacts API",
+    title="Stage 3 API",
     description="Demo-API – DHBW Karlsruhe",
     version="1.0.0",
 )
 
-app.include_router(GraphQLRouter(schema, graphql_ide="graphiql"), prefix="/graphql")
+app.include_router(DemoGraphQLRouter(schema, graphql_ide="graphiql"), prefix="/graphql")
 
 
 # ── REST-Endpunkte ────────────────────────────────────────────────────────────

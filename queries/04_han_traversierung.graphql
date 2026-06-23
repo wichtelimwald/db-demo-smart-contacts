@@ -1,10 +1,10 @@
 # Stufe 3: FastAPI + Strawberry (Port 8000/graphql)
-# Zeigt: relatedTo traversiert zu vollständigen Kontaktobjekten
+# Zeigt: related_to traversiert zu vollständigen Kontaktobjekten
 # mit Fokus auf "wen man kennt" – didaktisch reduzierte Ausgabe
 query HanTraversierung {
-  contact(id: 6) {
+  Contact(id: 6) {
     name
-    relatedTo {
+    related_to {
       name
       organization
     }
